@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>RSN UX_Lab Blog</title>
+        <link>https://blog.realsn.com/</link>
+        <description>Recent content on RSN UX_Lab Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ko</language>
+        <lastBuildDate>Fri, 14 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About</title>
+        <link>https://blog.realsn.com/about/</link>
+        <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/about/</guid>
+        <description>&lt;p&gt;본문내용&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+</description>
+        </item>
+        <item>
+        <title>Hugo Framework 설치</title>
+        <link>https://blog.realsn.com/p/hugo-framework-%EC%84%A4%EC%B9%98/</link>
+        <pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/p/hugo-framework-%EC%84%A4%EC%B9%98/</guid>
+        <description>&lt;img src="https://blog.realsn.com/p/hugo-framework-%EC%84%A4%EC%B9%98/thumb.png" alt="Featured image of post Hugo Framework 설치" /&gt;&lt;h2 id=&#34;hugo-공식문서의-설치법&#34;&gt;Hugo 공식문서의 설치법&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/getting-started/installing/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;링크&lt;/a&gt;에 접속하면 공식 문서의 다양한 설치법이 기재되어 있습니다.&lt;br&gt;
+&lt;code&gt;하지만 패키지 관리자를 설치하는 과정, CLI를 이용하는 등의 과정이 번거로워 Windows환경에서 직접 설치하는 법을 기재합니다&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;windows에서-패키지-관리자-없이-설치하는-법&#34;&gt;Windows에서 패키지 관리자 없이 설치하는 법&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;링크&lt;/a&gt;에 접속하면 빌드 되어있는 휴고의 release를 확인할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;해당 페이지에서 원하는 버전에 해당하는 Release를 찾습니다.&lt;br&gt;
+&lt;code&gt;본 게시글을 작성하는 시점의 최신버전 : v0.104.1&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;본 게시글을 빌드한 버전 : v0.103.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;하단에 Assets 메뉴를 클릭하여 펼친 후 &amp;lsquo;Show all &lt;code&gt;nn&lt;/code&gt; assets&amp;rsquo;를 클릭합니다.&lt;br&gt;
+&lt;code&gt;0.104.1버전의 경우 &#39;Show all 23 assets&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;hugo_extended_&lt;code&gt;version&lt;/code&gt;_windows-amd64.zip&amp;rsquo;을 클릭하여 다운 받습니다.&lt;/li&gt;
+&lt;li&gt;다운받은 압축파일의 압축을 풀고 &amp;lsquo;hugo.exe&amp;rsquo; 파일을 경로(&lt;code&gt;C:\Hugo\bin&lt;/code&gt;)에 넣습니다.&lt;br&gt;
+&lt;code&gt;Hugo Document에서는 &#39;C:\Hugo\bin&#39;을 기본 경로로 설명하고 있기에 본 설명은 해당 경로에 설치합니다&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://monand0603.tistory.com/29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;링크&lt;/a&gt;를 참조하여 환경 변수 편집에 들어갑니다.&lt;/li&gt;
+&lt;li&gt;환경 변수에 &lt;code&gt;C:\Hugo\bin&lt;/code&gt;경로를 추가하면 설치가 모두 완료되었습니다.&lt;br&gt;
+&lt;code&gt;본 글에서 설명한 경로가 아닌 다른 경로에 &#39;hugo.exe&#39;를 넣었다면 해당하는 경로를 입력해주세요&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;올바르게-설치되었는지-확인하는-법&#34;&gt;올바르게 설치되었는지 확인하는 법&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;명령프롬프트(CMD)를 실행해줍니다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hugo version&lt;/code&gt; 명령어를 실행한 뒤 아래와 같이 나타나는지 확인합니다. &lt;br&gt;
+&lt;strong&gt;&lt;code&gt;아래의 사진이 잘 보이지 않는다면 우클릭 후 &#39;새 탭에서 이미지 열기&#39;로 연 뒤 보는것을 권장합니다&lt;/code&gt;&lt;/strong&gt; &lt;br&gt;
+&lt;img src=&#34;https://blog.realsn.com/p/hugo-framework-%EC%84%A4%EC%B9%98/hugo-version.png&#34;
+	width=&#34;978&#34;
+	height=&#34;510&#34;
+	srcset=&#34;https://blog.realsn.com/p/hugo-framework-%EC%84%A4%EC%B9%98/hugo-version_hu96d999f13f2cf26f679239a934a31c87_9784_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/hugo-framework-%EC%84%A4%EC%B9%98/hugo-version_hu96d999f13f2cf26f679239a934a31c87_9784_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;hugo-version&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;191&#34;
+		data-flex-basis=&#34;460px&#34;
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;위의 사진 처럼 휴고의 버전이 나오지 않는다면 설치가 되지 않은 것이므로 처음부터 다시 해보는 것을 권장합니다.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Hugo Framework를 선택하게 된 이유</title>
+        <link>https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/</link>
+        <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/</guid>
+        <description>&lt;img src="https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/thumb.png" alt="Featured image of post Hugo Framework를 선택하게 된 이유" /&gt;&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide1.png&#34;
+	width=&#34;960&#34;
+	height=&#34;540&#34;
+	srcset=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide1_hufa1589cb11b26301098bafe24a1ceae6_77481_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide1_hufa1589cb11b26301098bafe24a1ceae6_77481_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;hugo-slide1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hugo Framework를 선택한 이유에 대하여 간단하게 정리하여 작성하겠습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide2.png&#34;
+	width=&#34;960&#34;
+	height=&#34;540&#34;
+	srcset=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide2_hu064aea4b321c79bbd514a9cb27855ee9_158248_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide2_hu064aea4b321c79bbd514a9cb27855ee9_158248_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;hugo-slide2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;목차&#34;&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Client Side와 Server Side에 대한 간략한 설명&lt;/li&gt;
+&lt;li&gt;Web Server와 Web Application Server에 대한 간략한 설명&lt;/li&gt;
+&lt;li&gt;그래서 왜 Hugo Framework를 선택하게 되었는지?&lt;/li&gt;
+&lt;li&gt;예시페이지를 JSP와 Hugo로 작성했을때의 샘플 코드&lt;/li&gt;
+&lt;li&gt;예시페이지의 실행 결과&lt;/li&gt;
+&lt;li&gt;Hugo Framework의 Directory 구조와 반자동 배포에 대하여&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide3.png&#34;
+	width=&#34;960&#34;
+	height=&#34;540&#34;
+	srcset=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide3_hu74de339f325fa56482fb3eb259badb6d_68682_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide3_hu74de339f325fa56482fb3eb259badb6d_68682_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;hugo-slide3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;정의&lt;/strong&gt;
+&lt;code&gt;Client Side&lt;/code&gt;는 클라이언트(사용자)환경에서 처리되는 것이라고 할 수 있습니다. HTML, CSS, JavaScript 등을 예로 들 수 있습니다.
+&lt;code&gt;Server Side&lt;/code&gt;는 서버환경에서 처리하는 것이라고 할 수 있습니다. 대표적으로 JSP, ASP.Net, PHP 등 프로그래밍 언어로 만들어진 파일들을 예로 들 수 있습니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;처리과정&lt;/strong&gt;
+&lt;code&gt;Client Side&lt;/code&gt;는 사용자가 HTTP요청에 따라 파일을 전달받아 그 파일 내의 코드를 웹브라우저가 직접 해석하고 화면을 렌더링하여 사용자에게 보여줍니다.
+&lt;code&gt;Server Side&lt;/code&gt;는 서버의 WAS에서 코드를 해석한 뒤 HTML 형식으로 빌드하여 사용자에게 넘겨주는 과정이 추가됩니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;배포과정&lt;/strong&gt;
+&lt;code&gt;Cleint Side&lt;/code&gt;는 정적페이지로 이루어져 있고 그 내용은 사용자의 웹브라우저가 해석이 가능하므로 단순한 Web Server만으로도 배포가 가능합니다.
+&lt;code&gt;Server Side&lt;/code&gt;는 동적페이지로 이루어져 있고 사용자의 웹브라우저에서 단독으로 해석이 불가능하기 때문에 WAS를 이용한 배포만 가능합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide4.png&#34;
+	width=&#34;960&#34;
+	height=&#34;540&#34;
+	srcset=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide4_hu995b5f3bd51e4d2927024d1b4090d777_69080_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide4_hu995b5f3bd51e4d2927024d1b4090d777_69080_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;hugo-slide4&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;정의&lt;/strong&gt;
+&lt;code&gt;Web Server&lt;/code&gt;는 사용자로부터 HTTP요청을 수신한 뒤 경로에 해당하는 정적 리소스를 반환합니다. 대표적으로 Apache Server, GitHub Pages 등이 있습니다.
+&lt;code&gt;Web Apllication Server&lt;/code&gt;는 Web Server의 기능에 동적 리소스를 정적 리소스로 변환하여 사용자에게 반환할 수 있습니다. 대표적으로 Apache Tomcat, NginX 등이 있습니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;목적&lt;/strong&gt;
+&lt;code&gt;Web Server&lt;/code&gt;는 서버 측에 저장된 파일 중에서 HTML, CSS, JS, 이미지 등 상태가 변하지 않는 정적 리소스만을 사용자에게 반환할 수 있습니다.
+&lt;code&gt;Web Apllication Server&lt;/code&gt;는 Server Side언어로 만들어진 동적 리소스들을 정적 리소스로 변환하여 전달할 수 있습니다.
+&lt;!-- raw HTML omitted --&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;처리 환경&lt;/strong&gt;
+&lt;code&gt;Web Server&lt;/code&gt;는 정적 리소스만을 취급하기 때문에 로컬 환경에서 테스트를 진행할 때에는 굳이 Web Server를 동작시킬 필요 없이 웹브라우저에서 단독으로 테스트가 가능합니다.
+&lt;code&gt;Web Apllication Server&lt;/code&gt;는 동적 리소스를 취급할 때에 있어서 필수적인 요소로 작용하기 때문에 동적 리소스를 취급함에 있어서 WAS는 필수적으로 동작되어야 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide5.png&#34;
+	width=&#34;960&#34;
+	height=&#34;540&#34;
+	srcset=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide5_hu878cd4fa91f971bc8a541790062c9be4_36813_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide5_hu878cd4fa91f971bc8a541790062c9be4_36813_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;hugo-slide5&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Client Side로 이루어져 있습니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo의 빌드 결과물은 정적 리소스로 이루어져 있어 WAS를 사용하지 않고 로컬 환경에서 손쉽게 테스트가 가능하며 Web Server만을 이용하여 간편하게 배포가 가능합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SASS 통합 컴파일, JavaScript 번들링을 지원합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo는 자체적으로 SASS 컴파일과 JavaScript 번들링하여 빌드할 수 있습니다.
+&lt;ul&gt;
+&lt;li&gt;기존에 SASS를 작성하여 컴파일하고, JavaScript를 번들링한 뒤 WAS를 통하여 리소스를 배포하였다면, Hugo를 사용할 때에는 설정만 해둔다면 &lt;code&gt;Hugo&lt;/code&gt;명령어를 통하여 한 번에 처리가 가능합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;정적 리소스임에도 불구하고 Layout을 구성해두면 지속적으로 재사용이 가능합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo는 &lt;code&gt;header&lt;/code&gt;, &lt;code&gt;footer&lt;/code&gt;등 미리 만들어둔 파일을 &lt;code&gt;partial&lt;/code&gt;을 통하여 불러와서 사용할 수 있습니다.
+&lt;ul&gt;
+&lt;li&gt;기존에는 &lt;code&gt;include&lt;/code&gt; 기능을 사용하기 위하여 &lt;code&gt;jsp&lt;/code&gt;를 이용하여 산출물을 만들었고 그렇기 때문에 WAS를 이용하여야만 했습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Git을 활용하면 형상관리와 배포를 동시에 처리할 수 있습니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo는 Git을 이용한다면 아주 간편하게 공유 및 배포가 가능합니다.
+&lt;ul&gt;
+&lt;li&gt;기존에는 WAS를 통해서만 산출물을 배포할 수 있었지만 Hugo는 Git의 Submodule 기능을 활용한다면 소스코드와 산출물을 분리하여 관리, 배포할 수 있고 이 과정을 스크립트를 통해 &lt;code&gt;&#39;반 자동화&#39;&lt;/code&gt;하여 편리하게 이용할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;종합---기존&#34;&gt;&lt;strong&gt;종합 - 기존&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;산출물을 테스트하기 위해서는 &lt;code&gt;JDK&lt;/code&gt;, &lt;code&gt;Apache Tomcat&lt;/code&gt;을 설치하여야 했고, &lt;code&gt;Apache Tomcat&lt;/code&gt;을 실행시켜둬야함&lt;/li&gt;
+&lt;li&gt;SASS 컴파일, JavaScript 번들링 등의 과정을 별도로 거쳤어야함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;종합---hugo&#34;&gt;&lt;strong&gt;종합 - Hugo&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;산출물을 로컬에서 테스트 할 때에는 Hugo가 설치된 상태로 &lt;code&gt;hugo server&lt;/code&gt;명령어만 입력하면 실시간으로 테스트 가능&lt;/li&gt;
+&lt;li&gt;SASS 컴파일, JavaScript 번들링 또한 Hugo 빌드 시 자체적으로 처리&lt;code&gt;(extended 버전 한정)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide6.png&#34;
+	width=&#34;960&#34;
+	height=&#34;540&#34;
+	srcset=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide6_hu78d0e655e884a075fdcb343eaf86c90c_129984_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide6_hu78d0e655e884a075fdcb343eaf86c90c_129984_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;hugo-slide6&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;JSP 샘플코드&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;페이지 최상단에 jsp 선언을 합니다.&lt;/li&gt;
+&lt;li&gt;html 구조를 작성합니다.&lt;/li&gt;
+&lt;li&gt;삽입되어질 페이지를 include 합니다.&lt;/li&gt;
+&lt;li&gt;각 페이지에 맞는 컨텐츠를 작성합니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Hugo 샘플코드&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;baseof.html&lt;/code&gt;에 기본적인 html구조 및 partial을 작성합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;single.html&lt;/code&gt;에 컨텐츠 영역을 설정합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;index.html&lt;/code&gt;에 Front Matter&lt;code&gt;(--- ---)&lt;/code&gt;를 작성한 뒤 컨텐츠를 작성합니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;차이점&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JSP의 경우에는 페이지가 늘어나면 각 페이지마다 상기 1~4번의 과정을 계속해서 거쳐야 합니다.&lt;/li&gt;
+&lt;li&gt;Hugo의 경우에는 3번의 과정인 Front Matter를 작성하고 컨텐츠를 작성하면 1~2번에 작성한 내용이 자동으로 재사용 됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide7.png&#34;
+	width=&#34;960&#34;
+	height=&#34;540&#34;
+	srcset=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide7_hueaf3bc1de57c368c86957a660ee4ff0d_26143_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide7_hueaf3bc1de57c368c86957a660ee4ff0d_26143_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;hugo-slide7&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;위 화면은 상기 샘플코드를 실행했을 때의 결과이며, 2개의 코드 모두 결과는 동일합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide8.png&#34;
+	width=&#34;960&#34;
+	height=&#34;540&#34;
+	srcset=&#34;https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide8_hu04428e637b053cf08716cddeb01f64fc_178225_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/slide8_hu04428e637b053cf08716cddeb01f64fc_178225_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;hugo-slide8&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Hugo Site의 폴더구조 및 반자동 배포&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;좌측은 Hugo Framework을 이용하여 만든 Site의 기본적인 &lt;code&gt;Directory Structure&lt;/code&gt;이며 &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/getting-started/directory-structure&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;링크&lt;/a&gt;에서 더 자세히 알아볼 수 있습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;우측은 &lt;code&gt;쉘 스크립트&lt;/code&gt;를 이용하여 커밋메시지만 입력하면 Hugo로 만들어진 사이트를 빌드하고 결과물과 소스코드를 각각 git에 push하는 &lt;code&gt;반 자동화&lt;/code&gt; 배포 스크립트 입니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Archives</title>
+        <link>https://blog.realsn.com/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Links</title>
+        <link>https://blog.realsn.com/links/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/links/</guid>
+        <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
+&lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub is the world&amp;#39;s largest software development platform.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.com&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://www.typescriptlang.org&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ts-logo-128.jpg&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;image&lt;/code&gt; field accepts both local and external images.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Search</title>
+        <link>https://blog.realsn.com/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
