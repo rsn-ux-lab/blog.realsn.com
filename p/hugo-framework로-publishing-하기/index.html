@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='소개요약'><title>About</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Hugo로 Publishing Resource 만들기 위한 Project Set-up과정'><title>Hugo Framework로 Publishing 하기</title>
 
-<link rel='canonical' href='https://blog.realsn.com/about/'>
+<link rel='canonical' href='https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/'>
 
-<link rel="stylesheet" href="/scss/style.min.e4cc906dc274b59ba86c98e496415505e103709c116a9c3653f2419a15ff112c.css"><meta property='og:title' content='About'>
-<meta property='og:description' content='소개요약'>
-<meta property='og:url' content='https://blog.realsn.com/about/'>
+<link rel="stylesheet" href="/scss/style.min.e4cc906dc274b59ba86c98e496415505e103709c116a9c3653f2419a15ff112c.css"><meta property='og:title' content='Hugo Framework로 Publishing 하기'>
+<meta property='og:description' content='Hugo로 Publishing Resource 만들기 위한 Project Set-up과정'>
+<meta property='og:url' content='https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/'>
 <meta property='og:site_name' content='RSN UX_Lab Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:published_time' content='2022-10-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-10-14T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="소개요약">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='framework' /><meta property='article:tag' content='Publishing' /><meta property='article:tag' content='최재영' /><meta property='article:published_time' content='2022-10-19T22:47:00&#43;00:00'/><meta property='article:modified_time' content='2022-10-19T22:47:00&#43;00:00'/><meta property='og:image' content='https://blog.realsn.com/thumb.png' />
+<meta name="twitter:title" content="Hugo Framework로 Publishing 하기">
+<meta name="twitter:description" content="Hugo로 Publishing Resource 만들기 위한 Project Set-up과정"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://blog.realsn.com/thumb.png' />
     </head>
     <body class="
     article-page
@@ -137,7 +138,7 @@
         
         
 
-        <li  class='current' >
+        <li >
             <a href='/about/' >
                 
                 
@@ -245,20 +246,40 @@
     </ol>
 </aside>
 <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/">
+                
+                    <img src="/thumb.png" loading="lazy" alt="Featured image of post Hugo Framework로 Publishing 하기" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/hugo/" style="background-color: #2a9d8f; color: #fff;">
+                Hugo
+            </a>
+        
+            <a href="/categories/publishing/" >
+                Publishing
+            </a>
+        
+    </header>
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/about/">About</a>
+            <a href="/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/">Hugo Framework로 Publishing 하기</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            소개요약
+            Hugo로 Publishing Resource 만들기 위한 Project Set-up과정
         </h3>
         
     </div>
@@ -276,7 +297,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2022년 10월 14일 / 00시 00분</time>
+                <time class="article-time--published">2022년 10월 19일 / 22시 47분</time>
             </div>
         
 
@@ -291,11 +312,11 @@
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    2 minute read
                 </time>
             </div>
         
-        <div id="name"><span>작성자 : </span></div>
+        <div id="name"><span>작성자 : 최재영</span></div>
     </footer>
     
     <hr>
@@ -306,7 +327,163 @@
     <section class="article-content">
     
     
-    <p>본문내용</p>
+    <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 class="toc1" id="기초-구성">기초 구성</h2>
+<blockquote>
+<h3 id="프로젝트-생성">프로젝트 생성</h3>
+</blockquote>
+<ol class="depth">
+<li>우선 <code>Windows 탐색기</code>를 이용하여 프로젝트를 생성하고자 하는 경로로 이동합니다.
+<ul>
+<li>ex) C:\hugo\Sites</li>
+</ul>
+</li>
+<li>해당 경로에서 우클릭 후 <code>'Git Bash Here'</code>을 클릭하여 커맨드 창을 실행합니다.</li>
+<li>커맨드 창에서 <code>'hugo new site [project_name]'</code>을 입력 후 실행합니다.
+<ul>
+<li>ex) hugo new site blog.realsn.com</li>
+</ul>
+</li>
+<li><code>C:\hugo\Sites\[project_name]</code> 폴더가 생성되었다면 성공적으로 생성된 것 입니다.
+<ul>
+<li>ex) C:\hugo\Sites\blog.realsn.com</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<h3 id="configtoml-수정">config.toml 수정</h3>
+</blockquote>
+<ul class="depth">
+<li>기존 내용 수정 (<em>프로젝트 생성 시 기본적으로 선언되는 옵션 수정</em>)
+<ol>
+<li><code>baseURL</code>에 내가 만들 리소스가 배포 될 url을 입력하세요.
+<ul>
+<li>ex)<code>baseURL = 'https://blog.realsn.com/</code></li>
+</ul>
+</li>
+<li><code>title</code>에 내가 만들 리소스의 타이틀을 지정하여 주세요.
+<ul>
+<li>ex)<code>title = 'RSN UX_Lab Blog'</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<ul class="depth">
+<li>추가 내용 작성 (<em>기본으로 선언되는 옵션 하단에 기재하는 추가 옵션</em>)
+<ol>
+<li><code>disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']</code>을 작성합니다.
+<ul>
+<li>기본으로 build시 생성되는 파일 중에서 Publishing Resource에 해당하지 않는 내용들을 제거합니다.</li>
+</ul>
+</li>
+<li><code>[outputFormats]</code>옵션을 작성합니다.
+<ul>
+<li>Hugo Build 시 산출물이 저장되는 경로를 설정합니다.</li>
+<li><code>default = '/' -&gt; [project_path]/public</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<h3 id="layouts-구성">/layouts 구성</h3>
+</blockquote>
+<ul class="depth">
+<li>_defalut 구성
+<ul>
+<li>baseof.html
+<ul>
+<li>기본 뼈대가 되는 layout을 구성합니다.</li>
+<li><code>partial</code>을 통해서 Header, Footer 등 공통 리소스를 가져와 구성합니다.</li>
+</ul>
+</li>
+<li>list.html
+<ul>
+<li>Build시 오류를 방지하기 위해 작성하는 파일이므로 사용하지는 않습니다.</li>
+</ul>
+</li>
+<li>single.html
+<ul>
+<li><code>[project_path]/content</code>하위의 파일 중 front matter가 존재하는 파일의 컨텐츠가 삽입되어지는 파일 입니다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>partials 구성
+<ul>
+<li>include 될 모든 파일</li>
+</ul>
+</li>
+<li>shortcodes 구성
+<ul>
+<li>partial.html</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h3 id="assets-구성">/assets 구성</h3>
+</blockquote>
+<ul class="depth">
+<li>/js
+<ul>
+<li>Webpack으로 bundling 할 resource 중 <code>*.js</code>파일을 저장합니다.</li>
+</ul>
+</li>
+<li>/scss
+<ul>
+<li>Webpack으로 bundling 할 resource 중 <code>*.scss</code>파일을 저장합니다.</li>
+</ul>
+</li>
+</ul>
+<p><em>본래 용도는 JS, CSS, img등의 Resource를 저장하고 불러올 때 사용하지만 우리는 Publishing을 위한 파일을 저장합니다.</em></p>
+<blockquote>
+<h3 id="static-구성">/static 구성</h3>
+</blockquote>
+<ul class="depth">
+<li>/fonts
+<ul>
+<li><code>icomoon</code>등 font 설정 파일 중 동적 리소스만을 저장합니다.</li>
+</ul>
+</li>
+<li>/img
+<ul>
+<li><code>logo</code>등의 image파일을 저장합니다.</li>
+</ul>
+</li>
+<li>/js
+<ul>
+<li><code>*.js</code>파일 중 동적 리소스를 저장하며, Webpack으로 Bundling된 resource도 이곳에 저장합니다.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="toc1" id="형상관리">형상관리</h2>
+<blockquote>
+<h3 id="최초-project-set-up시-개발리소스와-배포리소스-분리">최초 project set-up시 개발리소스와 배포리소스 분리</h3>
+</blockquote>
+<ul class="depth">
+<li>hugo build 후 public 폴더를 먼저 배포리소스 git에 push</li>
+<li>작업Directory에서 public 폴더 삭제 후 개발리소스 git에 push</li>
+<li>이후에 개발리소스에서 배포리소스를 submodule로 등록</li>
+<li>작업시작</li>
+</ul>
+<blockquote>
+<h3 id="최초-set-up-이후-git-clone으로-프로젝트-내려-받은-뒤-형상-관리">최초 set-up 이후 git clone으로 프로젝트 내려 받은 뒤 형상 관리</h3>
+</blockquote>
+<ul class="depth">
+<li>개발리소스를 원하는 경로에 git clone</li>
+<li>개발리소스 경로에서 git command를 이용하여 submodule 정보 update
+<ol>
+<li>git submodule init</li>
+<li>git submodule update</li>
+<li>cd public</li>
+<li>git checkout main</li>
+</ol>
+</li>
+<li>작업시작</li>
+</ul>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 
@@ -315,6 +492,18 @@
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">hugo</a>
+        
+            <a href="/tags/framework/">framework</a>
+        
+            <a href="/tags/publishing/">Publishing</a>
+        
+            <a href="/tags/%EC%B5%9C%EC%9E%AC%EC%98%81/">최재영</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -326,7 +515,7 @@
 
 
 
-        <span>CC BY-NC-ND</span>
+        <span>Licensed under CC BY-NC-SA 4.0</span>
     </section>
     </footer>
 
@@ -337,6 +526,63 @@
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-framework-%EC%84%A4%EC%B9%98/">
+        
+        
+            <div class="article-image">
+                <img src="/p/hugo-framework-%EC%84%A4%EC%B9%98/thumb.cc29b88b34a463386d00aa11a5845e1e_hu7a40aff17dad05f5d5a0240715286247_238394_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Hugo Framework 설치"
+                        
+                        data-hash="md5-zCm4izSkYzhtAKoRpYReHg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Framework 설치</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/">
+        
+        
+            <div class="article-image">
+                <img src="/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/thumb.1995d16cf05f0a40bc6a06d1babcc1ff_hu7a40aff17dad05f5d5a0240715286247_240140_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Hugo Framework를 선택하게 된 이유"
+                        
+                        data-hash="md5-GZXRbPBfCkC8agbRurzB/w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Framework를 선택하게 된 이유</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     
@@ -476,7 +722,52 @@
             >
 
             </main>
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives" >
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#기초-구성">기초 구성</a>
+      <ol>
+        <li><a href="#프로젝트-생성">프로젝트 생성</a></li>
+        <li><a href="#configtoml-수정">config.toml 수정</a></li>
+        <li><a href="#layouts-구성">/layouts 구성</a></li>
+        <li><a href="#assets-구성">/assets 구성</a></li>
+        <li><a href="#static-구성">/static 구성</a></li>
+      </ol>
+    </li>
+    <li><a href="#형상관리">형상관리</a>
+      <ol>
+        <li><a href="#최초-project-set-up시-개발리소스와-배포리소스-분리">최초 project set-up시 개발리소스와 배포리소스 분리</a></li>
+        <li><a href="#최초-set-up-이후-git-clone으로-프로젝트-내려-받은-뒤-형상-관리">최초 set-up 이후 git clone으로 프로젝트 내려 받은 뒤 형상 관리</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
         </div>
         <script 

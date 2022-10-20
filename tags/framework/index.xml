@@ -6,7 +6,174 @@
         <description>Recent content in framework on RSN UX_Lab Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Thu, 29 Sep 2022 09:48:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/tags/framework/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 19 Oct 2022 22:47:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/tags/framework/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo Framework로 Publishing 하기</title>
+        <link>https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/</link>
+        <pubDate>Wed, 19 Oct 2022 22:47:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/</guid>
+        <description>&lt;img src="https://blog.realsn.com/thumb.png" alt="Featured image of post Hugo Framework로 Publishing 하기" /&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 class=&#34;toc1&#34; id=&#34;기초-구성&#34;&gt;기초 구성&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;프로젝트-생성&#34;&gt;프로젝트 생성&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;ol class=&#34;depth&#34;&gt;
+&lt;li&gt;우선 &lt;code&gt;Windows 탐색기&lt;/code&gt;를 이용하여 프로젝트를 생성하고자 하는 경로로 이동합니다.
+&lt;ul&gt;
+&lt;li&gt;ex) C:\hugo\Sites&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;해당 경로에서 우클릭 후 &lt;code&gt;&#39;Git Bash Here&#39;&lt;/code&gt;을 클릭하여 커맨드 창을 실행합니다.&lt;/li&gt;
+&lt;li&gt;커맨드 창에서 &lt;code&gt;&#39;hugo new site [project_name]&#39;&lt;/code&gt;을 입력 후 실행합니다.
+&lt;ul&gt;
+&lt;li&gt;ex) hugo new site blog.realsn.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C:\hugo\Sites\[project_name]&lt;/code&gt; 폴더가 생성되었다면 성공적으로 생성된 것 입니다.
+&lt;ul&gt;
+&lt;li&gt;ex) C:\hugo\Sites\blog.realsn.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;configtoml-수정&#34;&gt;config.toml 수정&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;ul class=&#34;depth&#34;&gt;
+&lt;li&gt;기존 내용 수정 (&lt;em&gt;프로젝트 생성 시 기본적으로 선언되는 옵션 수정&lt;/em&gt;)
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;baseURL&lt;/code&gt;에 내가 만들 리소스가 배포 될 url을 입력하세요.
+&lt;ul&gt;
+&lt;li&gt;ex)&lt;code&gt;baseURL = &#39;https://blog.realsn.com/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;title&lt;/code&gt;에 내가 만들 리소스의 타이틀을 지정하여 주세요.
+&lt;ul&gt;
+&lt;li&gt;ex)&lt;code&gt;title = &#39;RSN UX_Lab Blog&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class=&#34;depth&#34;&gt;
+&lt;li&gt;추가 내용 작성 (&lt;em&gt;기본으로 선언되는 옵션 하단에 기재하는 추가 옵션&lt;/em&gt;)
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;disableKinds = [&#39;taxonomy&#39;, &#39;term&#39;, &#39;RSS&#39;, &#39;sitemap&#39;]&lt;/code&gt;을 작성합니다.
+&lt;ul&gt;
+&lt;li&gt;기본으로 build시 생성되는 파일 중에서 Publishing Resource에 해당하지 않는 내용들을 제거합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[outputFormats]&lt;/code&gt;옵션을 작성합니다.
+&lt;ul&gt;
+&lt;li&gt;Hugo Build 시 산출물이 저장되는 경로를 설정합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;default = &#39;/&#39; -&amp;gt; [project_path]/public&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;layouts-구성&#34;&gt;/layouts 구성&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;ul class=&#34;depth&#34;&gt;
+&lt;li&gt;_defalut 구성
+&lt;ul&gt;
+&lt;li&gt;baseof.html
+&lt;ul&gt;
+&lt;li&gt;기본 뼈대가 되는 layout을 구성합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;partial&lt;/code&gt;을 통해서 Header, Footer 등 공통 리소스를 가져와 구성합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;list.html
+&lt;ul&gt;
+&lt;li&gt;Build시 오류를 방지하기 위해 작성하는 파일이므로 사용하지는 않습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;single.html
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[project_path]/content&lt;/code&gt;하위의 파일 중 front matter가 존재하는 파일의 컨텐츠가 삽입되어지는 파일 입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;partials 구성
+&lt;ul&gt;
+&lt;li&gt;include 될 모든 파일&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;shortcodes 구성
+&lt;ul&gt;
+&lt;li&gt;partial.html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;assets-구성&#34;&gt;/assets 구성&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;ul class=&#34;depth&#34;&gt;
+&lt;li&gt;/js
+&lt;ul&gt;
+&lt;li&gt;Webpack으로 bundling 할 resource 중 &lt;code&gt;*.js&lt;/code&gt;파일을 저장합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;/scss
+&lt;ul&gt;
+&lt;li&gt;Webpack으로 bundling 할 resource 중 &lt;code&gt;*.scss&lt;/code&gt;파일을 저장합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;본래 용도는 JS, CSS, img등의 Resource를 저장하고 불러올 때 사용하지만 우리는 Publishing을 위한 파일을 저장합니다.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;static-구성&#34;&gt;/static 구성&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;ul class=&#34;depth&#34;&gt;
+&lt;li&gt;/fonts
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;icomoon&lt;/code&gt;등 font 설정 파일 중 동적 리소스만을 저장합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;/img
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;logo&lt;/code&gt;등의 image파일을 저장합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;/js
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*.js&lt;/code&gt;파일 중 동적 리소스를 저장하며, Webpack으로 Bundling된 resource도 이곳에 저장합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 class=&#34;toc1&#34; id=&#34;형상관리&#34;&gt;형상관리&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;최초-project-set-up시-개발리소스와-배포리소스-분리&#34;&gt;최초 project set-up시 개발리소스와 배포리소스 분리&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;ul class=&#34;depth&#34;&gt;
+&lt;li&gt;hugo build 후 public 폴더를 먼저 배포리소스 git에 push&lt;/li&gt;
+&lt;li&gt;작업Directory에서 public 폴더 삭제 후 개발리소스 git에 push&lt;/li&gt;
+&lt;li&gt;이후에 개발리소스에서 배포리소스를 submodule로 등록&lt;/li&gt;
+&lt;li&gt;작업시작&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;최초-set-up-이후-git-clone으로-프로젝트-내려-받은-뒤-형상-관리&#34;&gt;최초 set-up 이후 git clone으로 프로젝트 내려 받은 뒤 형상 관리&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;ul class=&#34;depth&#34;&gt;
+&lt;li&gt;개발리소스를 원하는 경로에 git clone&lt;/li&gt;
+&lt;li&gt;개발리소스 경로에서 git command를 이용하여 submodule 정보 update
+&lt;ol&gt;
+&lt;li&gt;git submodule init&lt;/li&gt;
+&lt;li&gt;git submodule update&lt;/li&gt;
+&lt;li&gt;cd public&lt;/li&gt;
+&lt;li&gt;git checkout main&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;작업시작&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+</description>
+        </item>
+        <item>
         <title>Hugo Framework 설치</title>
         <link>https://blog.realsn.com/p/hugo-framework-%EC%84%A4%EC%B9%98/</link>
         <pubDate>Thu, 29 Sep 2022 09:48:00 +0000</pubDate>

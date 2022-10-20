@@ -6,10 +6,10 @@
         <description>Recent content in Tags on RSN UX_Lab Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Thu, 29 Sep 2022 09:48:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 19 Oct 2022 22:47:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>framework</title>
         <link>https://blog.realsn.com/tags/framework/</link>
-        <pubDate>Thu, 29 Sep 2022 09:48:00 +0000</pubDate>
+        <pubDate>Wed, 19 Oct 2022 22:47:00 +0000</pubDate>
         
         <guid>https://blog.realsn.com/tags/framework/</guid>
         <description></description>
@@ -17,9 +17,25 @@
         <item>
         <title>hugo</title>
         <link>https://blog.realsn.com/tags/hugo/</link>
-        <pubDate>Thu, 29 Sep 2022 09:48:00 +0000</pubDate>
+        <pubDate>Wed, 19 Oct 2022 22:47:00 +0000</pubDate>
         
         <guid>https://blog.realsn.com/tags/hugo/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Publishing</title>
+        <link>https://blog.realsn.com/tags/publishing/</link>
+        <pubDate>Wed, 19 Oct 2022 22:47:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/tags/publishing/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>최재영</title>
+        <link>https://blog.realsn.com/tags/%EC%B5%9C%EC%9E%AC%EC%98%81/</link>
+        <pubDate>Wed, 19 Oct 2022 22:47:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/tags/%EC%B5%9C%EC%9E%AC%EC%98%81/</guid>
         <description></description>
         </item>
         <item>
@@ -28,14 +44,6 @@
         <pubDate>Thu, 29 Sep 2022 09:48:00 +0000</pubDate>
         
         <guid>https://blog.realsn.com/tags/server/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>최재영</title>
-        <link>https://blog.realsn.com/tags/%EC%B5%9C%EC%9E%AC%EC%98%81/</link>
-        <pubDate>Thu, 29 Sep 2022 09:48:00 +0000</pubDate>
-        
-        <guid>https://blog.realsn.com/tags/%EC%B5%9C%EC%9E%AC%EC%98%81/</guid>
         <description></description>
         </item>
         

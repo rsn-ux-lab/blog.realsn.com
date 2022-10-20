@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.realsn.com/</loc>
-    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -15,14 +15,8 @@
                 href="https://blog.realsn.com/"
                 />
   </url><url>
-    <loc>https://blog.realsn.com/about/</loc>
-    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/page/</loc>
-    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.realsn.com/categories/</loc>
-    <lastmod>2022-09-29T09:48:00+00:00</lastmod>
+    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -35,25 +29,28 @@
                 />
   </url><url>
     <loc>https://blog.realsn.com/tags/framework/</loc>
-    <lastmod>2022-09-29T09:48:00+00:00</lastmod>
+    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/tags/hugo/</loc>
-    <lastmod>2022-09-29T09:48:00+00:00</lastmod>
+    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/categories/hugo/</loc>
-    <lastmod>2022-09-29T09:48:00+00:00</lastmod>
+    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.realsn.com/p/hugo-framework-%EC%84%A4%EC%B9%98/</loc>
-    <lastmod>2022-09-29T09:48:00+00:00</lastmod>
+    <loc>https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/</loc>
+    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/post/</loc>
-    <lastmod>2022-09-29T09:48:00+00:00</lastmod>
+    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.realsn.com/tags/server/</loc>
-    <lastmod>2022-09-29T09:48:00+00:00</lastmod>
+    <loc>https://blog.realsn.com/tags/publishing/</loc>
+    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/categories/publishing/</loc>
+    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/tags/</loc>
-    <lastmod>2022-09-29T09:48:00+00:00</lastmod>
+    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -66,6 +63,18 @@
                 />
   </url><url>
     <loc>https://blog.realsn.com/tags/%EC%B5%9C%EC%9E%AC%EC%98%81/</loc>
+    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/about/</loc>
+    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/page/</loc>
+    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/p/hugo-framework-%EC%84%A4%EC%B9%98/</loc>
+    <lastmod>2022-09-29T09:48:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/tags/server/</loc>
     <lastmod>2022-09-29T09:48:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/</loc>
