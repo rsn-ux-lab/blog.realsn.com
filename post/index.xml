@@ -6,7 +6,79 @@
         <description>Recent content in Posts on RSN UX_Lab Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Wed, 19 Oct 2022 22:47:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 03 Nov 2022 06:21:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VScode 설정 및 확장플러그인 안내</title>
+        <link>https://blog.realsn.com/p/vscode-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%99%95%EC%9E%A5%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%95%88%EB%82%B4/</link>
+        <pubDate>Thu, 03 Nov 2022 06:21:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/p/vscode-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%99%95%EC%9E%A5%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%95%88%EB%82%B4/</guid>
+        <description>&lt;img src="https://blog.realsn.com/p/vscode-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%99%95%EC%9E%A5%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%95%88%EB%82%B4/thumb.png" alt="Featured image of post VScode 설정 및 확장플러그인 안내" /&gt;&lt;h1 id=&#34;vscode-설정&#34;&gt;VScode 설정&lt;/h1&gt;
+&lt;h2 id=&#34;gitbash&#34;&gt;GitBash&lt;/h2&gt;
+&lt;p&gt;VScode는 기본 터미널은 window 운영체체 특화된 &lt;code&gt;PowerShell&lt;/code&gt;로 설정되지만, 개발 환경에는 유닉스(Unix) 환경과 레퍼런스 사용해야되므로 &lt;code&gt;GitBash&lt;/code&gt;로 설정 변경하는 것이 권장하며, 앞으로 Node를 사용한 개발이 증가하므로, &lt;code&gt;GitBash&lt;/code&gt;를 이용한 커맨드 명령어 사용에 익숙해야져 될 것이다.&lt;/p&gt;
+&lt;p&gt;설정에 앞서 &lt;a class=&#34;link&#34; href=&#34;https://git-scm.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git 공식사이트&lt;/a&gt; 최신버전을 다운받아 설치해야된다. 이후 VScode에서 터미널 기본값은 아래와 같다.&lt;/p&gt;
+&lt;h3 id=&#34;설정창-실행&#34;&gt;설정창 실행&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/vscode-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%99%95%EC%9E%A5%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%95%88%EB%82%B4/gitbash1.png&#34;
+	width=&#34;821&#34;
+	height=&#34;846&#34;
+	srcset=&#34;https://blog.realsn.com/p/vscode-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%99%95%EC%9E%A5%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%95%88%EB%82%B4/gitbash1_hu51fa9fd41e44bde2ef3f016b53773745_55074_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/vscode-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%99%95%EC%9E%A5%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%95%88%EB%82%B4/gitbash1_hu51fa9fd41e44bde2ef3f016b53773745_55074_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;파일 &amp;gt; 기본 설정 &amp;gt; 설정&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;97&#34;
+		data-flex-basis=&#34;232px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;json-설정-파일-열기&#34;&gt;JSON 설정 파일 열기&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/vscode-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%99%95%EC%9E%A5%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%95%88%EB%82%B4/gitbash2.png&#34;
+	width=&#34;861&#34;
+	height=&#34;869&#34;
+	srcset=&#34;https://blog.realsn.com/p/vscode-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%99%95%EC%9E%A5%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%95%88%EB%82%B4/gitbash2_huc0cb4352dead803d9e7850ac722c0493_66808_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/vscode-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%99%95%EC%9E%A5%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%95%88%EB%82%B4/gitbash2_huc0cb4352dead803d9e7850ac722c0493_66808_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;설정 화면 우측 상단 &amp;ldquo;JSON&amp;rdquo; 파일 열기&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;99&#34;
+		data-flex-basis=&#34;237px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;내용-추가&#34;&gt;내용 추가&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;terminal.integrated.profiles.windows&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;GitBash&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;C:\\Program Files\\Git\\bin\\bash.exe&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;terminal.integrated.defaultProfile.windows&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;GitBash&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;GitBash 뿐만 아니라, VScode JSON 설정파일 변경은 프로젝트 환경에 따라
+VScode 기본 설정을 변경해야되는 경우가 있을 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;prettier---code-formatter&#34;&gt;Prettier - Code formatter&lt;/h2&gt;
+</description>
+        </item>
+        <item>
         <title>Hugo Framework로 Publishing 하기</title>
         <link>https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/</link>
         <pubDate>Wed, 19 Oct 2022 22:47:00 +0000</pubDate>
@@ -18,7 +90,7 @@
 &lt;blockquote&gt;
 &lt;h3 id=&#34;프로젝트-생성&#34;&gt;프로젝트 생성&lt;/h3&gt;
 &lt;/blockquote&gt;
-&lt;ol class=&#34;depth&#34;&gt;
+&lt;ol&gt;
 &lt;li&gt;우선 &lt;code&gt;Windows 탐색기&lt;/code&gt;를 이용하여 프로젝트를 생성하고자 하는 경로로 이동합니다.
 &lt;ul&gt;
 &lt;li&gt;ex) C:\hugo\Sites&lt;/li&gt;
@@ -30,53 +102,34 @@
 &lt;li&gt;ex) hugo new site blog.realsn.com&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C:\hugo\Sites\[project_name]&lt;/code&gt; 폴더가 생성되었다면 성공적으로 생성된 것 입니다.
-&lt;ul&gt;
-&lt;li&gt;ex) C:\hugo\Sites\blog.realsn.com&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;&lt;code&gt;C:\hugo\Sites\[project_name]&lt;/code&gt; 폴더가 생성되었다면 성공적으로 생성된 것 입니다. * ex) C:\hugo\Sites\blog.realsn.com
 &lt;blockquote&gt;
 &lt;h3 id=&#34;configtoml-수정&#34;&gt;config.toml 수정&lt;/h3&gt;
 &lt;/blockquote&gt;
-&lt;ul class=&#34;depth&#34;&gt;
-&lt;li&gt;기존 내용 수정 (&lt;em&gt;프로젝트 생성 시 기본적으로 선언되는 옵션 수정&lt;/em&gt;)
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;기존 내용 수정 (&lt;em&gt;프로젝트 생성 시 기본적으로 선언되는 옵션 수정&lt;/em&gt;)&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;baseURL&lt;/code&gt;에 내가 만들 리소스가 배포 될 url을 입력하세요.
 &lt;ul&gt;
 &lt;li&gt;ex)&lt;code&gt;baseURL = &#39;https://blog.realsn.com/&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;title&lt;/code&gt;에 내가 만들 리소스의 타이틀을 지정하여 주세요.
-&lt;ul&gt;
-&lt;li&gt;ex)&lt;code&gt;title = &#39;RSN UX_Lab Blog&#39;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;title&lt;/code&gt;에 내가 만들 리소스의 타이틀을 지정하여 주세요. * ex)&lt;code&gt;title = &#39;RSN UX_Lab Blog&#39;&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class=&#34;depth&#34;&gt;
-&lt;li&gt;추가 내용 작성 (&lt;em&gt;기본으로 선언되는 옵션 하단에 기재하는 추가 옵션&lt;/em&gt;)
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;disableKinds = [&#39;taxonomy&#39;, &#39;term&#39;, &#39;RSS&#39;, &#39;sitemap&#39;]&lt;/code&gt;을 작성합니다.
-&lt;ul&gt;
-&lt;li&gt;기본으로 build시 생성되는 파일 중에서 Publishing Resource에 해당하지 않는 내용들을 제거합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;[outputFormats]&lt;/code&gt;옵션을 작성합니다.
-&lt;ul&gt;
-&lt;li&gt;Hugo Build 시 산출물이 저장되는 경로를 설정합니다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;default = &#39;/&#39; -&amp;gt; [project_path]/public&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;
+&lt;p class=&#34;depth&#34;&gt;추가 내용 작성 (&lt;em&gt;기본으로 선언되는 옵션 하단에 기재하는 추가 옵션&lt;/em&gt;) 1. &lt;code&gt;disableKinds = [&#39;taxonomy&#39;, &#39;term&#39;, &#39;RSS&#39;, &#39;sitemap&#39;]&lt;/code&gt;을 작성합니다.
+_ 기본으로 build시 생성되는 파일 중에서 Publishing Resource에 해당하지 않는 내용들을 제거합니다. 2. &lt;code&gt;[outputFormats]&lt;/code&gt;옵션을 작성합니다.
+_ Hugo Build 시 산출물이 저장되는 경로를 설정합니다. * &lt;code&gt;default = &#39;/&#39; -&amp;gt; [project_path]/public&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h3 id=&#34;layouts-구성&#34;&gt;/layouts 구성&lt;/h3&gt;
 &lt;/blockquote&gt;
-&lt;ul class=&#34;depth&#34;&gt;
-&lt;li&gt;_defalut 구성
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;_defalut 구성&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;baseof.html
 &lt;ul&gt;
@@ -96,48 +149,46 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;partials 구성
+&lt;li&gt;
+&lt;p&gt;partials 구성&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;include 될 모든 파일&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;shortcodes 구성
-&lt;ul&gt;
-&lt;li&gt;partial.html&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;
+&lt;p class=&#34;depth&#34;&gt;shortcodes 구성 * partial.html&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h3 id=&#34;assets-구성&#34;&gt;/assets 구성&lt;/h3&gt;
 &lt;/blockquote&gt;
-&lt;ul class=&#34;depth&#34;&gt;
-&lt;li&gt;/js
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;/js&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Webpack으로 bundling 할 resource 중 &lt;code&gt;*.js&lt;/code&gt;파일을 저장합니다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;/scss
-&lt;ul&gt;
-&lt;li&gt;Webpack으로 bundling 할 resource 중 &lt;code&gt;*.scss&lt;/code&gt;파일을 저장합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;
+&lt;p class=&#34;depth&#34;&gt;/scss
+_ Webpack으로 bundling 할 resource 중 &lt;code&gt;_.scss&lt;/code&gt;파일을 저장합니다.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;본래 용도는 JS, CSS, img등의 Resource를 저장하고 불러올 때 사용하지만 우리는 Publishing을 위한 파일을 저장합니다.&lt;/em&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h3 id=&#34;static-구성&#34;&gt;/static 구성&lt;/h3&gt;
 &lt;/blockquote&gt;
-&lt;ul class=&#34;depth&#34;&gt;
-&lt;li&gt;/fonts
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;/fonts&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;icomoon&lt;/code&gt;등 font 설정 파일 중 동적 리소스만을 저장합니다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;/img
+&lt;li&gt;
+&lt;p&gt;/img&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;logo&lt;/code&gt;등의 image파일을 저장합니다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;/js
+&lt;li&gt;
+&lt;p&gt;/js&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;*.js&lt;/code&gt;파일 중 동적 리소스를 저장하며, Webpack으로 Bundling된 resource도 이곳에 저장합니다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -152,12 +203,11 @@
 &lt;li&gt;hugo build 후 public 폴더를 먼저 배포리소스 git에 push&lt;/li&gt;
 &lt;li&gt;작업Directory에서 public 폴더 삭제 후 개발리소스 git에 push&lt;/li&gt;
 &lt;li&gt;이후에 개발리소스에서 배포리소스를 submodule로 등록&lt;/li&gt;
-&lt;li&gt;작업시작&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;작업시작
 &lt;blockquote&gt;
 &lt;h3 id=&#34;최초-set-up-이후-git-clone으로-프로젝트-내려-받은-뒤-형상-관리&#34;&gt;최초 set-up 이후 git clone으로 프로젝트 내려 받은 뒤 형상 관리&lt;/h3&gt;
 &lt;/blockquote&gt;
-&lt;ul class=&#34;depth&#34;&gt;
+&lt;/li&gt;
 &lt;li&gt;개발리소스를 원하는 경로에 git clone&lt;/li&gt;
 &lt;li&gt;개발리소스 경로에서 git command를 이용하여 submodule 정보 update
 &lt;ol&gt;

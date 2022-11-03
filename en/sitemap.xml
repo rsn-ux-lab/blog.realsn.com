@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.realsn.com/</loc>
-    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
+    <lastmod>2022-11-03T06:21:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://blog.realsn.com/categories/</loc>
-    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
+    <lastmod>2022-11-03T06:21:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -27,6 +27,34 @@
                 hreflang="en"
                 href="https://blog.realsn.com/categories/"
                 />
+  </url><url>
+    <loc>https://blog.realsn.com/post/</loc>
+    <lastmod>2022-11-03T06:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/tags/</loc>
+    <lastmod>2022-11-03T06:21:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.realsn.com/ko/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.realsn.com/tags/"
+                />
+  </url><url>
+    <loc>https://blog.realsn.com/tags/vscode/</loc>
+    <lastmod>2022-11-03T06:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/categories/vscode/</loc>
+    <lastmod>2022-11-03T06:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/p/vscode-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%99%95%EC%9E%A5%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%95%88%EB%82%B4/</loc>
+    <lastmod>2022-11-03T06:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%EC%84%B8%ED%8C%85/</loc>
+    <lastmod>2022-11-03T06:21:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/tags/framework/</loc>
     <lastmod>2022-10-19T22:47:00+00:00</lastmod>
@@ -40,27 +68,8 @@
     <loc>https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/</loc>
     <lastmod>2022-10-19T22:47:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.realsn.com/post/</loc>
-    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.realsn.com/tags/publishing/</loc>
     <lastmod>2022-10-19T22:47:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/categories/publishing/</loc>
-    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/</loc>
-    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.realsn.com/ko/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.realsn.com/tags/"
-                />
   </url><url>
     <loc>https://blog.realsn.com/tags/%EC%B5%9C%EC%9E%AC%EC%98%81/</loc>
     <lastmod>2022-10-19T22:47:00+00:00</lastmod>

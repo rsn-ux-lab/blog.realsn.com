@@ -5,7 +5,7 @@
 
 <link rel='canonical' href='https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/'>
 
-<link rel="stylesheet" href="/scss/style.min.e4cc906dc274b59ba86c98e496415505e103709c116a9c3653f2419a15ff112c.css"><meta property='og:title' content='Hugo Framework로 Publishing 하기'>
+<link rel="stylesheet" href="/scss/style.min.774899bc7db8eb9dd93dc9661a01635b05b7e467ed1f35503fb2088b61a196e5.css"><meta property='og:title' content='Hugo Framework로 Publishing 하기'>
 <meta property='og:description' content='Hugo로 Publishing Resource 만들기 위한 Project Set-up과정'>
 <meta property='og:url' content='https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/'>
 <meta property='og:site_name' content='RSN UX_Lab Blog'>
@@ -56,7 +56,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hub6ac9fb9420cdd1d9758e1c9ae23b3ea_10134_300x0_resize_q75_box.jpg" width="300"
+                        <img src="/img/avatar_huc5370c2022e964866f8cc6f529b81b88_10404_300x0_resize_q75_box.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -251,27 +251,13 @@
         <div class="article-image">
             <a href="/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/">
                 
-                    <img src="/thumb.png" loading="lazy" alt="Featured image of post Hugo Framework로 Publishing 하기" />
+                    <img src="/thumb.png" loading="lazy" alt="Featured image of post Hugo Framework로 Publishing 하기" onerror="this.onerror=null; this.src='/img/404_thumb.png';" />
                 
             </a>
         </div>
     
 
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/hugo/" style="background-color: #2a9d8f; color: #fff;">
-                Hugo
-            </a>
-        
-            <a href="/categories/publishing/" >
-                Publishing
-            </a>
-        
-    </header>
-    
-
+    <div class="article-details">    
     <div class="article-title-wrapper">
         <h2 class="article-title">
             <a href="/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/">Hugo Framework로 Publishing 하기</a>
@@ -315,9 +301,18 @@
                     2 minute read
                 </time>
             </div>
-        
-        <div id="name"><span>작성자 : 최재영</span></div>
+            
+            <div id="name">작성자 : 최재영</div>
     </footer>
+    
+    
+    <header class="article-category">
+        
+            <a href="/categories/hugo/" style="background-color: #2a9d8f; color: #fff;">
+                Hugo
+            </a>
+        
+    </header>
     
     <hr>
     
@@ -333,7 +328,7 @@
 <blockquote>
 <h3 id="프로젝트-생성">프로젝트 생성</h3>
 </blockquote>
-<ol class="depth">
+<ol>
 <li>우선 <code>Windows 탐색기</code>를 이용하여 프로젝트를 생성하고자 하는 경로로 이동합니다.
 <ul>
 <li>ex) C:\hugo\Sites</li>
@@ -345,53 +340,34 @@
 <li>ex) hugo new site blog.realsn.com</li>
 </ul>
 </li>
-<li><code>C:\hugo\Sites\[project_name]</code> 폴더가 생성되었다면 성공적으로 생성된 것 입니다.
-<ul>
-<li>ex) C:\hugo\Sites\blog.realsn.com</li>
-</ul>
-</li>
-</ol>
+<li><code>C:\hugo\Sites\[project_name]</code> 폴더가 생성되었다면 성공적으로 생성된 것 입니다. * ex) C:\hugo\Sites\blog.realsn.com
 <blockquote>
 <h3 id="configtoml-수정">config.toml 수정</h3>
 </blockquote>
-<ul class="depth">
-<li>기존 내용 수정 (<em>프로젝트 생성 시 기본적으로 선언되는 옵션 수정</em>)
+</li>
+</ol>
+<ul>
+<li>
+<p>기존 내용 수정 (<em>프로젝트 생성 시 기본적으로 선언되는 옵션 수정</em>)</p>
 <ol>
 <li><code>baseURL</code>에 내가 만들 리소스가 배포 될 url을 입력하세요.
 <ul>
 <li>ex)<code>baseURL = 'https://blog.realsn.com/</code></li>
 </ul>
 </li>
-<li><code>title</code>에 내가 만들 리소스의 타이틀을 지정하여 주세요.
-<ul>
-<li>ex)<code>title = 'RSN UX_Lab Blog'</code></li>
-</ul>
-</li>
+<li><code>title</code>에 내가 만들 리소스의 타이틀을 지정하여 주세요. * ex)<code>title = 'RSN UX_Lab Blog'</code></li>
 </ol>
 </li>
-</ul>
-<ul class="depth">
-<li>추가 내용 작성 (<em>기본으로 선언되는 옵션 하단에 기재하는 추가 옵션</em>)
-<ol>
-<li><code>disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']</code>을 작성합니다.
-<ul>
-<li>기본으로 build시 생성되는 파일 중에서 Publishing Resource에 해당하지 않는 내용들을 제거합니다.</li>
-</ul>
-</li>
-<li><code>[outputFormats]</code>옵션을 작성합니다.
-<ul>
-<li>Hugo Build 시 산출물이 저장되는 경로를 설정합니다.</li>
-<li><code>default = '/' -&gt; [project_path]/public</code></li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
+<li>
+<p class="depth">추가 내용 작성 (<em>기본으로 선언되는 옵션 하단에 기재하는 추가 옵션</em>) 1. <code>disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']</code>을 작성합니다.
+_ 기본으로 build시 생성되는 파일 중에서 Publishing Resource에 해당하지 않는 내용들을 제거합니다. 2. <code>[outputFormats]</code>옵션을 작성합니다.
+_ Hugo Build 시 산출물이 저장되는 경로를 설정합니다. * <code>default = '/' -&gt; [project_path]/public</code></p>
 <blockquote>
 <h3 id="layouts-구성">/layouts 구성</h3>
 </blockquote>
-<ul class="depth">
-<li>_defalut 구성
+</li>
+<li>
+<p>_defalut 구성</p>
 <ul>
 <li>baseof.html
 <ul>
@@ -411,48 +387,46 @@
 </li>
 </ul>
 </li>
-<li>partials 구성
+<li>
+<p>partials 구성</p>
 <ul>
 <li>include 될 모든 파일</li>
 </ul>
 </li>
-<li>shortcodes 구성
-<ul>
-<li>partial.html</li>
-</ul>
-</li>
-</ul>
+<li>
+<p class="depth">shortcodes 구성 * partial.html</p>
 <blockquote>
 <h3 id="assets-구성">/assets 구성</h3>
 </blockquote>
-<ul class="depth">
-<li>/js
+</li>
+<li>
+<p>/js</p>
 <ul>
 <li>Webpack으로 bundling 할 resource 중 <code>*.js</code>파일을 저장합니다.</li>
 </ul>
 </li>
-<li>/scss
-<ul>
-<li>Webpack으로 bundling 할 resource 중 <code>*.scss</code>파일을 저장합니다.</li>
-</ul>
-</li>
-</ul>
+<li>
+<p class="depth">/scss
+_ Webpack으로 bundling 할 resource 중 <code>_.scss</code>파일을 저장합니다.</p>
 <p><em>본래 용도는 JS, CSS, img등의 Resource를 저장하고 불러올 때 사용하지만 우리는 Publishing을 위한 파일을 저장합니다.</em></p>
 <blockquote>
 <h3 id="static-구성">/static 구성</h3>
 </blockquote>
-<ul class="depth">
-<li>/fonts
+</li>
+<li>
+<p>/fonts</p>
 <ul>
 <li><code>icomoon</code>등 font 설정 파일 중 동적 리소스만을 저장합니다.</li>
 </ul>
 </li>
-<li>/img
+<li>
+<p>/img</p>
 <ul>
 <li><code>logo</code>등의 image파일을 저장합니다.</li>
 </ul>
 </li>
-<li>/js
+<li>
+<p>/js</p>
 <ul>
 <li><code>*.js</code>파일 중 동적 리소스를 저장하며, Webpack으로 Bundling된 resource도 이곳에 저장합니다.</li>
 </ul>
@@ -467,12 +441,11 @@
 <li>hugo build 후 public 폴더를 먼저 배포리소스 git에 push</li>
 <li>작업Directory에서 public 폴더 삭제 후 개발리소스 git에 push</li>
 <li>이후에 개발리소스에서 배포리소스를 submodule로 등록</li>
-<li>작업시작</li>
-</ul>
+<li>작업시작
 <blockquote>
 <h3 id="최초-set-up-이후-git-clone으로-프로젝트-내려-받은-뒤-형상-관리">최초 set-up 이후 git clone으로 프로젝트 내려 받은 뒤 형상 관리</h3>
 </blockquote>
-<ul class="depth">
+</li>
 <li>개발리소스를 원하는 경로에 git clone</li>
 <li>개발리소스 경로에서 git command를 이용하여 submodule 정보 update
 <ol>
@@ -515,7 +488,7 @@
 
 
 
-        <span>Licensed under CC BY-NC-SA 4.0</span>
+        <span>UX Lab Team in RSN Co.,Ltd</span>
     </section>
     </footer>
 

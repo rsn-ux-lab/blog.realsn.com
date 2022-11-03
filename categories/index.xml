@@ -6,21 +6,21 @@
         <description>Recent content in Categories on RSN UX_Lab Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Wed, 19 Oct 2022 22:47:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 03 Nov 2022 06:21:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VScode</title>
+        <link>https://blog.realsn.com/categories/vscode/</link>
+        <pubDate>Thu, 03 Nov 2022 06:21:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/categories/vscode/</guid>
+        <description>&lt;img src="https://blog.realsn.com/categories/vscode/thumb.png" alt="Featured image of post VScode" /&gt;</description>
+        </item>
+        <item>
         <title>Hugo</title>
         <link>https://blog.realsn.com/categories/hugo/</link>
         <pubDate>Wed, 19 Oct 2022 22:47:00 +0000</pubDate>
         
         <guid>https://blog.realsn.com/categories/hugo/</guid>
         <description>&lt;img src="https://blog.realsn.com/categories/hugo/thumb.jpg" alt="Featured image of post Hugo" /&gt;</description>
-        </item>
-        <item>
-        <title>Publishing</title>
-        <link>https://blog.realsn.com/categories/publishing/</link>
-        <pubDate>Wed, 19 Oct 2022 22:47:00 +0000</pubDate>
-        
-        <guid>https://blog.realsn.com/categories/publishing/</guid>
-        <description></description>
         </item>
         
     </channel>
