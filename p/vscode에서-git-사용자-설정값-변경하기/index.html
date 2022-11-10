@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='VScode의 Git 관련된 설정을 변경하기 위한 내용 정리'><title>VScode에서 Git 사용자 설정값 변경하기</title>
+
+<link rel='canonical' href='https://blog.realsn.com/p/vscode%EC%97%90%EC%84%9C-git-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%84%A4%EC%A0%95%EA%B0%92-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/'>
+
+<link rel="stylesheet" href="/scss/style.min.1bfc2e58cc2fa8395412d3ee4a9cedef336f47ca1a4c3da990845b10a2b2f0c0.css"><meta property='og:title' content='VScode에서 Git 사용자 설정값 변경하기'>
+<meta property='og:description' content='VScode의 Git 관련된 설정을 변경하기 위한 내용 정리'>
+<meta property='og:url' content='https://blog.realsn.com/p/vscode%EC%97%90%EC%84%9C-git-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%84%A4%EC%A0%95%EA%B0%92-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/'>
+<meta property='og:site_name' content='RSN UX_Lab Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VScode' /><meta property='article:tag' content='Git' /><meta property='article:published_time' content='2022-11-10T06:21:00&#43;00:00'/><meta property='article:modified_time' content='2022-11-10T06:21:00&#43;00:00'/><meta property='og:image' content='https://blog.realsn.com/p/vscode%EC%97%90%EC%84%9C-git-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%84%A4%EC%A0%95%EA%B0%92-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/thumb.png' />
+<meta name="twitter:title" content="VScode에서 Git 사용자 설정값 변경하기">
+<meta name="twitter:description" content="VScode의 Git 관련된 설정을 변경하기 위한 내용 정리"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://blog.realsn.com/p/vscode%EC%97%90%EC%84%9C-git-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%84%A4%EC%A0%95%EA%B0%92-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/thumb.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huc5370c2022e964866f8cc6f529b81b88_10404_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">RSN UX_Lab Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+         
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/vscode%EC%97%90%EC%84%9C-git-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%84%A4%EC%A0%95%EA%B0%92-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/">
+                <img src="/p/vscode%EC%97%90%EC%84%9C-git-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%84%A4%EC%A0%95%EA%B0%92-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/thumb_hub264a34a1b33755d024e9ef4d5879533_9613_800x0_resize_box_3.png"
+                        srcset="/p/vscode%EC%97%90%EC%84%9C-git-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%84%A4%EC%A0%95%EA%B0%92-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/thumb_hub264a34a1b33755d024e9ef4d5879533_9613_800x0_resize_box_3.png 800w, /p/vscode%EC%97%90%EC%84%9C-git-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%84%A4%EC%A0%95%EA%B0%92-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/thumb_hub264a34a1b33755d024e9ef4d5879533_9613_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="381" 
+                        loading="lazy"
+                        alt="Featured image of post VScode에서 Git 사용자 설정값 변경하기" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">    
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/vscode%EC%97%90%EC%84%9C-git-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%84%A4%EC%A0%95%EA%B0%92-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/">VScode에서 Git 사용자 설정값 변경하기</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            VScode의 Git 관련된 설정을 변경하기 위한 내용 정리
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2022년 11월 10일 / 06시 21분</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    16 minute read
+                </time>
+            </div>
+            
+            <div id="name">작성자 : 장지훈</div>
+    </footer>
+    
+    
+    <hr>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span><span class="lnt">296
+</span><span class="lnt">297
+</span><span class="lnt">298
+</span><span class="lnt">299
+</span><span class="lnt">300
+</span><span class="lnt">301
+</span><span class="lnt">302
+</span><span class="lnt">303
+</span><span class="lnt">304
+</span><span class="lnt">305
+</span><span class="lnt">306
+</span><span class="lnt">307
+</span><span class="lnt">308
+</span><span class="lnt">309
+</span><span class="lnt">310
+</span><span class="lnt">311
+</span><span class="lnt">312
+</span><span class="lnt">313
+</span><span class="lnt">314
+</span><span class="lnt">315
+</span><span class="lnt">316
+</span><span class="lnt">317
+</span><span class="lnt">318
+</span><span class="lnt">319
+</span><span class="lnt">320
+</span><span class="lnt">321
+</span><span class="lnt">322
+</span><span class="lnt">323
+</span><span class="lnt">324
+</span><span class="lnt">325
+</span><span class="lnt">326
+</span><span class="lnt">327
+</span><span class="lnt">328
+</span><span class="lnt">329
+</span><span class="lnt">330
+</span><span class="lnt">331
+</span><span class="lnt">332
+</span><span class="lnt">333
+</span><span class="lnt">334
+</span><span class="lnt">335
+</span><span class="lnt">336
+</span><span class="lnt">337
+</span><span class="lnt">338
+</span><span class="lnt">339
+</span><span class="lnt">340
+</span><span class="lnt">341
+</span><span class="lnt">342
+</span><span class="lnt">343
+</span><span class="lnt">344
+</span><span class="lnt">345
+</span><span class="lnt">346
+</span><span class="lnt">347
+</span><span class="lnt">348
+</span><span class="lnt">349
+</span><span class="lnt">350
+</span><span class="lnt">351
+</span><span class="lnt">352
+</span><span class="lnt">353
+</span><span class="lnt">354
+</span><span class="lnt">355
+</span><span class="lnt">356
+</span><span class="lnt">357
+</span><span class="lnt">358
+</span><span class="lnt">359
+</span><span class="lnt">360
+</span><span class="lnt">361
+</span><span class="lnt">362
+</span><span class="lnt">363
+</span><span class="lnt">364
+</span><span class="lnt">365
+</span><span class="lnt">366
+</span><span class="lnt">367
+</span><span class="lnt">368
+</span><span class="lnt">369
+</span><span class="lnt">370
+</span><span class="lnt">371
+</span><span class="lnt">372
+</span><span class="lnt">373
+</span><span class="lnt">374
+</span><span class="lnt">375
+</span><span class="lnt">376
+</span><span class="lnt">377
+</span><span class="lnt">378
+</span><span class="lnt">379
+</span><span class="lnt">380
+</span><span class="lnt">381
+</span><span class="lnt">382
+</span><span class="lnt">383
+</span><span class="lnt">384
+</span><span class="lnt">385
+</span><span class="lnt">386
+</span><span class="lnt">387
+</span><span class="lnt">388
+</span><span class="lnt">389
+</span><span class="lnt">390
+</span><span class="lnt">391
+</span><span class="lnt">392
+</span><span class="lnt">393
+</span><span class="lnt">394
+</span><span class="lnt">395
+</span><span class="lnt">396
+</span><span class="lnt">397
+</span><span class="lnt">398
+</span><span class="lnt">399
+</span><span class="lnt">400
+</span><span class="lnt">401
+</span><span class="lnt">402
+</span><span class="lnt">403
+</span><span class="lnt">404
+</span><span class="lnt">405
+</span><span class="lnt">406
+</span><span class="lnt">407
+</span><span class="lnt">408
+</span><span class="lnt">409
+</span><span class="lnt">410
+</span><span class="lnt">411
+</span><span class="lnt">412
+</span><span class="lnt">413
+</span><span class="lnt">414
+</span><span class="lnt">415
+</span><span class="lnt">416
+</span><span class="lnt">417
+</span><span class="lnt">418
+</span><span class="lnt">419
+</span><span class="lnt">420
+</span><span class="lnt">421
+</span><span class="lnt">422
+</span><span class="lnt">423
+</span><span class="lnt">424
+</span><span class="lnt">425
+</span><span class="lnt">426
+</span><span class="lnt">427
+</span><span class="lnt">428
+</span><span class="lnt">429
+</span><span class="lnt">430
+</span><span class="lnt">431
+</span><span class="lnt">432
+</span><span class="lnt">433
+</span><span class="lnt">434
+</span><span class="lnt">435
+</span><span class="lnt">436
+</span><span class="lnt">437
+</span><span class="lnt">438
+</span><span class="lnt">439
+</span><span class="lnt">440
+</span><span class="lnt">441
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;--------------------------------------------------------------------------------------------&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Copyright (c) Microsoft Corporation. All rights reserved.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Licensed under the MIT License. See License.txt in the project root for license information.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;--------------------------------------------------------------------------------------------&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Do not edit this file. It is machine generated.&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;contents&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;package&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;displayName&#34;</span><span class="p">:</span> <span class="s2">&#34;Git&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;Git SCM 통합&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.setLogLevel&#34;</span><span class="p">:</span> <span class="s2">&#34;로그 수준 설정...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.clone&#34;</span><span class="p">:</span> <span class="s2">&#34;복제&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.cloneRecursive&#34;</span><span class="p">:</span> <span class="s2">&#34;복제(재귀)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.init&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리 초기화&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.openRepository&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리 열기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.close&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리 닫기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.refresh&#34;</span><span class="p">:</span> <span class="s2">&#34;새로 고침&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.openChange&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 내용 열기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.openFile&#34;</span><span class="p">:</span> <span class="s2">&#34;파일 열기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.openHEADFile&#34;</span><span class="p">:</span> <span class="s2">&#34;파일 열기(HEAD)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.stage&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 내용 스테이징&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.stageAll&#34;</span><span class="p">:</span> <span class="s2">&#34;모든 변경 내용 스테이징&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.stageAllTracked&#34;</span><span class="p">:</span> <span class="s2">&#34;추적된 모든 변경 내용 스테이징&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.stageAllUntracked&#34;</span><span class="p">:</span> <span class="s2">&#34;추적되지 않은 모든 변경 내용 스테이징&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.stageAllMerge&#34;</span><span class="p">:</span> <span class="s2">&#34;모든 병합 변경 내용 스테이징&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.stageSelectedRanges&#34;</span><span class="p">:</span> <span class="s2">&#34;선택한 범위 스테이징&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.revertSelectedRanges&#34;</span><span class="p">:</span> <span class="s2">&#34;선택한 범위 되돌리기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.stageChange&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 내용 스테이징&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.revertChange&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 내용 되돌리기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.unstage&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 내용 스테이징 취소&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.unstageAll&#34;</span><span class="p">:</span> <span class="s2">&#34;모든 변경 내용 스테이징 취소&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.unstageSelectedRanges&#34;</span><span class="p">:</span> <span class="s2">&#34;선택한 범위 스테이징 취소&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.clean&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 내용 취소&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.cleanAll&#34;</span><span class="p">:</span> <span class="s2">&#34;모든 변경 내용 취소&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.cleanAllTracked&#34;</span><span class="p">:</span> <span class="s2">&#34;추적된 모든 변경 내용 취소&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.cleanAllUntracked&#34;</span><span class="p">:</span> <span class="s2">&#34;추적되지 않은 모든 변경 내용 취소&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commit&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitStaged&#34;</span><span class="p">:</span> <span class="s2">&#34;스테이징된 항목 커밋&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitEmpty&#34;</span><span class="p">:</span> <span class="s2">&#34;빈 내용을 커밋합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitStagedSigned&#34;</span><span class="p">:</span> <span class="s2">&#34;스테이징된 항목 커밋(로그오프됨)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitStagedAmend&#34;</span><span class="p">:</span> <span class="s2">&#34;스테이징된 항목 커밋(수정)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitAll&#34;</span><span class="p">:</span> <span class="s2">&#34;모두 커밋&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitAllSigned&#34;</span><span class="p">:</span> <span class="s2">&#34;모두 커밋(로그오프됨)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitAllAmend&#34;</span><span class="p">:</span> <span class="s2">&#34;모두 커밋 (수정)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitNoVerify&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋(확인 안 함)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitStagedNoVerify&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋 스테이징됨(확인 안 함)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitEmptyNoVerify&#34;</span><span class="p">:</span> <span class="s2">&#34;빈 상태로 커밋(확인 안 함)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitStagedSignedNoVerify&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋 스테이징됨(로그오프됨, 확인 안 함)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitStagedAmendNoVerify&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋 스테이징됨(수정, 확인 안 함)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitAllNoVerify&#34;</span><span class="p">:</span> <span class="s2">&#34;모두 커밋(확인 안 함)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitAllSignedNoVerify&#34;</span><span class="p">:</span> <span class="s2">&#34;모두 커밋(로그오프됨, 확인 안 함)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.commitAllAmendNoVerify&#34;</span><span class="p">:</span> <span class="s2">&#34;모두 커밋(수정, 확인 안 함)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.restoreCommitTemplate&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋 템플릿 복원&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.undoCommit&#34;</span><span class="p">:</span> <span class="s2">&#34;마지막 커밋 실행 취소&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.checkout&#34;</span><span class="p">:</span> <span class="s2">&#34;다음으로 체크 아웃...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.branch&#34;</span><span class="p">:</span> <span class="s2">&#34;분기 만들기...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.branchFrom&#34;</span><span class="p">:</span> <span class="s2">&#34;분기를 만듭니다...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.deleteBranch&#34;</span><span class="p">:</span> <span class="s2">&#34;분기 삭제...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.renameBranch&#34;</span><span class="p">:</span> <span class="s2">&#34;분기 이름 바꾸기...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.merge&#34;</span><span class="p">:</span> <span class="s2">&#34;분기 병합...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.rebase&#34;</span><span class="p">:</span> <span class="s2">&#34;분기 다시 지정...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.createTag&#34;</span><span class="p">:</span> <span class="s2">&#34;태그 만들기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.deleteTag&#34;</span><span class="p">:</span> <span class="s2">&#34;태그 삭제&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.fetch&#34;</span><span class="p">:</span> <span class="s2">&#34;페치&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.fetchPrune&#34;</span><span class="p">:</span> <span class="s2">&#34;페치(정리)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.fetchAll&#34;</span><span class="p">:</span> <span class="s2">&#34;모든 원격에서 페치&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.pull&#34;</span><span class="p">:</span> <span class="s2">&#34;풀&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.pullRebase&#34;</span><span class="p">:</span> <span class="s2">&#34;풀(다시 지정)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.pullFrom&#34;</span><span class="p">:</span> <span class="s2">&#34;가져올 위치...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.push&#34;</span><span class="p">:</span> <span class="s2">&#34;푸시&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.pushForce&#34;</span><span class="p">:</span> <span class="s2">&#34;푸시(강제)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.pushTo&#34;</span><span class="p">:</span> <span class="s2">&#34;다음으로 푸시...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.pushToForce&#34;</span><span class="p">:</span> <span class="s2">&#34;...로 푸시 (강제)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.pushFollowTags&#34;</span><span class="p">:</span> <span class="s2">&#34;푸시(태그 팔로우)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.pushFollowTagsForce&#34;</span><span class="p">:</span> <span class="s2">&#34;푸시(태그 팔로우, 강제 적용)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.addRemote&#34;</span><span class="p">:</span> <span class="s2">&#34;원격 추가...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.removeRemote&#34;</span><span class="p">:</span> <span class="s2">&#34;원격 제거&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.sync&#34;</span><span class="p">:</span> <span class="s2">&#34;동기화&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.syncRebase&#34;</span><span class="p">:</span> <span class="s2">&#34;동기화(다시 지정)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.publish&#34;</span><span class="p">:</span> <span class="s2">&#34;분기 게시...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.showOutput&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 출력 표시&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.ignore&#34;</span><span class="p">:</span> <span class="s2">&#34;.gitignore에 추가&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.revealInExplorer&#34;</span><span class="p">:</span> <span class="s2">&#34;사이드바에 표시&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.rebaseAbort&#34;</span><span class="p">:</span> <span class="s2">&#34;다시 지정 중단&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.stashIncludeUntracked&#34;</span><span class="p">:</span> <span class="s2">&#34;스태시(미추적 포함)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.stash&#34;</span><span class="p">:</span> <span class="s2">&#34;스태시&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.stashPop&#34;</span><span class="p">:</span> <span class="s2">&#34;스태시 표시...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.stashPopLatest&#34;</span><span class="p">:</span> <span class="s2">&#34;최신 슬래시 표시&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.stashApply&#34;</span><span class="p">:</span> <span class="s2">&#34;스태시 적용하기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.stashApplyLatest&#34;</span><span class="p">:</span> <span class="s2">&#34;최신 스태시 적용하기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.stashDrop&#34;</span><span class="p">:</span> <span class="s2">&#34;스태시 삭제...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.timelineOpenDiff&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 내용 열기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.timelineCopyCommitId&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋 ID 복사&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command.timelineCopyCommitMessage&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋 메시지 복사&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.enabled&#34;</span><span class="p">:</span> <span class="s2">&#34;Git을 사용하도록 설정했는지 여부입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.path&#34;</span><span class="p">:</span> <span class="s2">&#34;git 실행 파일의 경로 및 파일 이름입니다(예: `C:\\Program Files\\Git\\bin\\git.exe`(Windows)). 조회할 여러 경로를 포함하는 문자열 값의 배열일 수도 있습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.autoRepositoryDetection&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리가 자동으로 감지되어야 하는 경우를 구성합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.autoRepositoryDetection.true&#34;</span><span class="p">:</span> <span class="s2">&#34;현재 열려 있는 폴더의 하위 폴더와 열려 있는 파일의 부모 폴더를 모두 검사합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.autoRepositoryDetection.false&#34;</span><span class="p">:</span> <span class="s2">&#34;자동 리포지토리 검사를 사용하지 않습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.autoRepositoryDetection.subFolders&#34;</span><span class="p">:</span> <span class="s2">&#34;현재 열려 있는 폴더의 하위 폴더를 검사합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.autoRepositoryDetection.openEditors&#34;</span><span class="p">:</span> <span class="s2">&#34;열려 있는 파일의 부모 폴더를 검사합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.autorefresh&#34;</span><span class="p">:</span> <span class="s2">&#34;자동 새로 고침을 사용할지 여부입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.autofetch&#34;</span><span class="p">:</span> <span class="s2">&#34;사용하도록 설정하는 경우 현재 Git 리포지토리의 기본 원격에서 커밋을 자동으로 가져옵니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.autofetchPeriod&#34;</span><span class="p">:</span> <span class="s2">&#34;`git.autofetch`가 사용되는 경우 각 자동 git fetch 사이의 시간(초)입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.confirmSync&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 리포지토리를 동기화하기 전에 확인합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.countBadge&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 개수 배지를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.countBadge.all&#34;</span><span class="p">:</span> <span class="s2">&#34;모든 변경 내용을 계산합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.countBadge.tracked&#34;</span><span class="p">:</span> <span class="s2">&#34;추적된 변경 내용만 계산합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.countBadge.off&#34;</span><span class="p">:</span> <span class="s2">&#34;카운터를 끕니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.checkoutType&#34;</span><span class="p">:</span> <span class="s2">&#34;&#39;다음으로 체크 아웃...&#39;을 실행할 때 나열되는 분기 유형을 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.checkoutType.all&#34;</span><span class="p">:</span> <span class="s2">&#34;모든 참조를 표시합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.checkoutType.local&#34;</span><span class="p">:</span> <span class="s2">&#34;로컬 분기만 표시합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.checkoutType.tags&#34;</span><span class="p">:</span> <span class="s2">&#34;태그만 표시합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.checkoutType.remote&#34;</span><span class="p">:</span> <span class="s2">&#34;원격 분기만 표시합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.branchValidationRegex&#34;</span><span class="p">:</span> <span class="s2">&#34;새 분기 이름의 유효성을 검사하는 정규식입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.branchWhitespaceChar&#34;</span><span class="p">:</span> <span class="s2">&#34;새 브랜치 이름에서 공백을 대체하는 문자.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.ignoreLegacyWarning&#34;</span><span class="p">:</span> <span class="s2">&#34;레거시 Git 경고를 무시합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.ignoreMissingGitWarning&#34;</span><span class="p">:</span> <span class="s2">&#34;Git이 없으면 경고를 무시합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.ignoreWindowsGit27Warning&#34;</span><span class="p">:</span> <span class="s2">&#34;Windows에 Git 2.25~2.26이 설치되어 있는 경우 경고를 무시합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.ignoreLimitWarning&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리에 변경 내용이 너무 많으면 경고를 무시합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.defaultCloneDirectory&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 리포지토리를 복제할 기본 위치입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.enableSmartCommit&#34;</span><span class="p">:</span> <span class="s2">&#34;단계적 변경 사항이 없는 경우 모든 변경 사항을 저장합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.smartCommitChanges&#34;</span><span class="p">:</span> <span class="s2">&#34;스마트 커밋에서 자동으로 스테이징되는 변경 사항을 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.smartCommitChanges.all&#34;</span><span class="p">:</span> <span class="s2">&#34;모든 변경 사항을 자동으로 스테이징합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.smartCommitChanges.tracked&#34;</span><span class="p">:</span> <span class="s2">&#34;추적된 변경 사항만 자동으로 스테이징했습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.suggestSmartCommit&#34;</span><span class="p">:</span> <span class="s2">&#34;스마트 커밋을 사용하도록 제안합니다(스테이징된 변경 사항이 없는 경우 모든 변경 사항 커밋).&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.enableCommitSigning&#34;</span><span class="p">:</span> <span class="s2">&#34;GPG 또는 X.509로 서명 커밋을 사용합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.discardAllScope&#34;</span><span class="p">:</span> <span class="s2">&#34;`모든 변경 내용 취소` 명령으로 취소되는 변경 내용을 제어합니다. `all`이면 모든 변경 내용을 취소합니다. `tracked`이면 추적된 파일만 취소합니다. `prompt`이면 작업을 실행할 때마다 프롬프트 대화 상자를 표시합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.decorations.enabled&#34;</span><span class="p">:</span> <span class="s2">&#34;Git에서 색과 배지를 탐색기와 열려 있는 편집기 뷰에 적용하는지 여부를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.enableStatusBarSync&#34;</span><span class="p">:</span> <span class="s2">&#34;Git Sync 명령이 상태 표시줄에 표시되는지 여부를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.promptToSaveFilesBeforeCommit&#34;</span><span class="p">:</span> <span class="s2">&#34;Git가 제출(commit)하기 전에 저장되지 않은 파일을 검사할지를 제어합니다. &#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.promptToSaveFilesBeforeCommit.always&#34;</span><span class="p">:</span> <span class="s2">&#34;저장되지 않은 파일이 있는지 확인합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.promptToSaveFilesBeforeCommit.staged&#34;</span><span class="p">:</span> <span class="s2">&#34;저장되지 않은 스테이징된 파일만 확인합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.promptToSaveFilesBeforeCommit.never&#34;</span><span class="p">:</span> <span class="s2">&#34;이 검사를 사용하지 않도록 설정합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.postCommitCommand&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋 후 git 명령을 실행합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.postCommitCommand.none&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋 후 명령을 실행하지 않습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.postCommitCommand.push&#34;</span><span class="p">:</span> <span class="s2">&#34;성공적인 커밋 후 &#39;Git Push&#39;를 실행합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.postCommitCommand.sync&#34;</span><span class="p">:</span> <span class="s2">&#34;성공적인 커밋 후 &#39;Git Sync&#39;를 실행합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.showInlineOpenFileAction&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 변경점 보기에서 파일 열기 동작 줄을 표시할지의 여부를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.showPushSuccessNotification&#34;</span><span class="p">:</span> <span class="s2">&#34;푸시가 성공했을 때 알림을 표시할지 여부를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.inputValidation&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋 메시지 입력 유효성 검사를 언제 표시할지 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.inputValidationLength&#34;</span><span class="p">:</span> <span class="s2">&#34;경고 표시를 위한 커밋 메시지 길이 임계값을 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.inputValidationSubjectLength&#34;</span><span class="p">:</span> <span class="s2">&#34;경고 표시를 위한 커밋 메시지 제목 길이 임계값을 제어합니다. `config.inputValidationLength` 값을 상속하려면 이 임계값 설정을 해제하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.detectSubmodules&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 하위 모듈을 자동으로 검색할지 여부를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.detectSubmodulesLimit&#34;</span><span class="p">:</span> <span class="s2">&#34;Git submodules 검출 개수의 제한을 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.alwaysShowStagedChangesResourceGroup&#34;</span><span class="p">:</span> <span class="s2">&#34;스테이징된 변경 내용 리소스 그룹을 항상 표시합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.alwaysSignOff&#34;</span><span class="p">:</span> <span class="s2">&#34;모든 커밋에 대한 확인 플래그를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.ignoredRepositories&#34;</span><span class="p">:</span> <span class="s2">&#34;무시할 Git 리포지토리의 목록입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.scanRepositories&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 리포지토리를 검색할 경로의 목록입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.showProgress&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 작업에서 진행률을 표시할지 여부를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.rebaseWhenSync&#34;</span><span class="p">:</span> <span class="s2">&#34;동기화 명령을 실행할 때 Git에서 다시 지정을 사용하게 합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.confirmEmptyCommits&#34;</span><span class="p">:</span> <span class="s2">&#34;&#39;Git: Commit Empty&#39; 명령에 대한 빈 항목 생성 커밋을 항상 확인합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.fetchOnPull&#34;</span><span class="p">:</span> <span class="s2">&#34;사용하도록 설정하면 풀할 때 모든 분기를 페치합니다. 그렇지 않으면 현재 분기만 페치합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.pullTags&#34;</span><span class="p">:</span> <span class="s2">&#34;풀할 때 모든 태그를 페치합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.autoStash&#34;</span><span class="p">:</span> <span class="s2">&#34;풀하기 전에 변경 내용을 스태시하고 풀하는 데 성공한 후 변경 내용을 복원합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.allowForcePush&#34;</span><span class="p">:</span> <span class="s2">&#34;강제 푸시(임대 사용 또는 사용 안 함)가 가능한지 여부를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.useForcePushWithLease&#34;</span><span class="p">:</span> <span class="s2">&#34;강제 푸시가 좀 더 안전한 force-with-lease 변형을 사용하는지 여부를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.confirmForcePush&#34;</span><span class="p">:</span> <span class="s2">&#34;강제 푸시하기 전에 확인을 요청할지 여부를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.allowNoVerifyCommit&#34;</span><span class="p">:</span> <span class="s2">&#34;pre-commit 및 commit-msg 후크를 실행하지 않는 커밋이 허용되는지를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.confirmNoVerifyCommit&#34;</span><span class="p">:</span> <span class="s2">&#34;확인하지 않고 커밋하기 전에 확인을 요청할지를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.openDiffOnClick&#34;</span><span class="p">:</span> <span class="s2">&#34;변경을 클릭할 때 Diff 편집기가 열릴지 여부를 제어합니다. 그렇지 않으면 일반 편집기가 열립니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.supportCancellation&#34;</span><span class="p">:</span> <span class="s2">&#34;동기화 작업을 실행할 때 사용자가 작업을 취소할 수 있도록 알림이 표시되는지 여부를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.branchSortOrder&#34;</span><span class="p">:</span> <span class="s2">&#34;분기의 정렬 순서를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.untrackedChanges&#34;</span><span class="p">:</span> <span class="s2">&#34;추적되지 않은 변경 내용의 작동 방식을 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.untrackedChanges.mixed&#34;</span><span class="p">:</span> <span class="s2">&#34;추적 및 추적되지 않은 모든 변경 내용이 함께 표시되고 동일한 작업이 수행됩니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.untrackedChanges.separate&#34;</span><span class="p">:</span> <span class="s2">&#34;추적되지 않은 변경 내용은 소스 제어 보기에 별도로 표시됩니다. 또한 여러 작업에서 제외됩니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.untrackedChanges.hidden&#34;</span><span class="p">:</span> <span class="s2">&#34;추적되지 않은 변경 내용이 숨겨지고 여러 작업에서 제외됩니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.showCommitInput&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 소스 제어판에 커밋 입력을 표시할지 여부를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.terminalAuthentication&#34;</span><span class="p">:</span> <span class="s2">&#34;통합 터미널에서 생성된 git 프로세스의 인증 처리기로 VS Code를 사용할지 여부를 제어합니다. 참고: 이 설정의 변경 내용을 적용하려면 터미널을 다시 시작해야 합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.timeline.showAuthor&#34;</span><span class="p">:</span> <span class="s2">&#34;타임라인 보기에 커밋 작성자를 표시할지를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.timeline.date&#34;</span><span class="p">:</span> <span class="s2">&#34;타임라인 보기에서 항목에 사용할 날짜를 제어합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.timeline.date.committed&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋된 날짜 사용&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;config.timeline.date.authored&#34;</span><span class="p">:</span> <span class="s2">&#34;작성 날짜 사용&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;submenu.commit&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;submenu.commit.amend&#34;</span><span class="p">:</span> <span class="s2">&#34;수정&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;submenu.commit.signoff&#34;</span><span class="p">:</span> <span class="s2">&#34;승인&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;submenu.changes&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 사항&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;submenu.pullpush&#34;</span><span class="p">:</span> <span class="s2">&#34;풀, 푸시&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;submenu.branch&#34;</span><span class="p">:</span> <span class="s2">&#34;분기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;submenu.remotes&#34;</span><span class="p">:</span> <span class="s2">&#34;원격&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;submenu.stash&#34;</span><span class="p">:</span> <span class="s2">&#34;스태시&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;submenu.tags&#34;</span><span class="p">:</span> <span class="s2">&#34;태그&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;colors.added&#34;</span><span class="p">:</span> <span class="s2">&#34;추가된 리소스의 색입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;colors.modified&#34;</span><span class="p">:</span> <span class="s2">&#34;수정된 리소스의 색상입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;colors.stageModified&#34;</span><span class="p">:</span> <span class="s2">&#34;스테이징되어 있는 수정된 리소스의 색입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;colors.stageDeleted&#34;</span><span class="p">:</span> <span class="s2">&#34;스테이징되어 있는 삭제된 리소스의 색입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;colors.deleted&#34;</span><span class="p">:</span> <span class="s2">&#34;삭제된 리소스의 색상입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;colors.untracked&#34;</span><span class="p">:</span> <span class="s2">&#34;추적되지 않은 리소스의 색상입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;colors.ignored&#34;</span><span class="p">:</span> <span class="s2">&#34;무시된 리소스의 색상입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;colors.conflict&#34;</span><span class="p">:</span> <span class="s2">&#34;충돌이 발생한 리소스의 색상입니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;colors.submodule&#34;</span><span class="p">:</span> <span class="s2">&#34;서브모듈 자원의 색상&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;view.workbench.scm.missing&#34;</span><span class="p">:</span> <span class="s2">&#34;유효한 Git 설치가 검색되지 않았습니다. [Git 출력](command:git.showOutput)에서 자세한 내용을 확인할 수 있습니다.\r\n[Git을 설치하거나](https://git-scm.com/) [Microsoft Docs](https://aka.ms/vscode-scm)에서 VS Code에서 Git 및 소스 제어를 사용하는 방법에 대해 자세히 알아보세요.\r\n다른 버전 제어 시스템을 사용하는 경우 추가 확장에 대해 [Marketplace를 검색](command:workbench.extensions.search?%22%40category%3A%5C%22scm%20providers%5C%22%22)할 수 있습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;view.workbench.scm.disabled&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 기능을 사용하려면 [설정]에서 Git을 사용하도록 설정하세요(command:workbench.action.openSettings?%5B%22git.enabled%22%5D).\r\nVS Code에서 Git 및 소스 제어를 사용하는 방법에 대해 자세히 알아보려면 [Microsoft Docs](https://aka.ms/vscode-scm)를 참조하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;view.workbench.scm.empty&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 기능을 사용하려면 Git 리포지토리가 포함된 폴더를 열거나 URL에서 복제하면 됩니다.\r\n[폴더 열기](command:vscode.openFolder)\n[리포지토리 복제](command:git.clone)\r\nVS Code에서 Git 및 소스 제어를 사용하는 방법에 대해 자세히 알아보려면 [Microsoft Docs](https://aka.ms/vscode-scm)를 참조하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;view.workbench.scm.folder&#34;</span><span class="p">:</span> <span class="s2">&#34;현재 열린 폴더에 Git 리포지토리가 없습니다. Git에서 제공하는 소스 제어 기능을 사용하도록 설정할 리포지토리를 초기화할 수 있습니다.\r\n[리포지토리 초기화](command:git.init?%5Btrue%5D)\r\nVS Code에서 Git 및 소스 제어를 사용하는 방법에 대해 자세히 알아보려면 [Microsoft Docs](https://aka.ms/vscode-scm)를 읽어보세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;view.workbench.scm.workspace&#34;</span><span class="p">:</span> <span class="s2">&#34;현재 열린 작업 영역에 Git 리포지토리가 포함된 폴더가 없습니다. Git에서 제공하는 소스 제어 기능을 사용하도록 설정할 폴더의 리포지토리를 초기화할 수 있습니다.\r\n[리포지토리 초기화](command:git.init)\r\nVS Code에서 Git 및 소스 제어를 사용하는 방법에 대해 자세히 알아보려면 [Microsoft Docs](https://aka.ms/vscode-scm)를 읽어보세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;view.workbench.scm.emptyWorkspace&#34;</span><span class="p">:</span> <span class="s2">&#34;현재 열린 작업 영역에 Git 리포지토리를 포함하는 폴더가 없습니다.\r\n[작업 영역에 폴더 추가](command:workbench.action.addRootFolder)\r\nVS Code에서 Git 및 소스 제어를 사용하는 방법에 대해 자세히 알아보려면 [Microsoft Docs](https://aka.ms/vscode-scm)를 참조하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;view.workbench.cloneRepository&#34;</span><span class="p">:</span> <span class="s2">&#34;URL에서 리포지토리를 복제할 수도 있습니다. VS Code에서 Git 및 소스 제어를 사용하는 방법에 대해 자세히 알아보려면 [Microsoft Docs](https://aka.ms/vscode-scm)를 참조하세요.\r\n[리포지토리 복제](command:git.clone)&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dist/repository&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;index modified&#34;</span><span class="p">:</span> <span class="s2">&#34;인덱스 수정됨&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;modified&#34;</span><span class="p">:</span> <span class="s2">&#34;수정&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;index added&#34;</span><span class="p">:</span> <span class="s2">&#34;인덱스 추가됨&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;index deleted&#34;</span><span class="p">:</span> <span class="s2">&#34;인덱스 삭제됨&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;deleted&#34;</span><span class="p">:</span> <span class="s2">&#34;삭제&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;index renamed&#34;</span><span class="p">:</span> <span class="s2">&#34;인덱스 이름 변경됨&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;index copied&#34;</span><span class="p">:</span> <span class="s2">&#34;인덱스 복사됨&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;untracked&#34;</span><span class="p">:</span> <span class="s2">&#34;추적되지 않음&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;ignored&#34;</span><span class="p">:</span> <span class="s2">&#34;무시됨&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;intent to add&#34;</span><span class="p">:</span> <span class="s2">&#34;추가할 의도&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;both deleted&#34;</span><span class="p">:</span> <span class="s2">&#34;둘 다 삭제됨&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;added by us&#34;</span><span class="p">:</span> <span class="s2">&#34;본인이 추가함&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;deleted by them&#34;</span><span class="p">:</span> <span class="s2">&#34;타인이 삭제함&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;added by them&#34;</span><span class="p">:</span> <span class="s2">&#34;타인이 추가함&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;deleted by us&#34;</span><span class="p">:</span> <span class="s2">&#34;본인이 삭제함&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;both added&#34;</span><span class="p">:</span> <span class="s2">&#34;둘 다 추가됨&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;both modified&#34;</span><span class="p">:</span> <span class="s2">&#34;둘 다 수정됨&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;open&#34;</span><span class="p">:</span> <span class="s2">&#34;열기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;commit&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;merge changes&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 사항 병합&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;staged changes&#34;</span><span class="p">:</span> <span class="s2">&#34;스테이징된 변경 사항&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;changes&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 사항&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;untracked changes&#34;</span><span class="p">:</span> <span class="s2">&#34;추적되지 않은 변경 사항&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;push success&#34;</span><span class="p">:</span> <span class="s2">&#34;성공적으로 푸시 되었습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;commit in rebase&#34;</span><span class="p">:</span> <span class="s2">&#34;기준 주소를 다시 지정하는 중에는 커밋 메시지를 변경할 수 없습니다. 기준 주소 다시 지정 작업을 완료하고, 대신 대화형 기준 주소 다시 지정을 사용하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;commitMessageWhitespacesOnlyWarning&#34;</span><span class="p">:</span> <span class="s2">&#34;현재 커밋 메시지에는 공백 문자만 포함됩니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;commitMessageCountdown&#34;</span><span class="p">:</span> <span class="s2">&#34;현재 줄에서 {0} 글자 남음&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;commitMessageWarning&#34;</span><span class="p">:</span> <span class="s2">&#34;현재 줄에서 {0} 글자 초과 {1}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;sync is unpredictable&#34;</span><span class="p">:</span> <span class="s2">&#34;동기화 중입니다. 취소하면 리포지토리가 손상될 수 있습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;huge&#34;</span><span class="p">:</span> <span class="s2">&#34;&#39;{0}&#39;의 Git 리포지토리에 활성 변경 내용이 너무 많습니다. Git 기능의 하위 집합만 사용할 수 있도록 설정됩니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;neveragain&#34;</span><span class="p">:</span> <span class="s2">&#34;다시 표시 안 함&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;add known&#34;</span><span class="p">:</span> <span class="s2">&#34;&#39;{0}&#39;을(를) .gitignore에 추가하시겠어요?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;yes&#34;</span><span class="p">:</span> <span class="s2">&#34;예&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;sync changes&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 내용 동기화&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;pull n&#34;</span><span class="p">:</span> <span class="s2">&#34;{1}/{2}에서 {0}개 커밋 풀&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;push n&#34;</span><span class="p">:</span> <span class="s2">&#34;{1}/{2}(으)로 {0}개 커밋 푸시&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;pull push n&#34;</span><span class="p">:</span> <span class="s2">&#34;{2}/{3} 간에 {0}개 커밋 풀 및 {1}개 커밋 푸시&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;commitMessageWithHeadLabel&#34;</span><span class="p">:</span> <span class="s2">&#34;메시지(&#39;{1}&#39;에서 커밋할 {0})&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;commitMessage&#34;</span><span class="p">:</span> <span class="s2">&#34;메시지(커밋할 {0})&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dist/main&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;looking&#34;</span><span class="p">:</span> <span class="s2">&#34;다음에서 git을 찾는 중: {0}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;using git&#34;</span><span class="p">:</span> <span class="s2">&#34;{1}에서 git {0}을(를) 사용하는 중&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;downloadgit&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 다운로드&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;neverShowAgain&#34;</span><span class="p">:</span> <span class="s2">&#34;다시 표시 안 함&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;notfound&#34;</span><span class="p">:</span> <span class="s2">&#34;Git을 찾을 수 없습니다. &#39;git.path&#39;를 사용하여 Git을 설치하거나 구성합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;updateGit&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 업데이트&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git20&#34;</span><span class="p">:</span> <span class="s2">&#34;Git {0}이(가) 설치된 것 같습니다. 코드는 2 이하의 Git에서 최적으로 작동합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git2526&#34;</span><span class="p">:</span> <span class="s2">&#34;설치된 Git {0}에 알려진 문제가 있습니다. Git 기능이 제대로 작동하도록 하려면 2.27 이상의 Git으로 업데이트하세요.&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dist/remoteSource&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;type to search&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리 이름(입력하여 검색)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;type to filter&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리 이름&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;none found&#34;</span><span class="p">:</span> <span class="s2">&#34;원격 리포지토리를 찾을 수 없습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;error&#34;</span><span class="p">:</span> <span class="s2">&#34;$(error) 오류: {0}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;provide url&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리 URL 제공&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;provide url or pick&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리 URL을 입력하거나 리포지토리 소스를 선택하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;url&#34;</span><span class="p">:</span> <span class="s2">&#34;URL&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;pick url&#34;</span><span class="p">:</span> <span class="s2">&#34;복제할 URL을 선택하세요.&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dist/timelineProvider&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git.timeline.source&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 기록&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git.timeline.you&#34;</span><span class="p">:</span> <span class="s2">&#34;사용자&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git.timeline.stagedChanges&#34;</span><span class="p">:</span> <span class="s2">&#34;스테이징된 변경 내용&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git.timeline.detail&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}  — {1}\r\n{2}\r\n\r\n{3}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git.index&#34;</span><span class="p">:</span> <span class="s2">&#34;인덱스&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git.timeline.uncommitedChanges&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋되지 않은 변경 내용&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git.workingTree&#34;</span><span class="p">:</span> <span class="s2">&#34;작업 트리&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dist/model&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;not supported&#34;</span><span class="p">:</span> <span class="s2">&#34;&#39;git.scanRepositories&#39; 설정에서는 절대 경로를 사용할 수 없습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;too many submodules&#34;</span><span class="p">:</span> <span class="s2">&#34;&#39;{0}&#39; 리포지토리에 자동으로 열리지 않는 {1}개의 하위 모듈이 있습니다. 모듈 내의 파일을 열러 각 모듈을 개별적으로 열 수는 있습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no repositories&#34;</span><span class="p">:</span> <span class="s2">&#34;사용 가능한 리포지토리가 없습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;pick repo&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리 선택&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dist/autofetch&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;yes&#34;</span><span class="p">:</span> <span class="s2">&#34;예&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no&#34;</span><span class="p">:</span> <span class="s2">&#34;아니요&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;not now&#34;</span><span class="p">:</span> <span class="s2">&#34;나중에 물어보기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;suggest auto fetch&#34;</span><span class="p">:</span> <span class="s2">&#34;Code에서 [&#39;git fetch&#39;]({0})를 정기적으로 실행하도록 하시겠습니까?&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dist/statusbar&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;rebasing&#34;</span><span class="p">:</span> <span class="s2">&#34;기준 주소 다시 지정&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;checkout&#34;</span><span class="p">:</span> <span class="s2">&#34;분기/태그 체크 아웃...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;publish to&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}에 게시&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;publish to...&#34;</span><span class="p">:</span> <span class="s2">&#34;다음에 게시...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;publish changes&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 내용 게시&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;syncing changes&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 내용을 동기화하는 중...&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dist/commands&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;tag at&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}의 태그&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;remote branch at&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}에서 원격 분기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;create branch&#34;</span><span class="p">:</span> <span class="s2">&#34;새 분기 만들기...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;create branch from&#34;</span><span class="p">:</span> <span class="s2">&#34;...에서 새 분기 만들기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;add remote&#34;</span><span class="p">:</span> <span class="s2">&#34;새 원격 추가...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;current&#34;</span><span class="p">:</span> <span class="s2">&#34;현재&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;select log level&#34;</span><span class="p">:</span> <span class="s2">&#34;로그 수준 선택&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;changed&#34;</span><span class="p">:</span> <span class="s2">&#34;로그 수준이 {0}(으)로 변경되었습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git.title.index&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}(인덱스)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git.title.workingTree&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}(작업 트리)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git.title.theirs&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}(다른 사용자의 변경 내용)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git.title.ours&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}(우리의 변경 내용)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git.title.untracked&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}(추적되지 않음)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;clonefrom&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}에서 복제&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;repourl&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리 URL&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;selectFolder&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리 위치 선택&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;cloning&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 리포지토리 &#39;{0}&#39;을(를) 복제하는 중...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;proposeopen&#34;</span><span class="p">:</span> <span class="s2">&#34;복제된 리포지토리를 여시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;openrepo&#34;</span><span class="p">:</span> <span class="s2">&#34;열기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;openreponew&#34;</span><span class="p">:</span> <span class="s2">&#34;새 창에서 열기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;add&#34;</span><span class="p">:</span> <span class="s2">&#34;작업 영역에 추가&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;proposeopen2&#34;</span><span class="p">:</span> <span class="s2">&#34;복제된 리포지토리를 열거나 현재 작업 영역에 추가하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;init&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 리포지토리를 초기화할 작업 영역 폴더 선택&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;choose&#34;</span><span class="p">:</span> <span class="s2">&#34;폴더 선택...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;init repo&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리 초기화&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;create repo&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리 초기화&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;are you sure&#34;</span><span class="p">:</span> <span class="s2">&#34;&#39;{0}&#39;에서 Git 리포지토리가 만들어집니다. 계속하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;proposeopen init&#34;</span><span class="p">:</span> <span class="s2">&#34;초기화된 리포지토리를 여시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;proposeopen2 init&#34;</span><span class="p">:</span> <span class="s2">&#34;초기화된 리포지토리를 열거나 현재 작업 영역에 추가하겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;open repo&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리 열기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;HEAD not available&#34;</span><span class="p">:</span> <span class="s2">&#34;&#39;{0}&#39;의 HEAD 버전이 없습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm stage files with merge conflicts&#34;</span><span class="p">:</span> <span class="s2">&#34;병합 충돌이 있는 {0} 파일을 스테이징하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm stage file with merge conflicts&#34;</span><span class="p">:</span> <span class="s2">&#34;병합 충돌이 있는 {0}을(를) 스테이징하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;yes&#34;</span><span class="p">:</span> <span class="s2">&#34;예&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;keep ours&#34;</span><span class="p">:</span> <span class="s2">&#34;현재 버전 유지&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;delete&#34;</span><span class="p">:</span> <span class="s2">&#34;파일 삭제&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;deleted by them&#34;</span><span class="p">:</span> <span class="s2">&#34;다른 사용자가 삭제한 &#39;{0}&#39; 파일을 Microsoft에서 수정했습니다.\r\n\r\n원하는 작업을 선택하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;keep theirs&#34;</span><span class="p">:</span> <span class="s2">&#34;다른 사용자 버전 유지&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;deleted by us&#34;</span><span class="p">:</span> <span class="s2">&#34;본인이 &#39;{0}&#39; 파일을 삭제하고 타인이 수정했습니다.\r\n\r\n수행하고 싶은 작업을 선택하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;discard&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 내용 취소&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm delete&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}을(를) 삭제하시겠습니까?\r\n이 작업은 취소할 수 없습니다!\r\n계속하면 이 파일이 영구적으로 손실됩니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;delete file&#34;</span><span class="p">:</span> <span class="s2">&#34;파일 삭제&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;restore file&#34;</span><span class="p">:</span> <span class="s2">&#34;파일 복원&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm restore&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}을(를) 복원하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm discard&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}의 변경 내용을 취소하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;restore files&#34;</span><span class="p">:</span> <span class="s2">&#34;파일 복원&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm restore multiple&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}개 파일을 복원하겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm discard multiple&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}개 파일의 변경 내용을 취소하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;warn untracked&#34;</span><span class="p">:</span> <span class="s2">&#34;이렇게 하면 추적되지 않은 파일 {0}개가 삭제됩니다!\r\n삭제 후에는 되돌릴 수 없습니다!\r\n이 파일은 영구적으로 손실됩니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;there are untracked files single&#34;</span><span class="p">:</span> <span class="s2">&#34;취소한 경우 다음 추적되지 않은 파일이 디스크에서 삭제됩니다. {0}.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;there are untracked files&#34;</span><span class="p">:</span> <span class="s2">&#34;취소하는 경우 {0}개의 추적되지 않은 파일이 디스크에서 삭제됩니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm discard all 2&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}\r\n\r\n이 작업은 되돌릴 수 없으며, 현재 작업 집합이 영구적으로 손실됩니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;yes discard tracked&#34;</span><span class="p">:</span> <span class="s2">&#34;1개의 추적된 파일 취소&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;yes discard tracked multiple&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}개의 추적된 파일 취소&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;discardAll&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}개 파일 모두 버리기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm discard all single&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}의 변경 내용을 취소하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm discard all&#34;</span><span class="p">:</span> <span class="s2">&#34;파일 {0}개의 변경 내용을 모두 취소하시겠습니까?\r\n이 작업은 취소할 수 없습니다!\r\n계속하면 현재 작업 집합이 영구적으로 손실됩니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;discardAll multiple&#34;</span><span class="p">:</span> <span class="s2">&#34;1개 파일 취소&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm delete multiple&#34;</span><span class="p">:</span> <span class="s2">&#34;파일 {0}개를 삭제하시겠습니까?\r\n이 작업은 취소할 수 없습니다!\r\n계속하면 해당 파일이 영구적으로 손실됩니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;delete files&#34;</span><span class="p">:</span> <span class="s2">&#34;파일 삭제&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;unsaved files single&#34;</span><span class="p">:</span> <span class="s2">&#34;계속하는 경우 {0} 파일의 저장되지 않은 변경 내용이 커밋에 포함되지 않을 수 있습니다.\r\n\r\n커밋하기 전에 저장하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;unsaved files&#34;</span><span class="p">:</span> <span class="s2">&#34;저장되지 않은 파일 {0}개가 있습니다.\r\n\r\n커밋하기 전에 저장하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;save and commit&#34;</span><span class="p">:</span> <span class="s2">&#34;모두 저장 및 커밋&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;commit&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no staged changes&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋할 스테이징된 변경 사항이 없습니다.\r\n\r\n모든 변경 사항을 스테이징하고 직접 커밋하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;always&#34;</span><span class="p">:</span> <span class="s2">&#34;항상&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;never&#34;</span><span class="p">:</span> <span class="s2">&#34;안 함&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no changes&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋할 변경 내용이 없습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no verify commit not allowed&#34;</span><span class="p">:</span> <span class="s2">&#34;확인 없는 커밋은 허용되지 않습니다. &#39;git.allowNoVerifyCommit&#39; 설정을 통해 사용하도록 설정하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm no verify commit&#34;</span><span class="p">:</span> <span class="s2">&#34;확인 없이 변경 내용을 커밋하려고 합니다. 그러면 pre-commit 후크를 건너뛰고 바람직하지 않을 수 있습니다.\r\n\r\n계속하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;ok&#34;</span><span class="p">:</span> <span class="s2">&#34;확인&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;never ask again&#34;</span><span class="p">:</span> <span class="s2">&#34;네, 다시 표시 안 함&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;commitMessageWithHeadLabel2&#34;</span><span class="p">:</span> <span class="s2">&#34;메시지(&#39;{0}&#39;에서 커밋)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;commit message&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋 메시지&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;provide commit message&#34;</span><span class="p">:</span> <span class="s2">&#34;커밋 메시지를 제공하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm emtpy commit&#34;</span><span class="p">:</span> <span class="s2">&#34;빈 커밋을 만드시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;yes never again&#34;</span><span class="p">:</span> <span class="s2">&#34;예, 다시 표시 안 함&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no more&#34;</span><span class="p">:</span> <span class="s2">&#34;HEAD가 커밋을 가리키지 않으므로 실행 취소할 수 없습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;undo commit&#34;</span><span class="p">:</span> <span class="s2">&#34;병합 커밋 실행 취소&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;merge commit&#34;</span><span class="p">:</span> <span class="s2">&#34;마지막 커밋은 병합 커밋이었습니다. 실행 취소하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;select a ref to checkout&#34;</span><span class="p">:</span> <span class="s2">&#34;체크아웃할 참조 선택&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;branch name&#34;</span><span class="p">:</span> <span class="s2">&#34;분기 이름&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;provide branch name&#34;</span><span class="p">:</span> <span class="s2">&#34;새 분기 이름을 제공하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;branch name format invalid&#34;</span><span class="p">:</span> <span class="s2">&#34;분기 이름은 regex {0}과(와) 일치해야 합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;select a ref to create a new branch from&#34;</span><span class="p">:</span> <span class="s2">&#34;ref를 선택하여 다음에서 &#39;{0}&#39; 분기를 만듭니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;select branch to delete&#34;</span><span class="p">:</span> <span class="s2">&#34;삭제할 분기 선택&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm force delete branch&#34;</span><span class="p">:</span> <span class="s2">&#34;&#39;{0}&#39; 분기가 완벽히 병합되지 않았습니다. 그래도 삭제할까요?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;delete branch&#34;</span><span class="p">:</span> <span class="s2">&#34;분기 삭제&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;invalid branch name&#34;</span><span class="p">:</span> <span class="s2">&#34;잘못된 분기 이름&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;branch already exists&#34;</span><span class="p">:</span> <span class="s2">&#34;이름이 &#39;{0}&#39;인 분기가 이미 있습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;select a branch to merge from&#34;</span><span class="p">:</span> <span class="s2">&#34;병합할 분기 선택&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;select a branch to rebase onto&#34;</span><span class="p">:</span> <span class="s2">&#34;다시 지정할 대상 분기 선택&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;tag name&#34;</span><span class="p">:</span> <span class="s2">&#34;태그 이름&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;provide tag name&#34;</span><span class="p">:</span> <span class="s2">&#34;태그 이름을 입력하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;tag message&#34;</span><span class="p">:</span> <span class="s2">&#34;메시지&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;provide tag message&#34;</span><span class="p">:</span> <span class="s2">&#34;태그에 주석을 달 메시지를 입력하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no tags&#34;</span><span class="p">:</span> <span class="s2">&#34;이 리포지토리에는 태그가 없습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;select a tag to delete&#34;</span><span class="p">:</span> <span class="s2">&#34;삭제할 태그 선택&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no remotes to fetch&#34;</span><span class="p">:</span> <span class="s2">&#34;이 리포지토리에 페치할 원격 항목이 구성되어 있지 않습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no remotes to pull&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리에 풀하도록 구성된 원격 항목이 없습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;pick remote pull repo&#34;</span><span class="p">:</span> <span class="s2">&#34;분기를 가져올 원격 선택&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;pick branch pull&#34;</span><span class="p">:</span> <span class="s2">&#34;다음에서 가져올 분기 선택&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;addremote&#34;</span><span class="p">:</span> <span class="s2">&#34;원격 추가&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no remotes to push&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리에 푸시하도록 구성된 원격이 없습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;force push not allowed&#34;</span><span class="p">:</span> <span class="s2">&#34;강제 푸시가 허용되지 않습니다. &#39;git.allowForcePush&#39; 설정으로 사용하도록 설정하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm force push&#34;</span><span class="p">:</span> <span class="s2">&#34;변경 내용을 강제로 푸시하려고 합니다. 이렇게 하면 다른 사람의 변경 내용을 무시하거나 의도하지 않게 덮어쓸 수 있습니다.\r\n\r\n계속하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;nobranch&#34;</span><span class="p">:</span> <span class="s2">&#34;원격에 푸시할 분기를 체크 아웃하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;confirm publish branch&#34;</span><span class="p">:</span> <span class="s2">&#34;&#39;{0}&#39; 분기에는 상향 분기가 없습니다. 이 분기를 게시하시겠습니까?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;pick remote&#34;</span><span class="p">:</span> <span class="s2">&#34;&#39;{0}&#39; 분기를 다음에 게시하려면 원격을 선택하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;addfrom&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}에서 원격 추가&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;addFrom&#34;</span><span class="p">:</span> <span class="s2">&#34;URL에서 원격 추가&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;remote name&#34;</span><span class="p">:</span> <span class="s2">&#34;원격 이름&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;provide remote name&#34;</span><span class="p">:</span> <span class="s2">&#34;원격 이름을 제공하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;remote name format invalid&#34;</span><span class="p">:</span> <span class="s2">&#34;잘못된 원격 이름 형식&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;remote already exists&#34;</span><span class="p">:</span> <span class="s2">&#34;원격 &#39;{0}&#39;이(가) 이미 존재합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no remotes added&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리에 원격 항목이 없습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;remove remote&#34;</span><span class="p">:</span> <span class="s2">&#34;제거할 원격 선택&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;sync is unpredictable&#34;</span><span class="p">:</span> <span class="s2">&#34;이 작업은 &#39;{0}/{1}&#39;(으)로 커밋을 푸시하고 풀합니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;never again&#34;</span><span class="p">:</span> <span class="s2">&#34;다시 표시 안 함&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no remotes to publish&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리에 게시하도록 구성된 원격이 없습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;publish to&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}에 게시&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;pick provider&#34;</span><span class="p">:</span> <span class="s2">&#34;&#39;{0}&#39; 분기를 다음에 게시할 공급자 선택:&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no changes stash&#34;</span><span class="p">:</span> <span class="s2">&#34;스태시할 변경 내용이 없습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;provide stash message&#34;</span><span class="p">:</span> <span class="s2">&#34;필요한 경우 스태시 메시지를 입력하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;stash message&#34;</span><span class="p">:</span> <span class="s2">&#34;스태시 메시지&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;pick stash to pop&#34;</span><span class="p">:</span> <span class="s2">&#34;표시할 스태시 선택&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no stashes&#34;</span><span class="p">:</span> <span class="s2">&#34;리포지토리에 스태시가 없습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;pick stash to apply&#34;</span><span class="p">:</span> <span class="s2">&#34;적용할 스태시 선택&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;pick stash to drop&#34;</span><span class="p">:</span> <span class="s2">&#34;삭제할 스태시 선택&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git.title.diffRefs&#34;</span><span class="p">:</span> <span class="s2">&#34;{0}({1}) ⟷ {0}({2})&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;no rebase&#34;</span><span class="p">:</span> <span class="s2">&#34;진행 중인 다시 지정이 없습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;open git log&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 로그 열기&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;clean repo&#34;</span><span class="p">:</span> <span class="s2">&#34;체크 아웃하기 전에 리포지토리 작업 트리를 정리하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;cant push&#34;</span><span class="p">:</span> <span class="s2">&#34;참조를 원격에 푸시할 수 없습니다. 먼저 &#39;풀&#39;을 실행하여 변경 내용을 통합하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;merge conflicts&#34;</span><span class="p">:</span> <span class="s2">&#34;병합 충돌이 있습니다. 해결한 후 계속하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;stash merge conflicts&#34;</span><span class="p">:</span> <span class="s2">&#34;스태시를 적용하는 중 병합 충돌이 발생했습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;auth failed specific&#34;</span><span class="p">:</span> <span class="s2">&#34;원격 Git에 인증하지 못했습니다.\r\n\r\n{0}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;auth failed&#34;</span><span class="p">:</span> <span class="s2">&#34;git remote에 인증하지 못했습니다.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;missing user info&#34;</span><span class="p">:</span> <span class="s2">&#34;Git에서 &#39;user.name&#39; 및 &#39;user.email&#39;을 구성하세요.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;learn more&#34;</span><span class="p">:</span> <span class="s2">&#34;자세한 정보&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git error details&#34;</span><span class="p">:</span> <span class="s2">&#34;Git: {0}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;git error&#34;</span><span class="p">:</span> <span class="s2">&#34;Git 오류&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dist/askpass-main&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;missOrInvalid&#34;</span><span class="p">:</span> <span class="s2">&#34;자격 증명이 없거나 잘못되었습니다.&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/vscode/">VScode</a>
+        
+            <a href="/tags/git/">Git</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>UX Lab Team in RSN Co.,Ltd</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "rsn-ux-lab" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }     
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+  <section class="copyright">
+    &copy;  2020 -  2022 RSN UX_Lab Blog
+  </section>
+
+  <section class="powerby">
+    Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+    Designed by <a href="https://www.realsn.com/" target="_blank" rel="noopener">UX Lab Team in RSN Co.,Ltd</a>
+  </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

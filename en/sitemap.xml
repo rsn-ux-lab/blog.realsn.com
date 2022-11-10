@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.realsn.com/</loc>
-    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
+    <lastmod>2022-11-10T06:21:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -15,24 +15,14 @@
                 href="https://blog.realsn.com/"
                 />
   </url><url>
-    <loc>https://blog.realsn.com/categories/</loc>
-    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.realsn.com/ko/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.realsn.com/categories/"
-                />
+    <loc>https://blog.realsn.com/tags/git/</loc>
+    <lastmod>2022-11-10T06:21:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/post/</loc>
-    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
+    <lastmod>2022-11-10T06:21:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/tags/</loc>
-    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
+    <lastmod>2022-11-10T06:21:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -44,20 +34,24 @@
                 href="https://blog.realsn.com/tags/"
                 />
   </url><url>
-    <loc>https://blog.realsn.com/p/test/</loc>
-    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/%EC%86%A1%EC%A0%951/</loc>
-    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/%EC%86%A1%EC%A0%952/</loc>
-    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/categories/%EC%86%A1%EC%A0%953/</loc>
-    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.realsn.com/tags/vscode/</loc>
+    <lastmod>2022-11-10T06:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/p/vscode%EC%97%90%EC%84%9C-git-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%84%A4%EC%A0%95%EA%B0%92-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/</loc>
+    <lastmod>2022-11-10T06:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/categories/</loc>
     <lastmod>2022-11-03T06:21:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.realsn.com/ko/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.realsn.com/categories/"
+                />
   </url><url>
     <loc>https://blog.realsn.com/categories/vscode/</loc>
     <lastmod>2022-11-03T06:21:00+00:00</lastmod>
