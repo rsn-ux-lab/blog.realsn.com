@@ -41,7 +41,7 @@
     <lastmod>2022-11-10T06:21:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/categories/</loc>
-    <lastmod>2022-11-03T06:21:00+00:00</lastmod>
+    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -52,6 +52,21 @@
                 hreflang="en"
                 href="https://blog.realsn.com/categories/"
                 />
+  </url><url>
+    <loc>https://blog.realsn.com/tags/intersectionobserver/</loc>
+    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/tags/js/</loc>
+    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/categories/js/</loc>
+    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/tags/js-api/</loc>
+    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/p/js-intersectionobserver/</loc>
+    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/categories/vscode/</loc>
     <lastmod>2022-11-03T06:21:00+00:00</lastmod>

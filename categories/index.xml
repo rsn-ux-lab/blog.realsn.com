@@ -6,7 +6,15 @@
         <description>Recent content in Categories on RSN UX_Lab Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Thu, 03 Nov 2022 06:21:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 10 Nov 2022 00:26:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>JS</title>
+        <link>https://blog.realsn.com/categories/js/</link>
+        <pubDate>Thu, 10 Nov 2022 00:26:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/categories/js/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>VScode</title>
         <link>https://blog.realsn.com/categories/vscode/</link>
         <pubDate>Thu, 03 Nov 2022 06:21:00 +0000</pubDate>

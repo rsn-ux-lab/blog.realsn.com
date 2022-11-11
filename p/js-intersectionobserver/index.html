@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='내용'><title>JS IntersectionObserver</title>
+
+<link rel='canonical' href='https://blog.realsn.com/p/js-intersectionobserver/'>
+
+<link rel="stylesheet" href="/scss/style.min.1bfc2e58cc2fa8395412d3ee4a9cedef336f47ca1a4c3da990845b10a2b2f0c0.css"><meta property='og:title' content='JS IntersectionObserver'>
+<meta property='og:description' content='내용'>
+<meta property='og:url' content='https://blog.realsn.com/p/js-intersectionobserver/'>
+<meta property='og:site_name' content='RSN UX_Lab Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='JS' /><meta property='article:tag' content='JS API' /><meta property='article:tag' content='IntersectionObserver' /><meta property='article:published_time' content='2022-11-10T00:26:00&#43;00:00'/><meta property='article:modified_time' content='2022-11-10T00:26:00&#43;00:00'/><meta property='og:image' content='https://blog.realsn.com/p/js-intersectionobserver/thumb.png' />
+<meta name="twitter:title" content="JS IntersectionObserver">
+<meta name="twitter:description" content="내용"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://blog.realsn.com/p/js-intersectionobserver/thumb.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huc5370c2022e964866f8cc6f529b81b88_10404_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">RSN UX_Lab Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+         
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/js-intersectionobserver/">
+                <img src="/p/js-intersectionobserver/thumb_hu232e2de08a6578f5ceeb8c7a53e589a1_41476_800x0_resize_box_3.png"
+                        srcset="/p/js-intersectionobserver/thumb_hu232e2de08a6578f5ceeb8c7a53e589a1_41476_800x0_resize_box_3.png 800w, /p/js-intersectionobserver/thumb_hu232e2de08a6578f5ceeb8c7a53e589a1_41476_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post JS IntersectionObserver" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">    
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/js-intersectionobserver/">JS IntersectionObserver</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            내용
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2022년 11월 10일 / 00시 26분</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+            
+            <div id="name">작성자 : 송정</div>
+    </footer>
+    
+    
+    <header class="article-category">
+        
+            <a href="/categories/js/" >
+                JS
+            </a>
+        
+    </header>
+    
+    <hr>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="intersectionobserver-api">IntersectionObserver API</h2>
+<p>IntersectionObserver API 는 브라우저의 <strong>Viewport</strong>와, <strong>지정한 요소 (Element)의 교차점</strong>을 관찰하는 기능을 제공합니다. 교차점을 감지해 &lsquo;원하는 위치&rsquo;에 &lsquo;지정한 요소가 노출되고있는지&rsquo;를 확인 가능하며, callback을 통해 기능을 연결 할 수 있습니다.
+mdn문서에 따르면, 웹이 성숙해짐과 동시에 퍼포먼스를 챙기며 필요한 기능들을 구현하기 위해서는 IntersectionObserver API가 필요하다고 말합니다.
+예를 들어 무한 스크롤로 더 많은 콘텐츠가 로드되고 렌더링 되는 웹사이트를 만든다거나, 스크롤 시 노출시킬 컨텐츠 구현 등에서 많은 사용이 필요하겠죠.</p>
+<hr>
+<h3 id="addeventlistenerscroll-과의-차이">addEventListener(&ldquo;scroll&rdquo;) 과의 차이</h3>
+<p>scroll 이벤트를 사용하는 것 보다, 해당 문서의 API를 이용해야하는 가장 중요한 이유는 브라우저의 부하를 고려, 한마디로 퍼포먼스를 고려한 스크립트를 위함입니다. mdn 문서 뿐만 아니라, 해당 API를 소개하는 글에서는 입을 모아 말하는 이슈인것 같구요.</p>
+<blockquote>
+<p>과거에 교차 감지를 구현하려면 Element.getBoundingClientRect()영향을 받는 모든 요소에 필요한 정보를 구축하는 것과 같은 메서드를 호출하는 이벤트 핸들러 및 루프가 필요했습니다. 이 코드는 모두 메인 스레드에서 실행되기 때문에 이 중 하나라도 성능 문제를 일으킬 수 있습니다. 사이트에 이러한 테스트가 로드되면 상황이 완전히 나빠질 수 있습니다.</p>
+</blockquote>
+<p>MDN의 해당 API 소개글에 나온 위 내용과 같이 기존의 <em>addEventListener 를 통한 &ldquo;scroll&rdquo; 이벤트</em>를 사용할 경우, 메인 스레드에서의 재실행이 반복됨으로서 렌더링 성능이나 이벤트 연속 호출과 같은 문제가 발생합니다. 이와같은 치명적인 허점을 보완하기 위해 나온 JS API가 IntersectionObserver API 입니다. 무엇보다 메인 스레드에서의 실행이 아닌, 브라우저를 감지 후 특정 시점에서 비동기로 실행이 되는 덕에 웹 퍼포먼스에서의 상당한 이득을 볼 수 있습니다.</p>
+<hr>
+<h3 id="intersectionobserver-사용방법">IntersectionObserver 사용방법</h3>
+<p>해당 API 사용시 필요한 내용들입니다.</p>
+<blockquote>
+<ol>
+<li>이벤트를 실행시킬 element</li>
+<li>Observer API 에 사용할 options<br>
+2-1) 지정될 ViewPort<br>
+2-2) Viewport에서의 Margin값 ( ViewPort 크기를 임의로 늘이거나, 줄임 )<br>
+2-3) Viewport와 엘리먼트의 교차가 몇 %이어야 API가 감지를 실행하는지에 대한 값.</li>
+<li>API 선언</li>
+</ol>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">root</span><span class="o">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#scrollArea&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// default: null
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="nx">rootMargin</span><span class="o">:</span> <span class="s1">&#39;0px&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 상단 내용에서 말한 2-2, Viewport의 마진값 지정으로
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// Viewport의 크기를 늘이거나 줄일수 있습니다.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// ★ 단위값 ( px || % )가 필수임.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="nx">threshold</span><span class="o">:</span> <span class="mf">1.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 상단 내용 2-3, 엘리먼트 백분율 기준 Viewport와의 교차정도를 지정할수 있음.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// ex ) threshold: 1.0 == 100% 교차
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// ex ) threshold: 0.5 == 50% 교차
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// ★ 1 이상의 값은 정의 불가
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">observer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IntersectionObserver</span><span class="p">(</span><span class="nx">callback</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// API 생성, 지정한 옵션값을 토대로 브라우저를 감지하며, 감지 될 경우 callback 함수 실행
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="observe-대상-지정하기">observe 대상 지정하기</h4>
+<p>먼저 Viewport안에 노출되고있는지 확인하고싶은 대상 엘리먼트를 선언해보고자 합니다. 바로 위 코드블럭의 18번째 줄을 그대로 사용한 후, observe시킬 대상을 연결합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">observer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IntersectionObserver</span><span class="p">(</span><span class="nx">callback</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">observer</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="s1">&#39;대상 엘리먼트&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>새로 API를 선언한 후 변수에 담은 후, 그 뒤에 다시 observe 를 연결하여 대상 엘리먼트를 연결합니다. 현재 options 값과 callback시킬 함수가 없어 작동되지 않고 있지만요.
+포스팅의 threshold 에서 테스트용 엘리먼트를 불러올 예정입니다.</p>
+<h4 id="options-값의-rootmargin">options 값의 rootMargin</h4>
+<p>기본적으로 <strong>px</strong> 또는 <strong>%</strong> 값이 필수로 들어가야합니다.<br>
+css - margin 과 유사한 속성으로 선언이 가능하며, 지정한 값 만큼 Viewport를 늘이거나 줄일 수 있습니다.
+해당 페이지를 예로 들어보겠습니다.</p>
+<p><img src="/p/js-intersectionobserver/default_viewport.png"
+	width="1232"
+	height="1057"
+	srcset="/p/js-intersectionobserver/default_viewport_hu07f9a5af71d262028eb65fd3d0a095d4_132210_480x0_resize_box_3.png 480w, /p/js-intersectionobserver/default_viewport_hu07f9a5af71d262028eb65fd3d0a095d4_132210_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="기본 viewport"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="116"
+		data-flex-basis="279px"
+	
+></p>
+<p><code>options.rootMargin</code> 값을 &lsquo;0px&rsquo; 또는 &lsquo;0%&lsquo;로 지정했을 때의 Viewport 영역입니다.</p>
+<p><img src="/p/js-intersectionobserver/rootMargin0_0_150_0.png"
+	width="1616"
+	height="1290"
+	srcset="/p/js-intersectionobserver/rootMargin0_0_150_0_hu1bce2a2642eb047566c3301a20d122e5_195851_480x0_resize_box_3.png 480w, /p/js-intersectionobserver/rootMargin0_0_150_0_hu1bce2a2642eb047566c3301a20d122e5_195851_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="rootMargin: 0px 0px 150px 0px 적용시"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="125"
+		data-flex-basis="300px"
+	
+></p>
+<p><code>options.rootMargin</code> 값을 &lsquo;0px 0px 150px 0px&rsquo; 로 지정했을 때의 Viewport 영역입니다.
+보이는것처럼, 기존 Viewport의 화면보다 지정한 값 만큼 viewport가 늘어나게 됩니다.</p>
+<p><img src="/p/js-intersectionobserver/rootMargin0_0_150_-200.png"
+	width="1616"
+	height="1290"
+	srcset="/p/js-intersectionobserver/rootMargin0_0_150_-200_hu95baaadac9f6a5c88afccde56a3795a9_205925_480x0_resize_box_3.png 480w, /p/js-intersectionobserver/rootMargin0_0_150_-200_hu95baaadac9f6a5c88afccde56a3795a9_205925_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="rootMargin: 0px 0px 150px 0px 적용시"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="125"
+		data-flex-basis="300px"
+	
+></p>
+<p><code>options.rootMargin</code> 값을 &lsquo;0px 0px 150px -200px&rsquo; 로 지정했을 때의 Viewport 영역입니다.
+마찬가지로, 기존 Viewport상에서 -200px 만큼 빠진 영역이 Viewport가 됩니다.</p>
+<p>실전에서 예를 들어보자면, 저는 해당 기술을 사용하면서 브라우저의 가운데만을 Viewport로 삼은 후
+지정한 엘리먼트가 <code>브라우저의 가운데 영역과 완전히 겹쳤을 때 Observer 실행이 이루어지는 기능</code>을 구현하고싶었습니다.
+그러기 위해서는 Viewport의 위치를 먼저 지정해줘야했고, 가장 자연스러운 위치를 계산한 결과 나온 Viewport 의 영역은</p>
+<p><img src="/p/js-intersectionobserver/rootMargin-25_0_-25_0.png"
+	width="1652"
+	height="1098"
+	srcset="/p/js-intersectionobserver/rootMargin-25_0_-25_0_hu108a038bd4f7191de1f59a41f6fb7293_218746_480x0_resize_box_3.png 480w, /p/js-intersectionobserver/rootMargin-25_0_-25_0_hu108a038bd4f7191de1f59a41f6fb7293_218746_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Viewport를 페이지의 가운데 영역으로만 잡고 싶을 경우"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="361px"
+	
+></p>
+<p><code>rootMargin: '-25% 0% -25% 0%'</code> 해당 사진과 같은 Viewport 입니다.</p>
+<p><img src="/p/js-intersectionobserver/rootMarginConsole.png"
+	width="1605"
+	height="1057"
+	srcset="/p/js-intersectionobserver/rootMarginConsole_hud428add2b3a950749934ae097a568a43_404118_480x0_resize_box_3.png 480w, /p/js-intersectionobserver/rootMarginConsole_hud428add2b3a950749934ae097a568a43_404118_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Viewport를 페이지의 가운데 영역으로 잡았을 때 - 콘솔 확인"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="151"
+		data-flex-basis="364px"
+	
+></p>
+<p>계산과 같이 Viewport의 height 값이 472px 로 잘 잡혀주었습니다.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<hr>
+<h4 id="options-값의-threshold">options 값의 threshold</h4>
+<p>위 rootMargin에 의해 세팅된 <strong>Viewport 영역</strong>과 <strong>observe 시킨 대상 엘리먼트</strong>가 얼마나 겹쳤을때 감지가 이뤄지는지를 설정할 수 있습니다.
+1을 100%로 계산하며, <strong>1 초과, 0 미만의 수는 사용할 수 없습니다.</strong> (에러가 뜹니다!)<br>
+[observe 대상 지정하기]에서 말했던 것 처럼, 겹침 대상 감지 엘리먼트를 아래처럼 위 상단의 타이틀 이미지라고 가정해봅시다.</p>
+<p><img src="/p/js-intersectionobserver/threshold.png"
+	width="1232"
+	height="1057"
+	srcset="/p/js-intersectionobserver/threshold_hu1d87a7c565281f187e8df51ece4e1540_142103_480x0_resize_box_3.png 480w, /p/js-intersectionobserver/threshold_hu1d87a7c565281f187e8df51ece4e1540_142103_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="지정할 엘리먼트."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="116"
+		data-flex-basis="279px"
+	
+></p>
+<p>해당 엘리먼트를 아래와 같이 observe 시킵니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">observer</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.article-image&#39;</span><span class="p">));</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>options.threshold</code> 를 <code>1</code>로 지정했을때,
+엘리먼트의 100% 영역이 Viewport와 겹쳐야만 API가 옵저버 실행을 성공할것입니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">threshold</span><span class="o">:</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/js-intersectionobserver/threshold_1.png"
+	width="1232"
+	height="1057"
+	srcset="/p/js-intersectionobserver/threshold_1_hue916bf4cb67cefbe6d3dd663ccd0e39a_122526_480x0_resize_box_3.png 480w, /p/js-intersectionobserver/threshold_1_hue916bf4cb67cefbe6d3dd663ccd0e39a_122526_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="threshold를 1로 지정했을 때"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="116"
+		data-flex-basis="279px"
+	
+></p>
+<p>사진과 같이 엘리먼트가 100% Viewport와 겹쳤을 경우부터 옵저버가 실행됩니다. 다음으로는 0.5를 확인해보겠습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">threshold</span><span class="o">:</span> <span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/js-intersectionobserver/threshold_0.5.png"
+	width="1232"
+	height="1057"
+	srcset="/p/js-intersectionobserver/threshold_0.5_huc45fb4092b68306a016fac0546a9732e_126737_480x0_resize_box_3.png 480w, /p/js-intersectionobserver/threshold_0.5_huc45fb4092b68306a016fac0546a9732e_126737_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="threshold를 0.5로 지정했을 때"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="116"
+		data-flex-basis="279px"
+	
+></p>
+<p>엘리먼트가 50% Viewport와 겹치게 된 순간부터 옵저버가 실행됩니다.</p>
+<p>이 다음은 <code>threshold</code> 를 <code>0</code>으로 지정했을 때 입니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">threshold</span><span class="o">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/js-intersectionobserver/threshold_0.png"
+	width="1232"
+	height="1057"
+	srcset="/p/js-intersectionobserver/threshold_0_hufc173a8df243f002ff71cabf2d4a7679_133345_480x0_resize_box_3.png 480w, /p/js-intersectionobserver/threshold_0_hufc173a8df243f002ff71cabf2d4a7679_133345_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="threshold를 0으로 지정했을 때"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="116"
+		data-flex-basis="279px"
+	
+></p>
+<p>위와 같이 <strong>viewport와 지정 엘리먼트가 닿는 지점</strong>부터 옵저버가 실행됩니다.</p>
+<p><code>options.threshold</code> 는 이 뿐만 아니라, array 를 통해 연속 실행도 가능하도록 세팅이 가능합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">threshold</span><span class="o">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>예를 들어 값을 <code>[0, 0.3, 1]</code>로 지정하였을 경우, threshold 감지 실행 기준이 0 일때, 0.3일 때, 1일 때를 기준으로 한번 씩 옵저버를 실행해줍니다.</p>
+<h2 id="테스트">테스트!</h2>
+<p>해당 포스트에서 사용한 IntersectionObserver API의 예시입니다.<br>
+콘솔창에 그대로 복붙하면 감지가 이뤄지는 기준을 확인할수 있습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.article-header&#39;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">paddingTop</span> <span class="o">=</span> <span class="s1">&#39;1000px&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">viewportDiv</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">viewportDiv</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="s1">&#39;50%&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">viewportDiv</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="s1">&#39;100%&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">viewportDiv</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">position</span> <span class="o">=</span> <span class="s1">&#39;fixed&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">viewportDiv</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">top</span> <span class="o">=</span> <span class="s1">&#39;25%&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">viewportDiv</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">viewportDiv</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span> <span class="o">=</span> <span class="s1">&#39;lightgoldenrodyellow&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">viewportDiv</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">opacity</span> <span class="o">=</span> <span class="s1">&#39;0.5&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">viewportDiv</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;가상 VIEWPORT - 동적으로 움직이지 않습니다.&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">viewportDiv</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.article-header&#39;</span><span class="p">).</span><span class="nx">focus</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.article-header&#39;</span><span class="p">).</span><span class="nx">scrollIntoView</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">observer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IntersectionObserver</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nx">obs</span><span class="p">,</span> <span class="nx">ins</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 설정값에 맞춰서 감지 후 실행할 때 타는 영역.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;감지!&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obs</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//options
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">root</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">rootMargin</span><span class="o">:</span> <span class="s1">&#39;-25% 0% -25% 0%&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">threshold</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">observer</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.article-image&#39;</span><span class="p">));</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="entries">entries</h2>
+<p><code>IntersectionObserver</code> 감지 실행 후 작동하는 callback을 통해 인스턴스에서 제공하는 기능들을 사용 가능합니다.</p>
+<blockquote>
+<p><strong>boundingClientRect</strong>: 관찰 대상의 사각형 정보<br>
+<strong>intersectionRect</strong>: 관찰 대상의 교차 영역 정보<br>
+<strong>intersectionRatio</strong>: 관찰 대상의 교차한 영역 백분율<br>
+<strong>isIntersecting</strong>: 관찰 대상의 교차 상태(Boolean)<br>
+<strong>rootBounds</strong>: 지정한 루트 요소의 사각형 정보(DOMRectReadOnly)<br>
+<strong>target</strong>: 관찰 대상 요소(Element)<br>
+<strong>time</strong>: 변경이 발생한 시간 정보(DOMHighResTimeStamp)</p>
+</blockquote>
+<h2 id="작업을-하며-느낀-장점">작업을 하며 느낀 장점</h2>
+<blockquote>
+<ol>
+<li>★ 브라우저가 리사이징 될 때의 값도 계산하여 Viewport 영역과 height를 함께 API 인스턴스에서 받아볼수 있음이 큰 장점.</li>
+<li>scroll 이벤트를 사용할 때에는 항상 퍼포먼스 이슈를 염두에 두고 작업해야했는데, 그보다 훨씬 가벼운 형태로 똑같은 기능을 구현할 수 있는 점이 큰 장점.</li>
+<li>인스턴스에서 entries를 통해 정보값을 얻어오기 편함. (따로 엘리먼트를 선언해서, 그 값을 가져오지않아도 됨.)</li>
+<li>교차가 제대로 이루어졌는지에 대해 Boolean값으로 확인 가능함.</li>
+</ol>
+</blockquote>
+<h2 id="참고문서">참고문서</h2>
+<p><a class="link" href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"  target="_blank" rel="noopener"
+    >https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API</a><br>
+<a class="link" href="http://blog.hyeyoonjung.com/2019/01/09/intersectionobserver-tutorial/"  target="_blank" rel="noopener"
+    >http://blog.hyeyoonjung.com/2019/01/09/intersectionobserver-tutorial/</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/js/">JS</a>
+        
+            <a href="/tags/js-api/">JS API</a>
+        
+            <a href="/tags/intersectionobserver/">IntersectionObserver</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>UX Lab Team in RSN Co.,Ltd</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "rsn-ux-lab" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }     
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+  <section class="copyright">
+    &copy;  2020 -  2022 RSN UX_Lab Blog
+  </section>
+
+  <section class="powerby">
+    Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+    Designed by <a href="https://www.realsn.com/" target="_blank" rel="noopener">UX Lab Team in RSN Co.,Ltd</a>
+  </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives" >
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#intersectionobserver-api">IntersectionObserver API</a>
+      <ol>
+        <li><a href="#addeventlistenerscroll-과의-차이">addEventListener(&ldquo;scroll&rdquo;) 과의 차이</a></li>
+        <li><a href="#intersectionobserver-사용방법">IntersectionObserver 사용방법</a>
+          <ol>
+            <li><a href="#observe-대상-지정하기">observe 대상 지정하기</a></li>
+            <li><a href="#options-값의-rootmargin">options 값의 rootMargin</a></li>
+            <li><a href="#options-값의-threshold">options 값의 threshold</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#테스트">테스트!</a></li>
+    <li><a href="#entries">entries</a></li>
+    <li><a href="#작업을-하며-느낀-장점">작업을 하며 느낀 장점</a></li>
+    <li><a href="#참고문서">참고문서</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
