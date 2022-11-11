@@ -40,6 +40,12 @@
     <loc>https://blog.realsn.com/p/vscode%EC%97%90%EC%84%9C-git-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%84%A4%EC%A0%95%EA%B0%92-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/</loc>
     <lastmod>2022-11-10T06:21:00+00:00</lastmod>
   </url><url>
+    <loc>https://blog.realsn.com/tags/api/</loc>
+    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/categories/browser-api/</loc>
+    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.realsn.com/categories/</loc>
     <lastmod>2022-11-10T00:26:00+00:00</lastmod>
     <xhtml:link
@@ -53,19 +59,13 @@
                 href="https://blog.realsn.com/categories/"
                 />
   </url><url>
+    <loc>https://blog.realsn.com/p/intersection-observer-api/</loc>
+    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.realsn.com/tags/intersectionobserver/</loc>
     <lastmod>2022-11-10T00:26:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/tags/js/</loc>
-    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/categories/js/</loc>
-    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/js-api/</loc>
-    <lastmod>2022-11-10T00:26:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/p/js-intersectionobserver/</loc>
     <lastmod>2022-11-10T00:26:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/categories/vscode/</loc>

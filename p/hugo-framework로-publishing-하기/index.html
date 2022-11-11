@@ -5,7 +5,7 @@
 
 <link rel='canonical' href='https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/'>
 
-<link rel="stylesheet" href="/scss/style.min.1bfc2e58cc2fa8395412d3ee4a9cedef336f47ca1a4c3da990845b10a2b2f0c0.css"><meta property='og:title' content='Hugo Framework로 Publishing 하기'>
+<link rel="stylesheet" href="/scss/style.min.28c49f738a55ce8024ab4740a41077d4c7e1edf2554ee5f0e68da477b8567176.css"><meta property='og:title' content='Hugo Framework로 Publishing 하기'>
 <meta property='og:description' content='Hugo로 Publishing Resource 만들기 위한 Project Set-up과정'>
 <meta property='og:url' content='https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/'>
 <meta property='og:site_name' content='RSN UX_Lab Blog'>
@@ -248,15 +248,6 @@
 <main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/">
-                
-                    <img src="/thumb.png" loading="lazy" alt="Featured image of post Hugo Framework로 Publishing 하기" onerror="this.onerror=null; this.src='/img/404_thumb.png';" />
-                
-            </a>
-        </div>
-    
-
     <div class="article-details">    
     <div class="article-title-wrapper">
         <h2 class="article-title">
@@ -314,9 +305,17 @@
         
     </header>
     
-    <hr>
+    
     
 </div>
+        <div class="article-image">
+            <a href="/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/">
+                
+                    <img src="/thumb.png" loading="lazy" alt="Featured image of post Hugo Framework로 Publishing 하기" onerror="this.onerror=null; this.src='/img/404_thumb.png';" />
+                
+            </a>
+        </div>
+        
 </header>
 
     <section class="article-content">
@@ -588,8 +587,15 @@ _ Webpack으로 bundling 할 resource 중 <code>_.scss</code>파일을 저장합
         background-color: var(--card-background);
         border-radius: var(--card-border-radius);
         box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
+        padding: var(--card-padding);                
     }     
+
+    @media (min-width: 2048px) {
+        .disqus-container {            
+            max-width: 1700px;
+            margin: 0 6vw 0 14vw;
+        }
+    }
 </style>
 
 <script>
@@ -606,7 +612,7 @@ _ Webpack으로 bundling 할 resource 중 <code>_.scss</code>파일을 저장합
 
     <footer class="site-footer">
   <section class="copyright">
-    &copy;  2020 -  2022 RSN UX_Lab Blog
+    &copy;  2022 RSN UX_Lab Blog
   </section>
 
   <section class="powerby">

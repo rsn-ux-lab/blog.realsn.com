@@ -5,7 +5,7 @@
 
 <link rel='canonical' href='https://blog.realsn.com/about/'>
 
-<link rel="stylesheet" href="/scss/style.min.1bfc2e58cc2fa8395412d3ee4a9cedef336f47ca1a4c3da990845b10a2b2f0c0.css"><meta property='og:title' content='About'>
+<link rel="stylesheet" href="/scss/style.min.28c49f738a55ce8024ab4740a41077d4c7e1edf2554ee5f0e68da477b8567176.css"><meta property='og:title' content='About'>
 <meta property='og:description' content='소개요약'>
 <meta property='og:url' content='https://blog.realsn.com/about/'>
 <meta property='og:site_name' content='RSN UX_Lab Blog'>
@@ -247,7 +247,6 @@
 <main class="main full-width">
     <article class="main-article">
     <header class="article-header">
-
     <div class="article-details">    
     <div class="article-title-wrapper">
         <h2 class="article-title">
@@ -297,9 +296,9 @@
     </footer>
     
     
-    <hr>
     
-</div>
+    
+</div>    
 </header>
 
     <section class="article-content">
@@ -368,8 +367,15 @@
         background-color: var(--card-background);
         border-radius: var(--card-border-radius);
         box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
+        padding: var(--card-padding);                
     }     
+
+    @media (min-width: 2048px) {
+        .disqus-container {            
+            max-width: 1700px;
+            margin: 0 6vw 0 14vw;
+        }
+    }
 </style>
 
 <script>
@@ -386,7 +392,7 @@
 
     <footer class="site-footer">
   <section class="copyright">
-    &copy;  2020 -  2022 RSN UX_Lab Blog
+    &copy;  2022 RSN UX_Lab Blog
   </section>
 
   <section class="powerby">
