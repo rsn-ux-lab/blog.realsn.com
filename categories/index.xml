@@ -6,7 +6,31 @@
         <description>Recent content in Categories on RSN UX_Lab Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Fri, 11 Nov 2022 00:26:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 13 Nov 2022 13:50:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>JS</title>
+        <link>https://blog.realsn.com/categories/js/</link>
+        <pubDate>Sun, 13 Nov 2022 13:50:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/categories/js/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>plugin</title>
+        <link>https://blog.realsn.com/categories/plugin/</link>
+        <pubDate>Sun, 13 Nov 2022 13:50:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/categories/plugin/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>기술세미나</title>
+        <link>https://blog.realsn.com/categories/%EA%B8%B0%EC%88%A0%EC%84%B8%EB%AF%B8%EB%82%98/</link>
+        <pubDate>Sun, 13 Nov 2022 13:50:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/categories/%EA%B8%B0%EC%88%A0%EC%84%B8%EB%AF%B8%EB%82%98/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Browser API</title>
         <link>https://blog.realsn.com/categories/browser-api/</link>
         <pubDate>Fri, 11 Nov 2022 00:26:00 +0000</pubDate>
