@@ -12,7 +12,7 @@
         <pubDate>Sun, 13 Nov 2022 13:50:00 +0000</pubDate>
         
         <guid>https://blog.realsn.com/p/js-prototype/</guid>
-        <description>&lt;img src="https://blog.realsn.com/thumb.png" alt="Featured image of post JS Prototype" /&gt;&lt;h2 id=&#34;prototype-이란&#34;&gt;Prototype 이란?&lt;/h2&gt;
+        <description>&lt;img src="https://blog.realsn.com/p/js-prototype/thumb.png" alt="Featured image of post JS Prototype" /&gt;&lt;h2 id=&#34;prototype-이란&#34;&gt;Prototype 이란?&lt;/h2&gt;
 &lt;p&gt;prototype 단어의 뜻은 &lt;strong&gt;원형&lt;/strong&gt;이라는 뜻을 가지고 있다. 실제로 우리는 시제품, 견본 등의 의미로 사용되며, JS에서 Prototype은 &lt;em&gt;자신을 만들어낸 객체의 원형&lt;/em&gt;을 뜻한다.&lt;/p&gt;
 &lt;h3 id=&#34;쉽게-풀어서-설명한다면&#34;&gt;쉽게 풀어서 설명한다면?&lt;/h3&gt;
 &lt;ul&gt;
