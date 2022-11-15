@@ -28,7 +28,22 @@
                 href="https://blog.realsn.com/categories/"
                 />
   </url><url>
+    <loc>https://blog.realsn.com/tags/postcss/</loc>
+    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/categories/postcss/</loc>
+    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/p/postcss/</loc>
+    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.realsn.com/post/</loc>
+    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/tags/setting/</loc>
+    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/categories/setting/</loc>
     <lastmod>2022-11-14T08:21:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/tags/shell/</loc>
@@ -57,6 +72,12 @@
     <lastmod>2022-11-14T08:21:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/categories/%EA%B8%B0%EC%88%A0%EC%84%B8%EB%AF%B8%EB%82%98/</loc>
+    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/tags/%EC%9B%90%EC%9C%A0%EB%B9%88/</loc>
+    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/p/%EC%B4%88%EA%B8%B0-setting/</loc>
     <lastmod>2022-11-14T08:21:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/tags/%EC%B5%9C%EC%9E%AC%EC%98%81/</loc>

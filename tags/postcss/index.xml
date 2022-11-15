@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PostCSS on RSN UX_Lab Blog</title>
+        <link>https://blog.realsn.com/tags/postcss/</link>
+        <description>Recent content in PostCSS on RSN UX_Lab Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ko</language>
+        <lastBuildDate>Mon, 14 Nov 2022 08:21:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/tags/postcss/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>PostCSS</title>
+        <link>https://blog.realsn.com/p/postcss/</link>
+        <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/p/postcss/</guid>
+        <description>&lt;img src="https://blog.realsn.com/p/postcss/thumb.png" alt="Featured image of post PostCSS" /&gt;&lt;h2 id=&#34;postcss-이란&#34;&gt;PostCSS 이란?&lt;/h2&gt;
+&lt;p&gt;PostCSS는 JS플러그인을 사용하여 CSS를 변환시키는 툴입니다. 
+CSS 컴파일 틀 언어인 Sass, Less와 달리 CSS 도구 개발을 위한 프레임 워크입니다.
+Sass, Less와 달리 후처리기입니다.&lt;/p&gt;
+&lt;h2 id=&#34;postcss의-장점&#34;&gt;PostCSS의 장점&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;플러그인이 다양합니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Sass나 Less처럼 제공하는 문법이 정해져있지 않아 다양하게 튜닝하여 사용이 가능합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;모듈화가 가능합니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;세부적인 className을 작성하여 사용해야했지만, PostCSS의 모듈화를 사용하면 동일한 className을 사용하더라도 오버라이팅을 방지할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Autoprefix 기능을 쓸 수 있습니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;fullscreen과 같은 상태 CSS를 쓰게 되면 Webkit과 마이크로소프트 브라우저 등과 호환이 되기 위해 Autoprefix를 계속 붙여줘야 하는데 PostCSS는 자동으로 Prefix 기능을 사용할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;postcss의-단점&#34;&gt;PostCSS의 단점&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;필요한 플러그인을 직접 찾아서 조립해야 합니다.&lt;/li&gt;
+&lt;li&gt;Sass나 Less에 비해 강력한 문법을 제공하지 않습니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;for문이나 함수 사용 불가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;사용자가 많지 않아, 플러그인 지원이 중단될 수 있습니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;PostCSS 샘플&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/* 상위 3개 항목 : 벤더 프리픽스 */
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;h1, h2, h3, h4, h5, h6&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -ms-hyphens : auto&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -moz-hyphens : auto&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -webkit-hyphens : auto&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    hypens : auto&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/* 전처리기 처리 방식 */
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@mixin hyphens&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -ms-hyphens : auto&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -moz-hyphens : auto&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -webkit-hyphens : auto&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    hyphens : &lt;span class=&#34;nv&#34;&gt;$value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;h1, h2, h3, h4, h5, h6&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    @include hyphens&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;auto&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/* PostCSS 사용 시 플러그인으로 자동 컴파일 */
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;h1, h2, h3, h4, h5, h6&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    hyphens : auto&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/postcss/arc.png&#34;
+	width=&#34;268&#34;
+	height=&#34;400&#34;
+	srcset=&#34;https://blog.realsn.com/p/postcss/arc_hu52476b72386be4af540132db87a037ef_13389_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/postcss/arc_hu52476b72386be4af540132db87a037ef_13389_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;아키텍쳐&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;67&#34;
+		data-flex-basis=&#34;160px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;아키텍쳐&lt;br&gt;
+&lt;code&gt;parser&lt;/code&gt; : css의 구문 분석을 담당하는 주요 구조&lt;br&gt;
+&lt;code&gt;stringifier&lt;/code&gt; : 수정된 부분을 순수 css문자열로 변환하는 기본 클래스&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;postcss-플러그인-사용법&#34;&gt;PostCSS 플러그인 사용법&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/postcss/postcss/blob/main/docs/plugins.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/postcss/postcss/blob/main/docs/plugins.md&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
