@@ -7,6 +7,38 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
         <lastBuildDate>Mon, 14 Nov 2022 08:21:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Figma</title>
+        <link>https://blog.realsn.com/tags/figma/</link>
+        <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/tags/figma/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>GIT</title>
+        <link>https://blog.realsn.com/tags/git/</link>
+        <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/tags/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>JAVA</title>
+        <link>https://blog.realsn.com/tags/java/</link>
+        <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/tags/java/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>PC</title>
+        <link>https://blog.realsn.com/tags/pc/</link>
+        <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/tags/pc/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>PostCSS</title>
         <link>https://blog.realsn.com/tags/postcss/</link>
         <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
@@ -15,19 +47,19 @@
         <description></description>
         </item>
         <item>
-        <title>Setting</title>
-        <link>https://blog.realsn.com/tags/setting/</link>
-        <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
-        
-        <guid>https://blog.realsn.com/tags/setting/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>Shell</title>
         <link>https://blog.realsn.com/tags/shell/</link>
         <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
         
         <guid>https://blog.realsn.com/tags/shell/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SVN</title>
+        <link>https://blog.realsn.com/tags/svn/</link>
+        <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/tags/svn/</guid>
         <description></description>
         </item>
         <item>
@@ -44,6 +76,14 @@
         <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
         
         <guid>https://blog.realsn.com/tags/%EC%9B%90%EC%9C%A0%EB%B9%88/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>주차등록</title>
+        <link>https://blog.realsn.com/tags/%EC%A3%BC%EC%B0%A8%EB%93%B1%EB%A1%9D/</link>
+        <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/tags/%EC%A3%BC%EC%B0%A8%EB%93%B1%EB%A1%9D/</guid>
         <description></description>
         </item>
         <item>
