@@ -12,8 +12,11 @@
         <pubDate>Wed, 19 Oct 2022 22:47:00 +0000</pubDate>
         
         <guid>https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/</guid>
-        <description>&lt;img src="https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/thumb.png" alt="Featured image of post Hugo Framework로 Publishing 하기" /&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+        <description>&lt;img src="https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/thumb.png" alt="Featured image of post Hugo Framework로 Publishing 하기" /&gt;&lt;!-- # 임시 문서 입니다!!!!
+
+&gt; 아래 내용을 정리하여 작성 예정입니다.
+
+--- --&gt;
 &lt;h2 class=&#34;toc1&#34; id=&#34;기초-구성&#34;&gt;기초 구성&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;h3 id=&#34;프로젝트-생성&#34;&gt;프로젝트 생성&lt;/h3&gt;
@@ -147,8 +150,13 @@ _ Webpack으로 bundling 할 resource 중 &lt;code&gt;_.scss&lt;/code&gt;파일�
 &lt;/li&gt;
 &lt;li&gt;작업시작&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ---
+
+## Webpack 설정 {.toc1}
+
+&gt; ### Hugo에서 Webpack을 이용하기 위한 준비
+&gt;
+&gt; ### npm scripts 정의 및 설명 --&gt;
 </description>
         </item>
         

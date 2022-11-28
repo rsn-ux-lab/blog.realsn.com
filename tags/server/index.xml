@@ -80,8 +80,8 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### 썸네일 이미지 --&gt;
+&lt;!-- ____ --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Hugo Framework를 선택한 이유에 대하여 간단하게 정리하여 작성하겠습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -100,7 +100,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### 목차 이미지 --&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;목차&#34;&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/h3&gt;
 &lt;ol&gt;
@@ -126,7 +126,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### Client Side와 Server Side의 간략한 설명 --&gt;
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;정의&lt;/strong&gt;
@@ -154,7 +154,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### Web Server와 Web Application Server의 간략한 설명 --&gt;
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;정의&lt;/strong&gt;
@@ -163,7 +163,7 @@
 &lt;li&gt;&lt;strong&gt;목적&lt;/strong&gt;
 &lt;code&gt;Web Server&lt;/code&gt;는 서버 측에 저장된 파일 중에서 HTML, CSS, JS, 이미지 등 상태가 변하지 않는 정적 리소스만을 사용자에게 반환할 수 있습니다.
 &lt;code&gt;Web Apllication Server&lt;/code&gt;는 Server Side언어로 만들어진 동적 리소스들을 정적 리소스로 변환하여 전달할 수 있습니다.
-&lt;!-- raw HTML omitted --&gt;
+ &lt;!-- - 예를 들어 DataBase나 Server측의 정보를 연동하여 보여주는 페이지라면 동적인 요소가 포함됨으로 해당 리소스들은 항상 같은 상태를 유지할 수 없기에 동적 리소스라고 합니다. --&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;처리 환경&lt;/strong&gt;
 &lt;code&gt;Web Server&lt;/code&gt;는 정적 리소스만을 취급하기 때문에 로컬 환경에서 테스트를 진행할 때에는 굳이 Web Server를 동작시킬 필요 없이 웹브라우저에서 단독으로 테스트가 가능합니다.
@@ -184,7 +184,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### 왜 Hugo Framework를 선택하였는지? --&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -249,7 +249,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### JSP와 Hugo로 만든 예시페이지 샘플 코드 --&gt;
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -290,7 +290,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### 해당 샘플 코드들의 실행 결과 --&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;위 화면은 상기 샘플코드를 실행했을 때의 결과이며, 2개의 코드 모두 결과는 동일합니다.&lt;/strong&gt;&lt;/p&gt;
@@ -310,7 +310,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### Hugo Framework의 Directory 구조와 반자동 배포 --&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Hugo Site의 폴더구조 및 반자동 배포&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;

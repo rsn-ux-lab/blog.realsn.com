@@ -2,172 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.realsn.com/</loc>
-    <lastmod>2022-11-15T08:21:00+00:00</lastmod>
+    <loc>https://blog.realsn.com/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://blog.realsn.com/ko/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.realsn.com/"
-                />
-  </url><url>
-    <loc>https://blog.realsn.com/categories/</loc>
-    <lastmod>2022-11-15T08:21:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.realsn.com/ko/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
                 href="https://blog.realsn.com/categories/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.realsn.com/en/categories/"
+                />
   </url><url>
-    <loc>https://blog.realsn.com/post/</loc>
-    <lastmod>2022-11-15T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/</loc>
-    <lastmod>2022-11-15T08:21:00+00:00</lastmod>
+    <loc>https://blog.realsn.com/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://blog.realsn.com/ko/tags/"
+                href="https://blog.realsn.com/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blog.realsn.com/tags/"
+                href="https://blog.realsn.com/en/"
                 />
   </url><url>
-    <loc>https://blog.realsn.com/tags/vue/</loc>
-    <lastmod>2022-11-15T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/categories/vue/</loc>
-    <lastmod>2022-11-15T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/p/vue-%EC%84%A4%EC%B9%98/</loc>
-    <lastmod>2022-11-15T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/%EA%B8%B0%EC%88%A0%EC%84%B8%EB%AF%B8%EB%82%98/</loc>
-    <lastmod>2022-11-15T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/categories/%EA%B8%B0%EC%88%A0%EC%84%B8%EB%AF%B8%EB%82%98/</loc>
-    <lastmod>2022-11-15T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/%EC%9B%90%EC%9C%A0%EB%B9%88/</loc>
-    <lastmod>2022-11-15T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/figma/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/git/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/java/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/pc/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/postcss/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/categories/postcss/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/p/postcss/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/shell/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/categories/shell/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/p/shell-script/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/svn/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/categories/%EC%8B%A0%EA%B7%9C-%EC%9E%85%EC%82%AC%EC%9E%90-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/%EC%A3%BC%EC%B0%A8%EB%93%B1%EB%A1%9D/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/p/%EC%B4%88%EA%B8%B0-%EC%9E%91%EC%97%85%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/%EC%B5%9C%EC%9E%AC%EC%98%81/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/js/</loc>
-    <lastmod>2022-11-13T13:50:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/categories/js/</loc>
-    <lastmod>2022-11-13T13:50:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/p/js-prototype/</loc>
-    <lastmod>2022-11-13T13:50:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/categories/plugin/</loc>
-    <lastmod>2022-11-13T13:50:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/api/</loc>
-    <lastmod>2022-11-11T00:26:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/categories/browser-api/</loc>
-    <lastmod>2022-11-11T00:26:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/p/intersection-observer-api/</loc>
-    <lastmod>2022-11-11T00:26:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/intersectionobserver/</loc>
-    <lastmod>2022-11-11T00:26:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/framework/</loc>
-    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/hugo/</loc>
-    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/categories/hugo/</loc>
-    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/</loc>
-    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/publishing/</loc>
-    <lastmod>2022-10-19T22:47:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/about/</loc>
-    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/page/</loc>
-    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/p/hugo-framework-%EC%84%A4%EC%B9%98/</loc>
-    <lastmod>2022-09-29T09:48:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/server/</loc>
-    <lastmod>2022-09-29T09:48:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/p/hugo-framework%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%98%EA%B2%8C-%EB%90%9C-%EC%9D%B4%EC%9C%A0/</loc>
-    <lastmod>2022-09-28T10:25:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/archives/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/links/</loc>
-  </url><url>
-    <loc>https://blog.realsn.com/search/</loc>
-  </url><url>
-    <loc>https://blog.realsn.com/categories/vscode/</loc>
+    <loc>https://blog.realsn.com/en/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.realsn.com/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.realsn.com/en/tags/"
+                />
   </url>
 </urlset>

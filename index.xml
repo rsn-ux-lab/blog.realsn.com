@@ -6,123 +6,7 @@
         <description>Recent content on RSN UX_Lab Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Tue, 15 Nov 2022 08:21:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Vue 설치</title>
-        <link>https://blog.realsn.com/p/vue-%EC%84%A4%EC%B9%98/</link>
-        <pubDate>Tue, 15 Nov 2022 08:21:00 +0000</pubDate>
-        
-        <guid>https://blog.realsn.com/p/vue-%EC%84%A4%EC%B9%98/</guid>
-        <description>&lt;img src="https://blog.realsn.com/p/vue-%EC%84%A4%EC%B9%98/thumb.png" alt="Featured image of post Vue 설치" /&gt;&lt;h2 id=&#34;nodejs-설치-npm&#34;&gt;Node.js 설치 (npm)&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nodejs.org/en/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://nodejs.org/en/&lt;/a&gt; OS에 맞게 node 설치&lt;/li&gt;
-&lt;li&gt;VSCode 터미널에서 Node.js 설치되었는지 확인&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;node -v
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/vue-%EC%84%A4%EC%B9%98/1.png&#34;
-	width=&#34;470&#34;
-	height=&#34;233&#34;
-	srcset=&#34;https://blog.realsn.com/p/vue-%EC%84%A4%EC%B9%98/1_huef83ca5087353a40e8b9dbc9752bc099_7472_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/vue-%EC%84%A4%EC%B9%98/1_huef83ca5087353a40e8b9dbc9752bc099_7472_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;결과 화면&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;201&#34;
-		data-flex-basis=&#34;484px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;vuejs-플러그인-설치&#34;&gt;Vue.js 플러그인 설치&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Vetur 설치&lt;/li&gt;
-&lt;li&gt;Prettier 설치
-&lt;img src=&#34;https://blog.realsn.com/p/vue-%EC%84%A4%EC%B9%98/2.png&#34;
-	width=&#34;908&#34;
-	height=&#34;233&#34;
-	srcset=&#34;https://blog.realsn.com/p/vue-%EC%84%A4%EC%B9%98/2_hu77aacf78db2ea705341ed9d717690eb0_35049_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/vue-%EC%84%A4%EC%B9%98/2_hu77aacf78db2ea705341ed9d717690eb0_35049_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Vetur&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;389&#34;
-		data-flex-basis=&#34;935px&#34;
-	
-&gt;
-&lt;img src=&#34;https://blog.realsn.com/p/vue-%EC%84%A4%EC%B9%98/3.png&#34;
-	width=&#34;959&#34;
-	height=&#34;239&#34;
-	srcset=&#34;https://blog.realsn.com/p/vue-%EC%84%A4%EC%B9%98/3_hue8e7be3784ea17f888be6b868b406240_45654_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/vue-%EC%84%A4%EC%B9%98/3_hue8e7be3784ea17f888be6b868b406240_45654_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Prettier&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;401&#34;
-		data-flex-basis=&#34;963px&#34;
-	
-&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;vue-cli-설치&#34;&gt;Vue CLI 설치&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;CLI는 터미널에서 명령어로 vue를 활용하기 위해 설치합니다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g @vue/cli
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;vue-프로젝트-생성&#34;&gt;Vue 프로젝트 생성&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;workspace로 사용할 폴더에 들어가서 git Bash를 엽니다.&lt;/li&gt;
-&lt;li&gt;해당 명령어로 Vue 프로젝트를 생성합니다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vue create vue_project
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;버전을 선택합니다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;vue-프로젝트-실행&#34;&gt;Vue 프로젝트 실행&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;VSCode에 생성한 프로젝트 넣고 터미널에서 프로젝트를 실행시킬 수 있습니다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run serve
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;해당 로컬로 접속합니다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;github-레파지토리-생성-후-연결&#34;&gt;Github 레파지토리 생성 후 연결&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Github 접속 후 레파지토리 생성&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        </item>
-        <item>
+        <lastBuildDate>Mon, 14 Nov 2022 08:21:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>PostCSS</title>
         <link>https://blog.realsn.com/p/postcss/</link>
         <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
@@ -979,8 +863,8 @@ css - margin 과 유사한 속성으로 선언이 가능하며, 지정한 값 �
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;계산과 같이 Viewport의 height 값이 472px 로 잘 잡혀주었습니다.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- 회사 데이터를 보여줘야하는 대시보드 특성덕에..고민끝에 `rootMargin: &#39;-25% 0% 0% 0%&#39;` 으로 변경하여
+노출될 컨텐츠 엘리먼트가 가운데 영역보다 밑으로 내려갈 경우에도 지정 이벤트가 꺼지지않도록 조정하였지만요. --&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;options-값의-threshold&#34;&gt;options 값의 threshold&lt;/h4&gt;
 &lt;p&gt;위 rootMargin에 의해 세팅된 &lt;strong&gt;Viewport 영역&lt;/strong&gt;과 &lt;strong&gt;observe 시킨 대상 엘리먼트&lt;/strong&gt;가 얼마나 겹쳤을때 감지가 이뤄지는지를 설정할 수 있습니다.
@@ -1217,8 +1101,11 @@ css - margin 과 유사한 속성으로 선언이 가능하며, 지정한 값 �
         <pubDate>Wed, 19 Oct 2022 22:47:00 +0000</pubDate>
         
         <guid>https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/</guid>
-        <description>&lt;img src="https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/thumb.png" alt="Featured image of post Hugo Framework로 Publishing 하기" /&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+        <description>&lt;img src="https://blog.realsn.com/p/hugo-framework%EB%A1%9C-publishing-%ED%95%98%EA%B8%B0/thumb.png" alt="Featured image of post Hugo Framework로 Publishing 하기" /&gt;&lt;!-- # 임시 문서 입니다!!!!
+
+&gt; 아래 내용을 정리하여 작성 예정입니다.
+
+--- --&gt;
 &lt;h2 class=&#34;toc1&#34; id=&#34;기초-구성&#34;&gt;기초 구성&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;h3 id=&#34;프로젝트-생성&#34;&gt;프로젝트 생성&lt;/h3&gt;
@@ -1352,8 +1239,13 @@ _ Webpack으로 bundling 할 resource 중 &lt;code&gt;_.scss&lt;/code&gt;파일�
 &lt;/li&gt;
 &lt;li&gt;작업시작&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ---
+
+## Webpack 설정 {.toc1}
+
+&gt; ### Hugo에서 Webpack을 이용하기 위한 준비
+&gt;
+&gt; ### npm scripts 정의 및 설명 --&gt;
 </description>
         </item>
         <item>
@@ -1363,8 +1255,24 @@ _ Webpack으로 bundling 할 resource 중 &lt;code&gt;_.scss&lt;/code&gt;파일�
         
         <guid>https://blog.realsn.com/about/</guid>
         <description>&lt;p&gt;본문내용&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!--
+Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+
+Hugo makes use of a variety of open source projects including:
+
+* https://github.com/yuin/goldmark
+* https://github.com/alecthomas/chroma
+* https://github.com/muesli/smartcrop
+* https://github.com/spf13/cobra
+* https://github.com/spf13/viper
+
+Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+
+Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+
+Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+
+Learn more and contribute on [GitHub](https://github.com/gohugoio). --&gt;
 </description>
         </item>
         <item>
@@ -1441,8 +1349,8 @@ _ Webpack으로 bundling 할 resource 중 &lt;code&gt;_.scss&lt;/code&gt;파일�
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### 썸네일 이미지 --&gt;
+&lt;!-- ____ --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Hugo Framework를 선택한 이유에 대하여 간단하게 정리하여 작성하겠습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1461,7 +1369,7 @@ _ Webpack으로 bundling 할 resource 중 &lt;code&gt;_.scss&lt;/code&gt;파일�
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### 목차 이미지 --&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;목차&#34;&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/h3&gt;
 &lt;ol&gt;
@@ -1487,7 +1395,7 @@ _ Webpack으로 bundling 할 resource 중 &lt;code&gt;_.scss&lt;/code&gt;파일�
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### Client Side와 Server Side의 간략한 설명 --&gt;
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;정의&lt;/strong&gt;
@@ -1515,7 +1423,7 @@ _ Webpack으로 bundling 할 resource 중 &lt;code&gt;_.scss&lt;/code&gt;파일�
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### Web Server와 Web Application Server의 간략한 설명 --&gt;
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;정의&lt;/strong&gt;
@@ -1524,7 +1432,7 @@ _ Webpack으로 bundling 할 resource 중 &lt;code&gt;_.scss&lt;/code&gt;파일�
 &lt;li&gt;&lt;strong&gt;목적&lt;/strong&gt;
 &lt;code&gt;Web Server&lt;/code&gt;는 서버 측에 저장된 파일 중에서 HTML, CSS, JS, 이미지 등 상태가 변하지 않는 정적 리소스만을 사용자에게 반환할 수 있습니다.
 &lt;code&gt;Web Apllication Server&lt;/code&gt;는 Server Side언어로 만들어진 동적 리소스들을 정적 리소스로 변환하여 전달할 수 있습니다.
-&lt;!-- raw HTML omitted --&gt;
+ &lt;!-- - 예를 들어 DataBase나 Server측의 정보를 연동하여 보여주는 페이지라면 동적인 요소가 포함됨으로 해당 리소스들은 항상 같은 상태를 유지할 수 없기에 동적 리소스라고 합니다. --&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;처리 환경&lt;/strong&gt;
 &lt;code&gt;Web Server&lt;/code&gt;는 정적 리소스만을 취급하기 때문에 로컬 환경에서 테스트를 진행할 때에는 굳이 Web Server를 동작시킬 필요 없이 웹브라우저에서 단독으로 테스트가 가능합니다.
@@ -1545,7 +1453,7 @@ _ Webpack으로 bundling 할 resource 중 &lt;code&gt;_.scss&lt;/code&gt;파일�
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### 왜 Hugo Framework를 선택하였는지? --&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -1610,7 +1518,7 @@ _ Webpack으로 bundling 할 resource 중 &lt;code&gt;_.scss&lt;/code&gt;파일�
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### JSP와 Hugo로 만든 예시페이지 샘플 코드 --&gt;
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1651,7 +1559,7 @@ _ Webpack으로 bundling 할 resource 중 &lt;code&gt;_.scss&lt;/code&gt;파일�
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### 해당 샘플 코드들의 실행 결과 --&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;위 화면은 상기 샘플코드를 실행했을 때의 결과이며, 2개의 코드 모두 결과는 동일합니다.&lt;/strong&gt;&lt;/p&gt;
@@ -1671,7 +1579,7 @@ _ Webpack으로 bundling 할 resource 중 &lt;code&gt;_.scss&lt;/code&gt;파일�
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- ### Hugo Framework의 Directory 구조와 반자동 배포 --&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Hugo Site의 폴더구조 및 반자동 배포&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
