@@ -28,7 +28,7 @@
 &lt;code&gt;본 게시글을 빌드한 버전 : v0.103.1&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;하단에 Assets 메뉴를 클릭하여 펼친 후 &amp;lsquo;Show all &lt;code&gt;nn&lt;/code&gt; assets&amp;rsquo;를 클릭합니다.&lt;br&gt;
 &lt;code&gt;0.104.1버전의 경우 &#39;Show all 23 assets&#39;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&amp;lsquo;hugo_extended_&lt;code&gt;version&lt;/code&gt;_windows-amd64.zip&amp;rsquo;을 클릭하여 다운 받습니다.&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;hugo&lt;em&gt;extended&lt;/em&gt;&lt;code&gt;version&lt;/code&gt;_windows-amd64.zip&amp;rsquo;을 클릭하여 다운 받습니다.&lt;/li&gt;
 &lt;li&gt;다운받은 압축파일의 압축을 풀고 &amp;lsquo;hugo.exe&amp;rsquo; 파일을 경로(&lt;code&gt;C:\Hugo\bin&lt;/code&gt;)에 넣습니다.&lt;br&gt;
 &lt;code&gt;Hugo Document에서는 &#39;C:\Hugo\bin&#39;을 기본 경로로 설명하고 있기에 본 설명은 해당 경로에 설치합니다&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://monand0603.tistory.com/29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -40,8 +40,8 @@
 &lt;h2 id=&#34;올바르게-설치되었는지-확인하는-법&#34;&gt;올바르게 설치되었는지 확인하는 법&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;명령프롬프트(CMD)를 실행해줍니다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;hugo version&lt;/code&gt; 명령어를 실행한 뒤 아래와 같이 나타나는지 확인합니다. &lt;br&gt;
-&lt;strong&gt;&lt;code&gt;아래의 사진이 잘 보이지 않는다면 우클릭 후 &#39;새 탭에서 이미지 열기&#39;로 연 뒤 보는것을 권장합니다&lt;/code&gt;&lt;/strong&gt; &lt;br&gt;
+&lt;li&gt;&lt;code&gt;hugo version&lt;/code&gt; 명령어를 실행한 뒤 아래와 같이 나타나는지 확인합니다.&lt;br&gt;
+&lt;strong&gt;&lt;code&gt;아래의 사진이 잘 보이지 않는다면 우클릭 후 &#39;새 탭에서 이미지 열기&#39;로 연 뒤 보는것을 권장합니다&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
 &lt;img src=&#34;https://blog.realsn.com/p/hugo-framework-%EC%84%A4%EC%B9%98/hugo-version.png&#34;
 	width=&#34;978&#34;
 	height=&#34;510&#34;

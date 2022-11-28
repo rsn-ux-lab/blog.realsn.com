@@ -7,60 +7,28 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
         <lastBuildDate>Mon, 14 Nov 2022 08:21:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>PostCSS</title>
-        <link>https://blog.realsn.com/categories/postcss/</link>
-        <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
-        
-        <guid>https://blog.realsn.com/categories/postcss/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>Shell</title>
         <link>https://blog.realsn.com/categories/shell/</link>
         <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
         
         <guid>https://blog.realsn.com/categories/shell/</guid>
-        <description></description>
+        <description>&lt;img src="https://blog.realsn.com/categories/shell/thumb.png" alt="Featured image of post Shell" /&gt;</description>
         </item>
         <item>
-        <title>기술세미나</title>
-        <link>https://blog.realsn.com/categories/%EA%B8%B0%EC%88%A0%EC%84%B8%EB%AF%B8%EB%82%98/</link>
-        <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
-        
-        <guid>https://blog.realsn.com/categories/%EA%B8%B0%EC%88%A0%EC%84%B8%EB%AF%B8%EB%82%98/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>신규 입사자 가이드북</title>
-        <link>https://blog.realsn.com/categories/%EC%8B%A0%EA%B7%9C-%EC%9E%85%EC%82%AC%EC%9E%90-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81/</link>
-        <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
-        
-        <guid>https://blog.realsn.com/categories/%EC%8B%A0%EA%B7%9C-%EC%9E%85%EC%82%AC%EC%9E%90-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>JS</title>
-        <link>https://blog.realsn.com/categories/js/</link>
+        <title>JavascriptBasic</title>
+        <link>https://blog.realsn.com/categories/javascriptbasic/</link>
         <pubDate>Sun, 13 Nov 2022 13:50:00 +0000</pubDate>
         
-        <guid>https://blog.realsn.com/categories/js/</guid>
-        <description></description>
+        <guid>https://blog.realsn.com/categories/javascriptbasic/</guid>
+        <description>&lt;img src="https://blog.realsn.com/categories/javascriptbasic/thumb.png" alt="Featured image of post JavascriptBasic" /&gt;</description>
         </item>
         <item>
-        <title>plugin</title>
-        <link>https://blog.realsn.com/categories/plugin/</link>
-        <pubDate>Sun, 13 Nov 2022 13:50:00 +0000</pubDate>
-        
-        <guid>https://blog.realsn.com/categories/plugin/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Browser API</title>
-        <link>https://blog.realsn.com/categories/browser-api/</link>
+        <title>BrowserAPI</title>
+        <link>https://blog.realsn.com/categories/browserapi/</link>
         <pubDate>Fri, 11 Nov 2022 00:26:00 +0000</pubDate>
         
-        <guid>https://blog.realsn.com/categories/browser-api/</guid>
-        <description></description>
+        <guid>https://blog.realsn.com/categories/browserapi/</guid>
+        <description>&lt;img src="https://blog.realsn.com/categories/browserapi/thumb.png" alt="Featured image of post BrowserAPI" /&gt;</description>
         </item>
         <item>
         <title>Hugo</title>
@@ -68,7 +36,7 @@
         <pubDate>Wed, 19 Oct 2022 22:47:00 +0000</pubDate>
         
         <guid>https://blog.realsn.com/categories/hugo/</guid>
-        <description>&lt;img src="https://blog.realsn.com/categories/hugo/thumb.jpg" alt="Featured image of post Hugo" /&gt;</description>
+        <description>&lt;img src="https://blog.realsn.com/categories/hugo/thumb.png" alt="Featured image of post Hugo" /&gt;</description>
         </item>
         <item>
         <title>VScode</title>

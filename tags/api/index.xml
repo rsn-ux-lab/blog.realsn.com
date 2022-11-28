@@ -29,9 +29,9 @@ mdn문서에 따르면, 웹이 성숙해짐과 동시에 퍼포먼스를 챙기�
 &lt;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;이벤트를 실행시킬 element&lt;/li&gt;
-&lt;li&gt;Observer API 에 사용할 options&lt;br&gt;
-2-1) 지정될 ViewPort&lt;br&gt;
-2-2) Viewport에서의 Margin값 ( ViewPort 크기를 임의로 늘이거나, 줄임 )&lt;br&gt;
+&lt;li&gt;Observer API 에 사용할 options
+2-1) 지정될 ViewPort
+2-2) Viewport에서의 Margin값 ( ViewPort 크기를 임의로 늘이거나, 줄임 )
 2-3) Viewport와 엘리먼트의 교차가 몇 %이어야 API가 감지를 실행하는지에 대한 값.&lt;/li&gt;
 &lt;li&gt;API 선언&lt;/li&gt;
 &lt;/ol&gt;
@@ -93,7 +93,7 @@ mdn문서에 따르면, 웹이 성숙해짐과 동시에 퍼포먼스를 챙기�
 &lt;/div&gt;&lt;p&gt;새로 API를 선언한 후 변수에 담은 후, 그 뒤에 다시 observe 를 연결하여 대상 엘리먼트를 연결합니다. 현재 options 값과 callback시킬 함수가 없어 작동되지 않고 있지만요.
 포스팅의 threshold 에서 테스트용 엘리먼트를 불러올 예정입니다.&lt;/p&gt;
 &lt;h4 id=&#34;options-값의-rootmargin&#34;&gt;options 값의 rootMargin&lt;/h4&gt;
-&lt;p&gt;기본적으로 &lt;strong&gt;px&lt;/strong&gt; 또는 &lt;strong&gt;%&lt;/strong&gt; 값이 필수로 들어가야합니다.&lt;br&gt;
+&lt;p&gt;기본적으로 &lt;strong&gt;px&lt;/strong&gt; 또는 &lt;strong&gt;%&lt;/strong&gt; 값이 필수로 들어가야합니다.
 css - margin 과 유사한 속성으로 선언이 가능하며, 지정한 값 만큼 Viewport를 늘이거나 줄일 수 있습니다.
 해당 페이지를 예로 들어보겠습니다.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/intersection-observer-api/default_viewport.png&#34;
@@ -181,7 +181,7 @@ css - margin 과 유사한 속성으로 선언이 가능하며, 지정한 값 �
 &lt;hr&gt;
 &lt;h4 id=&#34;options-값의-threshold&#34;&gt;options 값의 threshold&lt;/h4&gt;
 &lt;p&gt;위 rootMargin에 의해 세팅된 &lt;strong&gt;Viewport 영역&lt;/strong&gt;과 &lt;strong&gt;observe 시킨 대상 엘리먼트&lt;/strong&gt;가 얼마나 겹쳤을때 감지가 이뤄지는지를 설정할 수 있습니다.
-1을 100%로 계산하며, &lt;strong&gt;1 초과, 0 미만의 수는 사용할 수 없습니다.&lt;/strong&gt; (에러가 뜹니다!)&lt;br&gt;
+1을 100%로 계산하며, &lt;strong&gt;1 초과, 0 미만의 수는 사용할 수 없습니다.&lt;/strong&gt; (에러가 뜹니다!)
 [observe 대상 지정하기]에서 말했던 것 처럼, 겹침 대상 감지 엘리먼트를 아래처럼 위 상단의 타이틀 이미지라고 가정해봅시다.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/intersection-observer-api/threshold.png&#34;
 	width=&#34;1232&#34;
@@ -313,7 +313,7 @@ css - margin 과 유사한 속성으로 선언이 가능하며, 지정한 값 �
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;예를 들어 값을 &lt;code&gt;[0, 0.3, 1]&lt;/code&gt;로 지정하였을 경우, threshold 감지 실행 기준이 0 일때, 0.3일 때, 1일 때를 기준으로 한번 씩 옵저버를 실행해줍니다.&lt;/p&gt;
 &lt;h2 id=&#34;테스트&#34;&gt;테스트!&lt;/h2&gt;
-&lt;p&gt;해당 포스트에서 사용한 IntersectionObserver API의 예시입니다.&lt;br&gt;
+&lt;p&gt;해당 포스트에서 사용한 IntersectionObserver API의 예시입니다.
 콘솔창에 그대로 복붙하면 감지가 이뤄지는 기준을 확인할수 있습니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -384,12 +384,12 @@ css - margin 과 유사한 속성으로 선언이 가능하며, 지정한 값 �
 &lt;/div&gt;&lt;h2 id=&#34;entries&#34;&gt;entries&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;IntersectionObserver&lt;/code&gt; 감지 실행 후 작동하는 callback을 통해 인스턴스에서 제공하는 기능들을 사용 가능합니다.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;boundingClientRect&lt;/strong&gt;: 관찰 대상의 사각형 정보&lt;br&gt;
-&lt;strong&gt;intersectionRect&lt;/strong&gt;: 관찰 대상의 교차 영역 정보&lt;br&gt;
-&lt;strong&gt;intersectionRatio&lt;/strong&gt;: 관찰 대상의 교차한 영역 백분율&lt;br&gt;
-&lt;strong&gt;isIntersecting&lt;/strong&gt;: 관찰 대상의 교차 상태(Boolean)&lt;br&gt;
-&lt;strong&gt;rootBounds&lt;/strong&gt;: 지정한 루트 요소의 사각형 정보(DOMRectReadOnly)&lt;br&gt;
-&lt;strong&gt;target&lt;/strong&gt;: 관찰 대상 요소(Element)&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;boundingClientRect&lt;/strong&gt;: 관찰 대상의 사각형 정보
+&lt;strong&gt;intersectionRect&lt;/strong&gt;: 관찰 대상의 교차 영역 정보
+&lt;strong&gt;intersectionRatio&lt;/strong&gt;: 관찰 대상의 교차한 영역 백분율
+&lt;strong&gt;isIntersecting&lt;/strong&gt;: 관찰 대상의 교차 상태(Boolean)
+&lt;strong&gt;rootBounds&lt;/strong&gt;: 지정한 루트 요소의 사각형 정보(DOMRectReadOnly)
+&lt;strong&gt;target&lt;/strong&gt;: 관찰 대상 요소(Element)
 &lt;strong&gt;time&lt;/strong&gt;: 변경이 발생한 시간 정보(DOMHighResTimeStamp)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;작업을-하며-느낀-장점&#34;&gt;작업을 하며 느낀 장점&lt;/h2&gt;
@@ -403,7 +403,7 @@ css - margin 과 유사한 속성으로 선언이 가능하며, 지정한 값 �
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;참고문서&#34;&gt;참고문서&lt;/h2&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API&lt;/a&gt;&lt;br&gt;
+    &gt;https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API&lt;/a&gt;
 &lt;a class=&#34;link&#34; href=&#34;http://blog.hyeyoonjung.com/2019/01/09/intersectionobserver-tutorial/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://blog.hyeyoonjung.com/2019/01/09/intersectionobserver-tutorial/&lt;/a&gt;&lt;/p&gt;
 </description>
