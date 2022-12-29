@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>DNS on RSN UX_Lab Blog</title>
+        <link>https://blog.realsn.com/tags/dns/</link>
+        <description>Recent content in DNS on RSN UX_Lab Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ko</language>
+        <lastBuildDate>Thu, 01 Dec 2022 08:25:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/tags/dns/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>DNS</title>
+        <link>https://blog.realsn.com/p/dns/</link>
+        <pubDate>Thu, 01 Dec 2022 08:25:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/p/dns/</guid>
+        <description>&lt;img src="https://blog.realsn.com/p/dns/thumb.png" alt="Featured image of post DNS" /&gt;&lt;h2 id=&#34;도메인이란-&#34;&gt;도메인이란 ?&lt;/h2&gt;
+&lt;p&gt;우리가 통상적으로 웹사이트에 접속하기 위해 웹브라우저 주소창에 입력하는 &lt;a class=&#34;link&#34; href=&#34;https://blog.realsn.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.realsn.com&lt;/a&gt; 과 같은 형식의 주소를 도메인이라고 한다.&lt;br&gt;
+원래대로라면 Web Server의 IP를 주소창에 입력하여야 하지만 Server의 IP를 매 번 기억하기 어렵기 때문에 Web Server의 IP에 대한 이름을 부여해주는 것이라고 이해하면 쉽다.&lt;/p&gt;
+&lt;p&gt;현실과 비유하자면 실제 RSN의 주소는 &lt;strong&gt;&amp;lsquo;경기도 고양시 일산서구 킨텍스로 240 킨텍스 꿈에그린 GIFC 타워&amp;rsquo;&lt;/strong&gt; 이지만 우리가 RSN을 찾아가고자 할 때에는 대다수의 사람들이 네비게이션을 이용해 &lt;strong&gt;&amp;lsquo;RSN&amp;rsquo;&lt;/strong&gt; 을 검색해서 찾아간다.&lt;br&gt;
+여기서 &lt;strong&gt;&amp;lsquo;경기도 ~~ GIFC 타워&amp;rsquo;&lt;/strong&gt; 는 IP라고 생각하고, &lt;strong&gt;&amp;lsquo;RSN&amp;rsquo;&lt;/strong&gt; 을 도메인으로 생각하면 된다.&lt;br&gt;
+즉, IP는 우리가 접속하고자 하는 Web Server의 주소! 도메인은 해당 Web Server의 명칭! 정도로 이해하면 된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://opentutorials.org/course/228/1450&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;생활코딩 - 도메인이란?&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;도메인-종류-및-url의-구조&#34;&gt;도메인 종류 및 URL의 구조&lt;/h2&gt;
+&lt;h3 id=&#34;도메인의-종류&#34;&gt;도메인의 종류&lt;/h3&gt;
+&lt;p&gt;도메인은 크게 국가도메인(ccTLD)과 일반도메인(gTLD)이 있다.&lt;br&gt;
+국가 도메인은 *.kr, *.jp, *.us 등이 있고, 일반도메인은 *.com, *.net, *.org 등이 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://xn--3e0bx5euxnjje69i70af08bea817g.xn--3e0b707e/jsp/resources/domainInfo/domainInfo.jsp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;한국인터넷정보센터 - 도메인&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://domain.nhn.com/regist/priceTable.gd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NHN도메인 - 도메인종류&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;url의-구조&#34;&gt;URL의 구조&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/dns/url-example.png&#34;
+	width=&#34;1024&#34;
+	height=&#34;100&#34;
+	srcset=&#34;https://blog.realsn.com/p/dns/url-example_hucc508d5f708b1b7ffaf807d359158764_7976_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/dns/url-example_hucc508d5f708b1b7ffaf807d359158764_7976_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;url 구조&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1024&#34;
+		data-flex-basis=&#34;2457px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;https = Protocol (통신방식이며 http, https, ftp, mailto 등이 있다.)&lt;/li&gt;
+&lt;li&gt;blog = Sub Domain (realsn의 하위 도메인이며 하나의 도메인에서 여러 서비스를 운영하고자 할 때 주로 사용된다.)&lt;/li&gt;
+&lt;li&gt;realsn.com = Domain (.com이라는 최상위 도메인에 realsn이라는 하위 도메인을 가졌으며 일반적으로 이를 통틀어서 도메인이라고 표현한다.)&lt;/li&gt;
+&lt;li&gt;/p/shell-script/ = Path (blog.realsn.com 도메인에 해당하는 서버에서 해당 경로에 접근할 때 사용된다.)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;dns란&#34;&gt;DNS란?&lt;/h2&gt;
+&lt;p&gt;DNS(Domain Name System)은 도메인을 통해 Web Server에 접속할 수 있도록 IP로 변환해주는 시스템이다.
+시스템에서 IP와 도메인을 이어주는 역할을 하는 서버를 DNS서버라고 하며 네 가지의 카테고리로 분류하지만 일반적으로는 Authoritative를 네임서버라고 부른다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Recursive resolvers&lt;/li&gt;
+&lt;li&gt;Root NameServer&lt;/li&gt;
+&lt;li&gt;TLD NameServer&lt;/li&gt;
+&lt;li&gt;Authoritative NameServer&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/ko-kr/learning/dns/what-is-dns/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare - DNS란?&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;네임서버의-역할-및-호스팅-서버-관계도&#34;&gt;네임서버의 역할 및 호스팅 서버 관계도&lt;/h2&gt;
+&lt;h3 id=&#34;네임서버의-역할&#34;&gt;네임서버의 역할&lt;/h3&gt;
+&lt;p&gt;클라이언트로부터 도메인으로 요청을 받으면 우선 Recursive resolvers에서 캐시 된 데이터로 응답하고, 캐시 된 데이터가 없다면 나머지 네임서버들로 요청을 보내서 IP정보를 받아와서 클라이언트에게 전달한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/ko-kr/learning/dns/dns-server-types/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare - DNS서버 유형&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;호스팅-서버-관계도&#34;&gt;호스팅 서버 관계도&lt;/h3&gt;
+&lt;h2 id=&#34;가비아-도메인-구입-및-서브도메인-등록&#34;&gt;가비아 도메인 구입 및 서브도메인 등록&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/dns/gabia1.png&#34;
+	width=&#34;1363&#34;
+	height=&#34;783&#34;
+	srcset=&#34;https://blog.realsn.com/p/dns/gabia1_hu1e45258fa988be34a61cb80907ca952d_166426_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/dns/gabia1_hu1e45258fa988be34a61cb80907ca952d_166426_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;가비아 메인&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;174&#34;
+		data-flex-basis=&#34;417px&#34;
+	
+&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://gabia.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;가비아&lt;/a&gt;에 접속한 뒤 로그인하고 빨간색 박스 영역에 희망하는 도메인을 입력하여 검색한 뒤 선택 가능한 항목을 선택하여 구매하면 된다.&lt;/p&gt;
+&lt;h3 id=&#34;서브도메인-등록&#34;&gt;서브도메인 등록&lt;/h3&gt;
+&lt;p&gt;도메인을 구입했다면 &lt;a class=&#34;link&#34; href=&#34;https://dns.gabia.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;가비아 DNS관리툴&lt;/a&gt;에 접속하여 아래와 같이 진행한다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/dns/gabia2.png&#34;
+	width=&#34;1372&#34;
+	height=&#34;437&#34;
+	srcset=&#34;https://blog.realsn.com/p/dns/gabia2_hucc6f56790be16d095ccf378e93f7e6bc_25788_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/dns/gabia2_hucc6f56790be16d095ccf378e93f7e6bc_25788_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;DNS 관리툴&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;313&#34;
+		data-flex-basis=&#34;753px&#34;
+	
+&gt;
+서브도메인을 등록할 도메인의 좌측 체크박스를 체크하고 상단 &lt;code&gt;DNS 설정&lt;/code&gt;버튼을 눌러 진입한다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/dns/gabia4.png&#34;
+	width=&#34;1372&#34;
+	height=&#34;662&#34;
+	srcset=&#34;https://blog.realsn.com/p/dns/gabia4_hu5ed50554fdf3278c09a84c8e400c9895_39148_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/dns/gabia4_hu5ed50554fdf3278c09a84c8e400c9895_39148_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;DNS 설정&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;207&#34;
+		data-flex-basis=&#34;497px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;DNS설정에 진입했다면 하단에 &lt;code&gt;레코드 추가&lt;/code&gt;버튼을 눌러서 입력창을 만든다.&lt;/li&gt;
+&lt;li&gt;첫 번째 빨간색 박스는 &lt;code&gt;A&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;두 번째 빨간색 박스는 &lt;code&gt;사용하고자 하는 서브도메인 정보&lt;/code&gt; (현재 등록되어 있는 최상단 jaeyoung은 jaeyoung.rsn-ux.com이 된다.)&lt;/li&gt;
+&lt;li&gt;세 번째 빨간색 박스는 내 서브도메인이 찾아가게 될 IP 주소 (GitHub Pages를 이용할거라면 &lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;링크&lt;/a&gt;에서 참조하도록 하자.)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;등록한-서브도메인으로-github-pages-배포-시연&#34;&gt;등록한 서브도메인으로 Github Pages 배포 시연&lt;/h2&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "17bb10b9bb05dd0";
+if(window.wcs) {
+  wcs_do();
+}
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKE8H3FPYX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZKE8H3FPYX');
+</script><meta name='description' content='DNS에 대해 알아보고 서브도메인을 등록하자'><title>DNS</title>
+
+
+<link rel='canonical' href='https://blog.realsn.com/p/dns/'>
+
+<link rel="stylesheet" href="/scss/style.min.28c49f738a55ce8024ab4740a41077d4c7e1edf2554ee5f0e68da477b8567176.css"><meta property='og:title' content='DNS'>
+<meta property='og:description' content='DNS에 대해 알아보고 서브도메인을 등록하자'>
+<meta property='og:url' content='https://blog.realsn.com/p/dns/'>
+<meta property='og:site_name' content='RSN UX_Lab Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='DNS' /><meta property='article:tag' content='SubDomain' /><meta property='article:tag' content='기술세미나' /><meta property='article:published_time' content='2022-12-01T08:25:00&#43;00:00'/><meta property='article:modified_time' content='2022-12-01T08:25:00&#43;00:00'/><meta property='og:image' content='https://blog.realsn.com/p/dns/thumb.png' />
+<meta name="twitter:title" content="DNS">
+<meta name="twitter:description" content="DNS에 대해 알아보고 서브도메인을 등록하자"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://blog.realsn.com/p/dns/thumb.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huc5370c2022e964866f8cc6f529b81b88_10404_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">RSN UX_Lab Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+         
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>다크 모드</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+    <div class="article-details">    
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/dns/">DNS</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            DNS에 대해 알아보고 서브도메인을 등록하자
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2022년 12월 01일 / 08시 25분</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 분 정도
+                </time>
+            </div>
+            
+            <div id="name">작성자 : 최재영</div>
+    </footer>
+    
+    
+    <header class="article-category">
+        
+            <a href="/categories/dns/" >
+                DNS
+            </a>
+        
+    </header>
+    
+    
+    
+</div>
+        <div class="article-image">
+            <a href="/p/dns/">
+                <img src="/p/dns/thumb_hu9c965155970ab2c1e8f881b7e5f8868e_124850_800x0_resize_box_3.png"
+                        srcset="/p/dns/thumb_hu9c965155970ab2c1e8f881b7e5f8868e_124850_800x0_resize_box_3.png 800w, /p/dns/thumb_hu9c965155970ab2c1e8f881b7e5f8868e_124850_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="642" 
+                        loading="lazy"
+                        alt="Featured image of post DNS" />
+                
+            </a>
+        </div>
+        
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="도메인이란-">도메인이란 ?</h2>
+<p>우리가 통상적으로 웹사이트에 접속하기 위해 웹브라우저 주소창에 입력하는 <a class="link" href="https://blog.realsn.com"  target="_blank" rel="noopener"
+    >https://blog.realsn.com</a> 과 같은 형식의 주소를 도메인이라고 한다.<br>
+원래대로라면 Web Server의 IP를 주소창에 입력하여야 하지만 Server의 IP를 매 번 기억하기 어렵기 때문에 Web Server의 IP에 대한 이름을 부여해주는 것이라고 이해하면 쉽다.</p>
+<p>현실과 비유하자면 실제 RSN의 주소는 <strong>&lsquo;경기도 고양시 일산서구 킨텍스로 240 킨텍스 꿈에그린 GIFC 타워&rsquo;</strong> 이지만 우리가 RSN을 찾아가고자 할 때에는 대다수의 사람들이 네비게이션을 이용해 <strong>&lsquo;RSN&rsquo;</strong> 을 검색해서 찾아간다.<br>
+여기서 <strong>&lsquo;경기도 ~~ GIFC 타워&rsquo;</strong> 는 IP라고 생각하고, <strong>&lsquo;RSN&rsquo;</strong> 을 도메인으로 생각하면 된다.<br>
+즉, IP는 우리가 접속하고자 하는 Web Server의 주소! 도메인은 해당 Web Server의 명칭! 정도로 이해하면 된다.</p>
+<blockquote>
+<p><a class="link" href="https://opentutorials.org/course/228/1450"  target="_blank" rel="noopener"
+    >생활코딩 - 도메인이란?</a></p>
+</blockquote>
+<h2 id="도메인-종류-및-url의-구조">도메인 종류 및 URL의 구조</h2>
+<h3 id="도메인의-종류">도메인의 종류</h3>
+<p>도메인은 크게 국가도메인(ccTLD)과 일반도메인(gTLD)이 있다.<br>
+국가 도메인은 *.kr, *.jp, *.us 등이 있고, 일반도메인은 *.com, *.net, *.org 등이 있다.</p>
+<blockquote>
+<p><a class="link" href="https://xn--3e0bx5euxnjje69i70af08bea817g.xn--3e0b707e/jsp/resources/domainInfo/domainInfo.jsp"  target="_blank" rel="noopener"
+    >한국인터넷정보센터 - 도메인</a><br>
+<a class="link" href="https://domain.nhn.com/regist/priceTable.gd"  target="_blank" rel="noopener"
+    >NHN도메인 - 도메인종류</a></p>
+</blockquote>
+<h3 id="url의-구조">URL의 구조</h3>
+<p><img src="/p/dns/url-example.png"
+	width="1024"
+	height="100"
+	srcset="/p/dns/url-example_hucc508d5f708b1b7ffaf807d359158764_7976_480x0_resize_box_3.png 480w, /p/dns/url-example_hucc508d5f708b1b7ffaf807d359158764_7976_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="url 구조"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1024"
+		data-flex-basis="2457px"
+	
+></p>
+<ol>
+<li>https = Protocol (통신방식이며 http, https, ftp, mailto 등이 있다.)</li>
+<li>blog = Sub Domain (realsn의 하위 도메인이며 하나의 도메인에서 여러 서비스를 운영하고자 할 때 주로 사용된다.)</li>
+<li>realsn.com = Domain (.com이라는 최상위 도메인에 realsn이라는 하위 도메인을 가졌으며 일반적으로 이를 통틀어서 도메인이라고 표현한다.)</li>
+<li>/p/shell-script/ = Path (blog.realsn.com 도메인에 해당하는 서버에서 해당 경로에 접근할 때 사용된다.)</li>
+</ol>
+<h2 id="dns란">DNS란?</h2>
+<p>DNS(Domain Name System)은 도메인을 통해 Web Server에 접속할 수 있도록 IP로 변환해주는 시스템이다.
+시스템에서 IP와 도메인을 이어주는 역할을 하는 서버를 DNS서버라고 하며 네 가지의 카테고리로 분류하지만 일반적으로는 Authoritative를 네임서버라고 부른다.</p>
+<ol>
+<li>Recursive resolvers</li>
+<li>Root NameServer</li>
+<li>TLD NameServer</li>
+<li>Authoritative NameServer</li>
+</ol>
+<blockquote>
+<p><a class="link" href="https://www.cloudflare.com/ko-kr/learning/dns/what-is-dns/"  target="_blank" rel="noopener"
+    >Cloudflare - DNS란?</a></p>
+</blockquote>
+<h2 id="네임서버의-역할-및-호스팅-서버-관계도">네임서버의 역할 및 호스팅 서버 관계도</h2>
+<h3 id="네임서버의-역할">네임서버의 역할</h3>
+<p>클라이언트로부터 도메인으로 요청을 받으면 우선 Recursive resolvers에서 캐시 된 데이터로 응답하고, 캐시 된 데이터가 없다면 나머지 네임서버들로 요청을 보내서 IP정보를 받아와서 클라이언트에게 전달한다.</p>
+<blockquote>
+<p><a class="link" href="https://www.cloudflare.com/ko-kr/learning/dns/dns-server-types/"  target="_blank" rel="noopener"
+    >Cloudflare - DNS서버 유형</a></p>
+</blockquote>
+<h3 id="호스팅-서버-관계도">호스팅 서버 관계도</h3>
+<h2 id="가비아-도메인-구입-및-서브도메인-등록">가비아 도메인 구입 및 서브도메인 등록</h2>
+<p><img src="/p/dns/gabia1.png"
+	width="1363"
+	height="783"
+	srcset="/p/dns/gabia1_hu1e45258fa988be34a61cb80907ca952d_166426_480x0_resize_box_3.png 480w, /p/dns/gabia1_hu1e45258fa988be34a61cb80907ca952d_166426_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="가비아 메인"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="174"
+		data-flex-basis="417px"
+	
+>
+<a class="link" href="https://gabia.com"  target="_blank" rel="noopener"
+    >가비아</a>에 접속한 뒤 로그인하고 빨간색 박스 영역에 희망하는 도메인을 입력하여 검색한 뒤 선택 가능한 항목을 선택하여 구매하면 된다.</p>
+<h3 id="서브도메인-등록">서브도메인 등록</h3>
+<p>도메인을 구입했다면 <a class="link" href="https://dns.gabia.com/"  target="_blank" rel="noopener"
+    >가비아 DNS관리툴</a>에 접속하여 아래와 같이 진행한다.</p>
+<p><img src="/p/dns/gabia2.png"
+	width="1372"
+	height="437"
+	srcset="/p/dns/gabia2_hucc6f56790be16d095ccf378e93f7e6bc_25788_480x0_resize_box_3.png 480w, /p/dns/gabia2_hucc6f56790be16d095ccf378e93f7e6bc_25788_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="DNS 관리툴"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="313"
+		data-flex-basis="753px"
+	
+>
+서브도메인을 등록할 도메인의 좌측 체크박스를 체크하고 상단 <code>DNS 설정</code>버튼을 눌러 진입한다.</p>
+<p><img src="/p/dns/gabia4.png"
+	width="1372"
+	height="662"
+	srcset="/p/dns/gabia4_hu5ed50554fdf3278c09a84c8e400c9895_39148_480x0_resize_box_3.png 480w, /p/dns/gabia4_hu5ed50554fdf3278c09a84c8e400c9895_39148_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="DNS 설정"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="207"
+		data-flex-basis="497px"
+	
+></p>
+<ol>
+<li>DNS설정에 진입했다면 하단에 <code>레코드 추가</code>버튼을 눌러서 입력창을 만든다.</li>
+<li>첫 번째 빨간색 박스는 <code>A</code></li>
+<li>두 번째 빨간색 박스는 <code>사용하고자 하는 서브도메인 정보</code> (현재 등록되어 있는 최상단 jaeyoung은 jaeyoung.rsn-ux.com이 된다.)</li>
+<li>세 번째 빨간색 박스는 내 서브도메인이 찾아가게 될 IP 주소 (GitHub Pages를 이용할거라면 <a class="link" href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site"  target="_blank" rel="noopener"
+    >링크</a>에서 참조하도록 하자.)</li>
+</ol>
+<h2 id="등록한-서브도메인으로-github-pages-배포-시연">등록한 서브도메인으로 Github Pages 배포 시연</h2>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/dns/">DNS</a>
+        
+            <a href="/tags/subdomain/">SubDomain</a>
+        
+            <a href="/tags/%EA%B8%B0%EC%88%A0%EC%84%B8%EB%AF%B8%EB%82%98/">기술세미나</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>UX Lab Team in RSN Co.,Ltd</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "rsn-ux-lab" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);                
+    }     
+
+    @media (min-width: 2048px) {
+        .disqus-container {            
+            max-width: 1700px;
+            margin: 0 6vw 0 14vw;
+        }
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+  <section class="copyright">
+    &copy;  2022 RSN UX_Lab Blog
+  </section>
+
+  <section class="powerby">
+    <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+    <a href="https://www.realsn.com/" target="_blank" rel="noopener">UX Lab Team in RSN Co.,Ltd</a>의 <no value> 테마 사용 중
+  </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives" >
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">목차</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#도메인이란-">도메인이란 ?</a></li>
+    <li><a href="#도메인-종류-및-url의-구조">도메인 종류 및 URL의 구조</a>
+      <ol>
+        <li><a href="#도메인의-종류">도메인의 종류</a></li>
+        <li><a href="#url의-구조">URL의 구조</a></li>
+      </ol>
+    </li>
+    <li><a href="#dns란">DNS란?</a></li>
+    <li><a href="#네임서버의-역할-및-호스팅-서버-관계도">네임서버의 역할 및 호스팅 서버 관계도</a>
+      <ol>
+        <li><a href="#네임서버의-역할">네임서버의 역할</a></li>
+        <li><a href="#호스팅-서버-관계도">호스팅 서버 관계도</a></li>
+      </ol>
+    </li>
+    <li><a href="#가비아-도메인-구입-및-서브도메인-등록">가비아 도메인 구입 및 서브도메인 등록</a>
+      <ol>
+        <li><a href="#서브도메인-등록">서브도메인 등록</a></li>
+      </ol>
+    </li>
+    <li><a href="#등록한-서브도메인으로-github-pages-배포-시연">등록한 서브도메인으로 Github Pages 배포 시연</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

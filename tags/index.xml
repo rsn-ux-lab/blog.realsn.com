@@ -6,28 +6,44 @@
         <description>Recent content in Tags on RSN UX_Lab Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Mon, 14 Nov 2022 08:21:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Shell</title>
-        <link>https://blog.realsn.com/tags/shell/</link>
-        <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
+        <lastBuildDate>Tue, 06 Dec 2022 00:26:00 +0000</lastBuildDate><atom:link href="https://blog.realsn.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Javascript</title>
+        <link>https://blog.realsn.com/tags/javascript/</link>
+        <pubDate>Tue, 06 Dec 2022 00:26:00 +0000</pubDate>
         
-        <guid>https://blog.realsn.com/tags/shell/</guid>
+        <guid>https://blog.realsn.com/tags/javascript/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>DNS</title>
+        <link>https://blog.realsn.com/tags/dns/</link>
+        <pubDate>Thu, 01 Dec 2022 08:25:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/tags/dns/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SubDomain</title>
+        <link>https://blog.realsn.com/tags/subdomain/</link>
+        <pubDate>Thu, 01 Dec 2022 08:25:00 +0000</pubDate>
+        
+        <guid>https://blog.realsn.com/tags/subdomain/</guid>
         <description></description>
         </item>
         <item>
         <title>기술세미나</title>
         <link>https://blog.realsn.com/tags/%EA%B8%B0%EC%88%A0%EC%84%B8%EB%AF%B8%EB%82%98/</link>
-        <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
+        <pubDate>Thu, 01 Dec 2022 08:25:00 +0000</pubDate>
         
         <guid>https://blog.realsn.com/tags/%EA%B8%B0%EC%88%A0%EC%84%B8%EB%AF%B8%EB%82%98/</guid>
         <description></description>
         </item>
         <item>
-        <title>Javascript</title>
-        <link>https://blog.realsn.com/tags/javascript/</link>
-        <pubDate>Sun, 13 Nov 2022 13:50:00 +0000</pubDate>
+        <title>Shell</title>
+        <link>https://blog.realsn.com/tags/shell/</link>
+        <pubDate>Mon, 14 Nov 2022 08:21:00 +0000</pubDate>
         
-        <guid>https://blog.realsn.com/tags/javascript/</guid>
+        <guid>https://blog.realsn.com/tags/shell/</guid>
         <description></description>
         </item>
         <item>

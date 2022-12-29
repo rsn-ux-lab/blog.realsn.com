@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.realsn.com/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
+    <lastmod>2022-12-06T00:26:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://blog.realsn.com/categories/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
+    <lastmod>2022-12-06T00:26:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -28,20 +28,20 @@
                 href="https://blog.realsn.com/categories/"
                 />
   </url><url>
+    <loc>https://blog.realsn.com/categories/javascript/</loc>
+    <lastmod>2022-12-06T00:26:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/tags/javascript/</loc>
+    <lastmod>2022-12-06T00:26:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/p/js-class/</loc>
+    <lastmod>2022-12-06T00:26:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.realsn.com/post/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/tags/shell/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/categories/shell/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.realsn.com/p/shell-script/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
+    <lastmod>2022-12-06T00:26:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/tags/</loc>
-    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
+    <lastmod>2022-12-06T00:26:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -53,11 +53,29 @@
                 href="https://blog.realsn.com/tags/"
                 />
   </url><url>
+    <loc>https://blog.realsn.com/tags/dns/</loc>
+    <lastmod>2022-12-01T08:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/categories/dns/</loc>
+    <lastmod>2022-12-01T08:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/p/dns/</loc>
+    <lastmod>2022-12-01T08:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/tags/subdomain/</loc>
+    <lastmod>2022-12-01T08:25:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.realsn.com/tags/%EA%B8%B0%EC%88%A0%EC%84%B8%EB%AF%B8%EB%82%98/</loc>
+    <lastmod>2022-12-01T08:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/tags/shell/</loc>
     <lastmod>2022-11-14T08:21:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.realsn.com/tags/javascript/</loc>
-    <lastmod>2022-11-13T13:50:00+00:00</lastmod>
+    <loc>https://blog.realsn.com/categories/shell/</loc>
+    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.realsn.com/p/shell-script/</loc>
+    <lastmod>2022-11-14T08:21:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.realsn.com/categories/javascriptbasic/</loc>
     <lastmod>2022-11-13T13:50:00+00:00</lastmod>
