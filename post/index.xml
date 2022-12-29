@@ -16,7 +16,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;클래스는 객체 지향 프로그래밍에서 특정 객체를 생성하기 위해 변수와 메소드를 정의하는 일종의 틀로, 객체를 정의하기 위한 상태(멤버 변수) 와 메서드(함수)로 구성된다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;객체 지향 프로그래밍에서 특정 객체를생성하기 위해 변수와 메서드를 정의하는 일종의 &lt;strong&gt;틀&lt;/strong&gt;. new 연산자를 사용해 Class 틀을 사용하여 새로운 인스턴스를 생성 가능하며, Class(틀)을 사용해 각 인스턴스(틀로 찍어낸 도구)로 다양한 기능을 구현가능함.&lt;/p&gt;
+&lt;p&gt;객체 지향 프로그래밍에서 특정 객체를생성하기 위해 변수와 메서드를 정의하는 일종의 &lt;strong&gt;틀&lt;/strong&gt;이다. new 연산자를 사용해 Class 틀을 사용하여 새로운 인스턴스를 생성하는것이 가능하며, Class(틀)을 사용해 각 인스턴스(틀로 찍어낸 도구)로 다양한 기능을 구현할 수 있다.&lt;/p&gt;
 &lt;h4 id=&#34;class-생성-예시&#34;&gt;Class 생성 예시&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -72,6 +72,38 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;class에서의-인스턴스란&#34;&gt;Class에서의 인스턴스란&lt;/h3&gt;
+&lt;p&gt;이 포스팅 초기에서 말 한 것처럼, &lt;code&gt;Class(틀)을 사용해 new 연산자로 각 인스턴스(틀로 찍어낸 도구)로 다양한 기능을 구현가능.&lt;/code&gt; 해당 내용을 기본 토대로 두고있다. 이해하기 쉽도록 &lt;strong&gt;틀&lt;/strong&gt; 과 &lt;strong&gt;틀로 찍어낸 도구&lt;/strong&gt;로 정의하였지만, 도구에 국한되지않고 다양한 사용 예시를 생각하여 보면 인스턴스에 대한 기본적인 인식이 더 쉽지않을까 싶다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;person&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;john&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;don&amp;#39;t know&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;personJung&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;768&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;jung&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;INTP&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;im&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// im 60 years old
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// name is john
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// mbti is ...don&amp;#39;t know
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;personJung&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;im&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// im 768 years old
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// name is jung
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// mbti is ...INTP
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;위 코드와 같이, 하나의 Person 클래스로 여러 사람을 소개할수있는 각각의 인스턴스를 생성할 수 있다. 같은 틀로 만들어낸 각각의 인스턴스이기에, &amp;lsquo;각자&amp;rsquo;의 인스턴스가 받아온 파라미터값을 &amp;lsquo;각자&amp;rsquo;의 인스턴스 내에서 사용하여주기때문에, 같은 Class를 사용하더라도 다른 결과값을 보여 줄 수 있다.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3 id=&#34;class에서의-getter-와-setter&#34;&gt;Class에서의 getter 와 setter&lt;/h3&gt;
 &lt;p&gt;constructor에서 선언된 this값을 &lt;strong&gt;get&lt;/strong&gt; 을 통해 return 시키고, &lt;strong&gt;set&lt;/strong&gt; 을 통해 재정의, 또는 계산된 값을 인스턴스 내에서 사용하기 위해 필요한 것이 getter와 setter이다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -135,47 +167,41 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;im&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;im &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39; years old\nname is &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;\nmbti is ...&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;_mbti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// 콘솔창 테스트 코드
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// person.mbti = &amp;#34;INTP&amp;#34;;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;person&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;john&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;don&amp;#39;t know&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;im&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;hr&gt;
-&lt;h3 id=&#34;class에서의-인스턴스란&#34;&gt;Class에서의 인스턴스란&lt;/h3&gt;
-&lt;p&gt;이 포스팅 초기에서 말 한 것처럼, &lt;code&gt;Class(틀)을 사용해 new 연산자로 각 인스턴스(틀로 찍어낸 도구)로 다양한 기능을 구현가능함.&lt;/code&gt; 해당 내용을 기본 토대로 두고있다. 이해하기 쉽도록 &lt;strong&gt;틀&lt;/strong&gt; 과 &lt;strong&gt;틀로 찍어낸 도구&lt;/strong&gt;로 정의하였지만, 도구에 국한되지않고 다양한 사용 예시를 생각하여 보면 인스턴스에 대한 기본적인 인식이 더 쉽지않을까 싶다.&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;생성된 person 인스턴스에 직접 접근할 경우, Class 내에서 get 과 set 을 정의해둔 요소가 반응하게 된다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;person&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;john&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;don&amp;#39;t know&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;personJung&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;768&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;jung&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;INTP&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;im&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// im 60 years old
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 콘솔창 테스트 코드
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;mbti&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;INTP&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;인스턴스 생성시 받아왔던 파라미터값을 다시 재구성해주며, 또한 set에 배치해둔 내부 메서드 &lt;code&gt;im()&lt;/code&gt;을 타고 다시 한번 재정의한 값을 console.log 로 출력해주는 것을 확인할 수 있다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// get/set mbti를 타고, im() 메서드에서 정의한 콘솔내용을 다시 출력해준다.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// im 60 years old
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// name is john
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// mbti is ...don&amp;#39;t know
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;personJung&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;im&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// im 768 years old
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// name is jung
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// mbti is ...INTP
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;위 코드와 같이, 하나의 Person 클래스로 여러 사람을 소개할수있는 각각의 인스턴스를 생성할 수 있다. 같은 틀로 만들어낸 각각의 인스턴스이기에, &amp;lsquo;각자&amp;rsquo;의 인스턴스가 받아온 파라미터값을 &amp;lsquo;각자&amp;rsquo;의 인스턴스 내에서 사용하여주기때문에, 같은 Class를 사용하더라도 다른 결과값을 보여 줄 수 있다.&lt;/p&gt;
-&lt;hr&gt;
+&lt;/div&gt;&lt;hr&gt;
 &lt;h3 id=&#34;class-원형의-복제extends&#34;&gt;Class 원형의 복제(extends)&lt;/h3&gt;
-&lt;p&gt;클래스 상속이란, &lt;code&gt;기존에 만들어둔 Class의 constructor와 메서드를 그대로 사용하거나, 부분적으로 수정&lt;/code&gt;이 필요한 별개의 Class를 새로 생성하고 싶을 때 유용한 기능이다. 기존 Class를 불러와 extends 시키는 방법으로 새로이 만들수 있으나, 부분적으로 메서드와 요소를 추가하거나 수정이 필요한 경우 &lt;code&gt;super()&lt;/code&gt;를 통해 필수로 처리해주어야 하는 부분들이 존재한다.&lt;/p&gt;
-&lt;p&gt;일단 새로 만들고싶은 Class를 선언 후, 동일하게 인자값을 쥐어준다.&lt;/p&gt;
+&lt;p&gt;클래스 상속이란, &lt;U&gt;기존에 만들어둔 Class의 constructor와 메서드를 그대로 사용하거나, 부분적으로 수정&lt;/U&gt;이 필요한 별개의 Class를 새로 생성하고 싶을 때 유용한 기능이다. 기존 Class를 불러와 extends 시키는 방법으로 새로이 만들수 있으나, 부분적으로 메서드와 요소를 추가하거나 수정이 필요한 경우 &lt;code&gt;super()&lt;/code&gt;를 통해 필수로 처리해주어야 하는 부분들이 존재한다.&lt;/p&gt;
+&lt;p&gt;일단 새로 만들고싶은 extends Class를 선언 후, 인스턴스를 생성함과 동시에 기존 person 인스턴스를 생성할 때와 동일하게 인자값을 쥐어준다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -199,7 +225,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;직접 정의해주지않아도 Person Class의 형태를 그대로 물려받은 것을 확인할 수 있다.&lt;/p&gt;
-&lt;p&gt;하지만 앞서 말했듯, 부분적으로 메서드 또는 요소의 수정이 필요한 경우, &lt;code&gt;오버라이딩&lt;/code&gt; 이 필요하다. 먼저 constructor에서의 요소 추가가 필요 할 경우의 생성자 오버라이딩을 알아보자.&lt;/p&gt;
+&lt;p&gt;하지만 앞서 말했듯, &lt;U&gt;부분적으로 메서드 또는 요소의 수정이 필요&lt;/U&gt;한 경우, &lt;strong&gt;오버라이딩&lt;/strong&gt; 이 필요하다. 먼저 &lt;em&gt;constructor에서의 요소 추가가 필요 할 경우&lt;/em&gt; &lt;strong&gt;생성자 오버라이딩&lt;/strong&gt;을 알아보자.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -267,8 +293,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;pianist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;im&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Person Class 에서 사용하던 인자값을 전부 &lt;code&gt;...args&lt;/code&gt; 를 통해 받아온 후, super()로 정의해주었다. 에러를 내지않고 새로운 인자값과 기존의 메서드를 사용할수 있게 되었다.&lt;/p&gt;
-&lt;p&gt;extends한 Class 안에서, 부모가 되는 기존의 Class의 &lt;code&gt;메서드를 확장 사용&lt;/code&gt;하고 싶을 때에도 동일하다. 하지만 메서드 오버라이딩의 경우 특이한 사항이 있다. super 처리를 하지 않은 채, 동일한 이름의 메서드를 extends Class 내에서 재정의 할 경우, 부모 Class에서 상속받은 메서드가 아닌 자체 메서드를 사용하게된다.&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;Person Class 에서 사용하던 인자값을 전부 &lt;code&gt;...args&lt;/code&gt; 를 통해 받아온 후, super()로 정의해주었다. 에러를 내지않고 &lt;strong&gt;새로운 인자값&lt;/strong&gt;&lt;code&gt;(this.work)&lt;/code&gt;&lt;strong&gt;과 기존의 인자값&lt;/strong&gt;&lt;code&gt;(this.age)&lt;/code&gt; &lt;strong&gt;모두를 사용&lt;/strong&gt;할수 있게 되었다.&lt;/p&gt;
+&lt;p&gt;extends한 Class 안에서, 부모가 되는 기존의 Class의 &lt;strong&gt;메서드를 확장 사용&lt;/strong&gt;하고 싶을 때에도 동일하다. 하지만 메서드 오버라이딩의 경우 특이한 사항이 있다. super 처리를 하지 않은 채, 동일한 이름의 메서드를 extends Class 내에서 재정의 할 경우, 부모 Class에서 상속받은 메서드가 아닌 자체 메서드를 사용하게된다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -301,7 +327,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;pianist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;im&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;부모격인 Person Class에서 정의된 console.log()를 무시하고 alert만 출력하는것을 확인할 수 있다. 이에 따른 이슈가 발생하는데, 바로 부모메서드의 일부 기능만 변경하거나, 확장하고 싶을 때이다. 이때에도 constructor와 동일하게, &lt;code&gt;super()&lt;/code&gt;를 사용하여 해결할 수 있다.&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;부모격인 Person Class에서 정의된 console.log()를 무시하고 alert만 출력하는것을 확인할 수 있다. 현재 &lt;code&gt;im()&lt;/code&gt; 메서드를 재정의 한 것에 대해 당장은 문제가 없을지 모른다. 하지만 부모 &lt;code&gt;im()&lt;/code&gt; 메서드의 일부 기능만 변경하거나, 확장하고 싶을 때 이에 따른 이슈가 발생하게 된다. 이때에도 constructor와 동일하게, &lt;code&gt;super()&lt;/code&gt;를 사용하여 해결할 수 있다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -346,9 +372,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;pianist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;im&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;메서드 내에서 &lt;code&gt;super.im()&lt;/code&gt;을 통해 부모 메서드를 호출하여 &lt;code&gt;Person Class의 im() 콘솔 + alert()가 추가되어 실행되는 모습&lt;/code&gt;을 확인할 수 있다.&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;위 코드블럭에서와 같이, 메서드 내에서 &lt;code&gt;super.im()&lt;/code&gt;을 통해 부모 메서드를 호출할 수 있다. 해당 코드를 실행해보면, &lt;code&gt;pianist.im()&lt;/code&gt; 에서 부모 &lt;code&gt;Person.im()&lt;/code&gt;의 기능을 가져와 출력해준다. 결과적으로 &lt;U&gt;&lt;code&gt;Person Class의 im()&lt;/code&gt; 콘솔 + &lt;code&gt;pianist.im()&lt;/code&gt; 고유의 &lt;code&gt;alert()&lt;/code&gt;&lt;/U&gt;가 추가되어 실행되는 모습을 확인할 수 있다.&lt;/p&gt;
 &lt;h3 id=&#34;class-원형의-복제extends를-위한-prototype&#34;&gt;Class 원형의 복제(extends)를 위한 Prototype&lt;/h3&gt;
-&lt;p&gt;이 &lt;code&gt;extends&lt;/code&gt;를 동작하기 위한것이 바로 &lt;code&gt;prototype&lt;/code&gt; 인데, js에서의 prototype이란 &lt;code&gt;객체의 특성을 다른 객체로 상속하는것을 가능하게 하는 매커니즘&lt;/code&gt;이라고 한다. 기본적으로 JS의 모든 객체는 &lt;code&gt;[[Prototype]]&lt;/code&gt; 내부 프로퍼티를 가진다. 자신에게 연결된 프로토 타입 객체에 대한 참조이다. 이 &lt;code&gt;prototype&lt;/code&gt; 을 확인하기 위해서는 아무 변수나 선언 한 후, 해당 변수에 &lt;code&gt;.__proto__&lt;/code&gt; 를 붙여 확인해보면 된다.&lt;/p&gt;
+&lt;p&gt;이 &lt;code&gt;extends&lt;/code&gt;를 동작하기 위한것이 바로 &lt;code&gt;prototype&lt;/code&gt; 인데, &lt;strong&gt;js에서의 prototype&lt;/strong&gt;이란 &lt;U&gt;객체의 특성을 다른 객체로 상속하는것을 가능하게 하는 매커니즘&lt;/U&gt;이라고 한다. 기본적으로 JS의 모든 객체는 &lt;code&gt;[[Prototype]]&lt;/code&gt; 내부 프로퍼티를 가진다. 자신에게 연결된 프로토 타입 객체에 대한 참조이다. 이 &lt;code&gt;prototype&lt;/code&gt; 을 확인하기 위해서는 아무 변수나 선언 한 후, 해당 변수에 &lt;code&gt;.__proto__&lt;/code&gt; 를 붙여 확인해보면 된다.
+각 변수의 형태별로 전부 고유의 프로토타입을 가지고 있는 모습이 보인다. Class extends 를 진행하기위해 해당 prototype들을 관찰해보자.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -367,21 +394,26 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;__proto__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;각 변수의 형태별로 전부 고유의 프로토타입을 가지고 있는 모습이 보인다. Class extends 를 진행하기위해 해당 prototype을 관찰한다.&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;단지 String / Object / Array 를 새로 정의하였을 뿐인데, 각자 고유의 prototype을 가지고있는 모습을 확인할 수 있다.&lt;br&gt;
+해당 프로토타입 원리가, Class의 extends 생성을 위해서도 사용되는 모습을 확인할 수 있다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
-&lt;li&gt;Pianist.prototype.[[Prototype]] 을 Person.prototype 으로 설정함.&lt;/li&gt;
-&lt;li&gt;Pianist.prototype 에서 메서드를 찾지 못하면&lt;/li&gt;
-&lt;li&gt;Person.prototype 에서 메서드를 가져옴.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pianist&lt;/strong&gt;.prototype.[[Prototype]] 을 Person.prototype 으로 설정함.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pianist&lt;/strong&gt;.prototype 에서 메서드를 찾지 못하면&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Person&lt;/strong&gt;.prototype 에서 메서드를 가져옴.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;[예시]&lt;br&gt;
-let pianist = new Pianist(); 생성시&lt;br&gt;
-im() 메서드가 Pianist.prototype 에 있는지 확인한다&lt;br&gt;
-if im() 메서드가 있을 경우, Class 에 선언되어있는 해당 메서드를 그대로 사용한다.&lt;br&gt;
-else if im() 메서드가 없을 경우, extends 를 통해 관계가 만들어진 Person.prototype에 im() 메서드가 있는지 확인한다.&lt;/p&gt;
-&lt;p&gt;im() 메서드를 찾은 후, 객체 pianist 에 im() 메서드를 추가해준다.&lt;/p&gt;
+&lt;p&gt;[예시]&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;기존에 Class Person이 정의되어있는 상태일 경우를 가정&lt;/li&gt;
+&lt;li&gt;Person 클래스를 가지고, extends 한 let pianist = new Pianist(); 생성시&lt;/li&gt;
+&lt;li&gt;Pianist.prototype 에 im() 메서드가 있는지 확인함.&lt;br&gt;
+3-1. if - &lt;strong&gt;im() 메서드가 있을 경우&lt;/strong&gt;, Class 에 선언되어있는 해당 메서드를 그대로 사용한다.&lt;br&gt;
+3-2. else if - &lt;strong&gt;im() 메서드가 없을 경우&lt;/strong&gt;, extends 를 통해 관계가 만들어진 Person.prototype에 im() 메서드가 있는지 확인한다.&lt;br&gt;
+3-2-1. im() 메서드를 찾은 후, 객체 pianist 에 im() 메서드를 추가해준다.&lt;br&gt;
+ㄴ 이 과정에서, 메서드 오버라이딩 &lt;strong&gt;super() 처리&lt;/strong&gt;가 되어있을 경우에만 부모 클래스의 im() 메서드를 불러 올 수 있게 된다.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;class-문법-사용-예시&#34;&gt;Class 문법 사용 예시&lt;/h3&gt;
 &lt;p&gt;해당 내용들을 토대로 amCharts5 를 이용한 차트 하나를 구현해보았다. 인스턴스에서 받은 파라미터를 통해 데이터를 받아오는데, 데이터가 바뀔 때에만 set을 통하여 차트를 새로 그려주는 방식을 채택했다. 간략한 순서는 이러하다.&lt;/p&gt;
@@ -395,152 +427,19 @@ else if im() 메서드가 없을 경우, extends 를 통해 관계가 만들어�
 3-2. JSON 파일 array 첫번째 인덱스의 데이터를 그대로 차트에 뿌려주게끔 설정.&lt;br&gt;
 =&amp;gt; 차트를 그려줄 &lt;code&gt;Class&lt;/code&gt; 사용함&lt;/li&gt;
 &lt;li&gt;버튼 클릭시 차트를 그려주는 data 인자값을 인스턴스에 새로 넘김.&lt;/li&gt;
-&lt;li&gt;차트드로잉 인스턴스의 &lt;code&gt;set data&lt;/code&gt;를 타고, 차트를 새로 그려줌.&lt;br&gt;
-링크: &lt;a class=&#34;link&#34; href=&#34;https://songjung110.github.io/uxLab-task-song/js-class-roundColumnChart/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://songjung110.github.io/uxLab-task-song/js-class-roundColumnChart/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;차트드로잉 인스턴스&lt;/strong&gt;의 &lt;code&gt;set data&lt;/code&gt;를 타고, 차트를 새로 그려줌.&lt;br&gt;
+링크: &lt;a class=&#34;link&#34; href=&#34;https://songjung110.github.io/uxLab-task-song/js-class-chart-playground/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://songjung110.github.io/uxLab-task-song/js-class-chart-playground/&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;아직 구현하지 못했지만 &lt;code&gt;extends&lt;/code&gt;를 잘 사용하면, 동일한 데이터로 형태가 다른 여러 차트를 그려주는 자식 Class를 만들어볼수 있지 않을까 싶다.&lt;/p&gt;
+&lt;p&gt;아직 구현하지 못했지만 &lt;code&gt;extends&lt;/code&gt;를 잘 사용하면, 동일한 데이터로 형태가 다른 여러 차트를 그려주는 확장 Class를 만들어볼수 있지 않을까 싶다.&lt;/p&gt;
 &lt;h2 id=&#34;참고문서&#34;&gt;참고문서&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ko.javascript.info/class&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://ko.javascript.info/class&lt;/a&gt; &amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://tecoble.techcourse.co.kr/post/2021-06-14-prototype/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://ko.javascript.info/class&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://tecoble.techcourse.co.kr/post/2021-06-14-prototype/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://tecoble.techcourse.co.kr/post/2021-06-14-prototype/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>DNS</title>
-        <link>https://blog.realsn.com/p/dns/</link>
-        <pubDate>Thu, 01 Dec 2022 08:25:00 +0000</pubDate>
-        
-        <guid>https://blog.realsn.com/p/dns/</guid>
-        <description>&lt;img src="https://blog.realsn.com/p/dns/thumb.png" alt="Featured image of post DNS" /&gt;&lt;h2 id=&#34;도메인이란-&#34;&gt;도메인이란 ?&lt;/h2&gt;
-&lt;p&gt;우리가 통상적으로 웹사이트에 접속하기 위해 웹브라우저 주소창에 입력하는 &lt;a class=&#34;link&#34; href=&#34;https://blog.realsn.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://blog.realsn.com&lt;/a&gt; 과 같은 형식의 주소를 도메인이라고 한다.&lt;br&gt;
-원래대로라면 Web Server의 IP를 주소창에 입력하여야 하지만 Server의 IP를 매 번 기억하기 어렵기 때문에 Web Server의 IP에 대한 이름을 부여해주는 것이라고 이해하면 쉽다.&lt;/p&gt;
-&lt;p&gt;현실과 비유하자면 실제 RSN의 주소는 &lt;strong&gt;&amp;lsquo;경기도 고양시 일산서구 킨텍스로 240 킨텍스 꿈에그린 GIFC 타워&amp;rsquo;&lt;/strong&gt; 이지만 우리가 RSN을 찾아가고자 할 때에는 대다수의 사람들이 네비게이션을 이용해 &lt;strong&gt;&amp;lsquo;RSN&amp;rsquo;&lt;/strong&gt; 을 검색해서 찾아간다.&lt;br&gt;
-여기서 &lt;strong&gt;&amp;lsquo;경기도 ~~ GIFC 타워&amp;rsquo;&lt;/strong&gt; 는 IP라고 생각하고, &lt;strong&gt;&amp;lsquo;RSN&amp;rsquo;&lt;/strong&gt; 을 도메인으로 생각하면 된다.&lt;br&gt;
-즉, IP는 우리가 접속하고자 하는 Web Server의 주소! 도메인은 해당 Web Server의 명칭! 정도로 이해하면 된다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://opentutorials.org/course/228/1450&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;생활코딩 - 도메인이란?&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;도메인-종류-및-url의-구조&#34;&gt;도메인 종류 및 URL의 구조&lt;/h2&gt;
-&lt;h3 id=&#34;도메인의-종류&#34;&gt;도메인의 종류&lt;/h3&gt;
-&lt;p&gt;도메인은 크게 국가도메인(ccTLD)과 일반도메인(gTLD)이 있다.&lt;br&gt;
-국가 도메인은 *.kr, *.jp, *.us 등이 있고, 일반도메인은 *.com, *.net, *.org 등이 있다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://xn--3e0bx5euxnjje69i70af08bea817g.xn--3e0b707e/jsp/resources/domainInfo/domainInfo.jsp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;한국인터넷정보센터 - 도메인&lt;/a&gt;&lt;br&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://domain.nhn.com/regist/priceTable.gd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;NHN도메인 - 도메인종류&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;url의-구조&#34;&gt;URL의 구조&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/dns/url-example.png&#34;
-	width=&#34;1024&#34;
-	height=&#34;100&#34;
-	srcset=&#34;https://blog.realsn.com/p/dns/url-example_hucc508d5f708b1b7ffaf807d359158764_7976_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/dns/url-example_hucc508d5f708b1b7ffaf807d359158764_7976_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;url 구조&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;1024&#34;
-		data-flex-basis=&#34;2457px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;https = Protocol (통신방식이며 http, https, ftp, mailto 등이 있다.)&lt;/li&gt;
-&lt;li&gt;blog = Sub Domain (realsn의 하위 도메인이며 하나의 도메인에서 여러 서비스를 운영하고자 할 때 주로 사용된다.)&lt;/li&gt;
-&lt;li&gt;realsn.com = Domain (.com이라는 최상위 도메인에 realsn이라는 하위 도메인을 가졌으며 일반적으로 이를 통틀어서 도메인이라고 표현한다.)&lt;/li&gt;
-&lt;li&gt;/p/shell-script/ = Path (blog.realsn.com 도메인에 해당하는 서버에서 해당 경로에 접근할 때 사용된다.)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;dns란&#34;&gt;DNS란?&lt;/h2&gt;
-&lt;p&gt;DNS(Domain Name System)은 도메인을 통해 Web Server에 접속할 수 있도록 IP로 변환해주는 시스템이다.
-시스템에서 IP와 도메인을 이어주는 역할을 하는 서버를 DNS서버라고 하며 네 가지의 카테고리로 분류하지만 일반적으로는 Authoritative를 네임서버라고 부른다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Recursive resolvers&lt;/li&gt;
-&lt;li&gt;Root NameServer&lt;/li&gt;
-&lt;li&gt;TLD NameServer&lt;/li&gt;
-&lt;li&gt;Authoritative NameServer&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/ko-kr/learning/dns/what-is-dns/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Cloudflare - DNS란?&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;네임서버의-역할-및-호스팅-서버-관계도&#34;&gt;네임서버의 역할 및 호스팅 서버 관계도&lt;/h2&gt;
-&lt;h3 id=&#34;네임서버의-역할&#34;&gt;네임서버의 역할&lt;/h3&gt;
-&lt;p&gt;클라이언트로부터 도메인으로 요청을 받으면 우선 Recursive resolvers에서 캐시 된 데이터로 응답하고, 캐시 된 데이터가 없다면 나머지 네임서버들로 요청을 보내서 IP정보를 받아와서 클라이언트에게 전달한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/ko-kr/learning/dns/dns-server-types/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Cloudflare - DNS서버 유형&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;호스팅-서버-관계도&#34;&gt;호스팅 서버 관계도&lt;/h3&gt;
-&lt;h2 id=&#34;가비아-도메인-구입-및-서브도메인-등록&#34;&gt;가비아 도메인 구입 및 서브도메인 등록&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/dns/gabia1.png&#34;
-	width=&#34;1363&#34;
-	height=&#34;783&#34;
-	srcset=&#34;https://blog.realsn.com/p/dns/gabia1_hu1e45258fa988be34a61cb80907ca952d_166426_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/dns/gabia1_hu1e45258fa988be34a61cb80907ca952d_166426_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;가비아 메인&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;174&#34;
-		data-flex-basis=&#34;417px&#34;
-	
-&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://gabia.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;가비아&lt;/a&gt;에 접속한 뒤 로그인하고 빨간색 박스 영역에 희망하는 도메인을 입력하여 검색한 뒤 선택 가능한 항목을 선택하여 구매하면 된다.&lt;/p&gt;
-&lt;h3 id=&#34;서브도메인-등록&#34;&gt;서브도메인 등록&lt;/h3&gt;
-&lt;p&gt;도메인을 구입했다면 &lt;a class=&#34;link&#34; href=&#34;https://dns.gabia.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;가비아 DNS관리툴&lt;/a&gt;에 접속하여 아래와 같이 진행한다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/dns/gabia2.png&#34;
-	width=&#34;1372&#34;
-	height=&#34;437&#34;
-	srcset=&#34;https://blog.realsn.com/p/dns/gabia2_hucc6f56790be16d095ccf378e93f7e6bc_25788_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/dns/gabia2_hucc6f56790be16d095ccf378e93f7e6bc_25788_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;DNS 관리툴&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;313&#34;
-		data-flex-basis=&#34;753px&#34;
-	
-&gt;
-서브도메인을 등록할 도메인의 좌측 체크박스를 체크하고 상단 &lt;code&gt;DNS 설정&lt;/code&gt;버튼을 눌러 진입한다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.realsn.com/p/dns/gabia4.png&#34;
-	width=&#34;1372&#34;
-	height=&#34;662&#34;
-	srcset=&#34;https://blog.realsn.com/p/dns/gabia4_hu5ed50554fdf3278c09a84c8e400c9895_39148_480x0_resize_box_3.png 480w, https://blog.realsn.com/p/dns/gabia4_hu5ed50554fdf3278c09a84c8e400c9895_39148_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;DNS 설정&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;207&#34;
-		data-flex-basis=&#34;497px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;DNS설정에 진입했다면 하단에 &lt;code&gt;레코드 추가&lt;/code&gt;버튼을 눌러서 입력창을 만든다.&lt;/li&gt;
-&lt;li&gt;첫 번째 빨간색 박스는 &lt;code&gt;A&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;두 번째 빨간색 박스는 &lt;code&gt;사용하고자 하는 서브도메인 정보&lt;/code&gt; (현재 등록되어 있는 최상단 jaeyoung은 jaeyoung.rsn-ux.com이 된다.)&lt;/li&gt;
-&lt;li&gt;세 번째 빨간색 박스는 내 서브도메인이 찾아가게 될 IP 주소 (GitHub Pages를 이용할거라면 &lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;링크&lt;/a&gt;에서 참조하도록 하자.)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;등록한-서브도메인으로-github-pages-배포-시연&#34;&gt;등록한 서브도메인으로 Github Pages 배포 시연&lt;/h2&gt;
 </description>
         </item>
         <item>
